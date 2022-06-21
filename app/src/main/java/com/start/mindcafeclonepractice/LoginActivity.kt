@@ -30,6 +30,7 @@ class LoginActivity : BaseActivity() {
     lateinit var binding : ActivityLoginBinding
 
 //  기본로그인에서 사용할 FirebaseAuth
+    private var auth: FirebaseAuth? = null
 
 //    firebase Auth
     private lateinit var firebaseAuth: FirebaseAuth
@@ -45,7 +46,7 @@ class LoginActivity : BaseActivity() {
         setupEvents()
         setValues()
 
-
+        auth = Firebase.auth
 
 
 //       Google 로그인 옵션 구성. requestToken 및 Email 요청.
@@ -154,8 +155,7 @@ class LoginActivity : BaseActivity() {
             val inputId = binding.edtId.text.toString()
             val inputPw = binding.edtPw.text.toString()
 
-
-
+            signIn(inputId, inputPw)
 
         }
 
@@ -260,6 +260,29 @@ class LoginActivity : BaseActivity() {
                                                                 "\n이메일 : ${user.kakaoAccount?.email}" +
                                                                 "\n닉네임 : ${user.kakaoAccount?.profile?.nickname}")
             }
+        }
+    }
+
+    fun signIn(email: String, password: String){
+
+        if(email.isNotEmpty() && password.isNotEmpty()){
+            auth?.signInWithEmailAndPassword(email, password)
+                ?.addOnCompleteListener(this) { task ->
+                    if(task.isSuccessful){
+                        Toast.makeText(mContext, "로그인 성공", Toast.LENGTH_SHORT).show()
+                        moveMainPage(auth?.currentUser)
+                    }else{
+                        Toast.makeText(mContext, "로그인 실패", Toast.LENGTH_SHORT).show()
+                    }
+                }
+        }
+    }
+
+    //유저정보 넘겨주고 메인 액티비티 호출
+    fun moveMainPage(user: FirebaseUser?){
+        if(user!= null){
+            startActivity(Intent(mContext,MainActivity::class.java))
+            finish()
         }
     }
 
