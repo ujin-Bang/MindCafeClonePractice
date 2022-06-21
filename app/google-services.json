@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "463327764022",
+    "project_id": "mindcafeclone",
+    "storage_bucket": "mindcafeclone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:463327764022:android:9f9434a22ffa31ae654297",
+        "android_client_info": {
+          "package_name": "com.start.mindcafeclonepractice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "463327764022-gh0rlpqubk9tvk0v3c5mk49ulv938ap7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.start.mindcafeclonepractice",
+            "certificate_hash": "a338f2840719a785394cbb4ddf97513d09d29c4d"
+          }
+        },
+        {
+          "client_id": "463327764022-lcd4qt3vomn9189alis6derig5p0f72a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCLm0inaBuRQRAzOtkDGqkTau4P1jfi4k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "463327764022-lcd4qt3vomn9189alis6derig5p0f72a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,6 +1,5 @@
 package com.start.mindcafeclonepractice
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import com.start.mindcafeclonepractice.databinding.ActivityMainBinding
@@ -15,6 +14,10 @@ class MainActivity : BaseActivity() {
     }
 
     override fun setupEvents() {
+
+        binding.btnLogout.setOnClickListener {
+
+        }
 
     }
 
