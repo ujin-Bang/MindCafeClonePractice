@@ -3,6 +3,9 @@ package com.start.mindcafeclonepractice
 import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 abstract class BaseActivity : AppCompatActivity() {
 
@@ -12,6 +15,7 @@ abstract class BaseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         mContext = this
+
 
     }
 

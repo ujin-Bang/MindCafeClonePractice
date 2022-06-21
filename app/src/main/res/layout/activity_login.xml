@@ -62,10 +62,12 @@
                     android:src="@drawable/id_button_icon" />
 
                 <EditText
+                    android:id="@+id/edtId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/teal"
-                    android:hint="ID"
+                    android:hint="이메일 입력"
+                    android:inputType="textEmailAddress"
                     android:textColorHint="@color/white" />
             </LinearLayout>
 
@@ -91,10 +93,12 @@
                     android:src="@drawable/pw_button_icon" />
 
                 <EditText
+                    android:id="@+id/edtPw"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/teal"
-                    android:hint="PASSWORD"
+                    android:hint="비밀번호 입력"
+                    android:inputType="textPassword"
                     android:textColorHint="@color/white"/>
             </LinearLayout>
 

@@ -30,7 +30,6 @@ class LoginActivity : BaseActivity() {
     lateinit var binding : ActivityLoginBinding
 
 //  기본로그인에서 사용할 FirebaseAuth
-    private var auth : FirebaseAuth? = null
 
 //    firebase Auth
     private lateinit var firebaseAuth: FirebaseAuth
@@ -46,7 +45,6 @@ class LoginActivity : BaseActivity() {
         setupEvents()
         setValues()
 
-        auth = Firebase.auth
 
 
 
@@ -149,7 +147,26 @@ class LoginActivity : BaseActivity() {
     }
 
     override fun setupEvents() {
-//      카카오 로그인 버틈
+
+//        기본로그인 버튼 눌리면
+        binding.btnLogin.setOnClickListener {
+
+            val inputId = binding.edtId.text.toString()
+            val inputPw = binding.edtPw.text.toString()
+
+
+
+
+        }
+
+        binding.btnSignUp.setOnClickListener {
+
+            startActivity(Intent(mContext, SignUpActivity::class.java))
+
+
+        }
+
+//      카카오 로그인 버튼 눌리면
         binding.btnKakaoLogin.setOnClickListener {
 
             if (UserApiClient.instance.isKakaoTalkLoginAvailable(mContext)) {
@@ -245,4 +262,6 @@ class LoginActivity : BaseActivity() {
             }
         }
     }
+
+
 }
