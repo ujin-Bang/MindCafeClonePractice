@@ -1,6 +1,7 @@
 package com.start.mindcafeclonepractice
 
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
@@ -55,6 +56,12 @@ override fun onCreate(savedInstanceState: Bundle?) {
     }
 
     override fun setupEvents() {
+
+        binding.btnWrite.setOnClickListener {
+
+            startActivity(Intent(mContext, WriteActivity::class.java))
+
+        }
 
     }
 

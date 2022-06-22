@@ -1,4 +1,4 @@
-package com.start.mindcafeclonepractice.fragments
+package com.start.mindcafeclonepractice.bottomnavigationinfragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
