@@ -82,7 +82,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/teal"
-                    android:hint="6글자 이상 입력해주세요."
+                    android:hint="8글자 이상 입력해주세요."
                     android:inputType="textPassword"
                     android:textColorHint="@color/white" />
 

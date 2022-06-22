@@ -62,7 +62,7 @@ class LoginActivity : BaseActivity() {
         //firebase auth객체
         firebaseAuth = FirebaseAuth.getInstance()
     }
-    //onStart. 유저가 앱에 이미 구글 로그인이 되어있는지 확인
+    //onStart. 유저가 앱에 이미 구글 로그인이 되어있는지 확인, 자동로그인
 //    override fun onStart() {
 //        super.onStart()
 //        val account = GoogleSignIn.getLastSignedInAccount(mContext)
@@ -71,6 +71,13 @@ class LoginActivity : BaseActivity() {
 //            toMainActivity(firebaseAuth.currentUser!!)
 //        }
 //    } //onStart End
+
+    //로그아웃 하지 않을시 자동로그인, 회원가입시 바로 로그인됨.
+//    public override fun onStart() {
+//        super.onStart()
+//
+//        moveMainPage(auth?.currentUser)
+//    }
 
     //onActivityResult
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -83,6 +90,7 @@ class LoginActivity : BaseActivity() {
                     //Google Sign In was successful. authenticate with Firebase
                     val account = task.getResult(ApiException::class.java)
                     firebaseAuthWithGoogle(account!!)
+                    Log.d("구글토큰",account.idToken.toString())
                 }catch (e: ApiException){
                     //Google Sign In failed, updata UI appropriately
                     Log.w("LoginActivity","Google sign in failed",e)
