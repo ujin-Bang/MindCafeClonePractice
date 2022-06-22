@@ -17,9 +17,7 @@ class MainActivity : BaseActivity() {
 
     override fun setupEvents() {
 
-        binding.btnLogout.setOnClickListener {
 
-        }
 
     }
 
