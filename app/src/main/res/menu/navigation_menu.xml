@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:title="홈"
+        android:icon="@drawable/bottom_nav_home_icon"/>
+
+    <item
+        android:id="@+id/community"
+        android:title="커뮤니티"
+        android:icon="@drawable/botom_nav_community_icon"/>
+
+
+    <item
+        android:id="@+id/expertFind"
+        android:title="전문가 찾기"
+        android:icon="@drawable/bottom_nav_expert_icon"/>
+
+
+    <item
+        android:id="@+id/consulting"
+        android:title="상담하기"
+        android:icon="@drawable/bottom_nav_consulting_icon"/>
+
+
+
+
+</menu>
