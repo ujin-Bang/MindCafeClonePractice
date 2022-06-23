@@ -12,4 +12,5 @@
     <color name="bottomnav">#00B28F</color>터
     <color name="dark_gray">#555151</color>
     <color name="light_gray">#F0ECEC</color>
+    <color name="light_teal">#B9D3D0</color>
 </resources>
