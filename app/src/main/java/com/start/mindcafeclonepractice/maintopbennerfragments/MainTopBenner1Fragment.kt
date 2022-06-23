@@ -1,5 +1,7 @@
 package com.start.mindcafeclonepractice.maintopbennerfragments
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -32,6 +34,13 @@ class MainTopBenner1Fragment: BaseFragment() {
     }
 
     override fun setupEvents() {
+
+        binding.imgBanner1.setOnClickListener {
+
+            val myUri = Uri.parse("https://www.mindcafe.co.kr")
+            val myIntent = Intent(Intent.ACTION_VIEW, myUri)
+            startActivity(myIntent)
+        }
 
     }
 
