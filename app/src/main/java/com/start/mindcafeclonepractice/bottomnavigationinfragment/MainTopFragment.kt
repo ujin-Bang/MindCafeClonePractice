@@ -46,7 +46,7 @@ class MainTopFragment: BaseFragment() {
 
         val storage = FirebaseStorage.getInstance("gs://mindcafeclone.appspot.com")
         val storageRef = storage.reference
-        storageRef.child("dregonball_vegita.jpeg").downloadUrl.addOnSuccessListener { uri -> //이미지 로드 성공시
+        storageRef.child("Benner1.png").downloadUrl.addOnSuccessListener { uri -> //이미지 로드 성공시
             Glide.with(mContext)
                 .load(uri)
                 .into(binding.bennerImg1)
