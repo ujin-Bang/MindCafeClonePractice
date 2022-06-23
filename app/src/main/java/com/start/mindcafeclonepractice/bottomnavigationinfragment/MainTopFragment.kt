@@ -1,6 +1,8 @@
 package com.start.mindcafeclonepractice.bottomnavigationinfragment
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -14,6 +16,7 @@ import com.start.mindcafeclonepractice.R
 import com.start.mindcafeclonepractice.adapters.HomeMainTopBennerViewPagerAdapter
 import com.start.mindcafeclonepractice.databinding.FragmentMainTopBinding
 import com.start.mindcafeclonepractice.fragments.BaseFragment
+import java.util.*
 
 
 class MainTopFragment: BaseFragment() {
@@ -52,6 +55,30 @@ class MainTopFragment: BaseFragment() {
         mMainTopViewPagerAdapter = HomeMainTopBennerViewPagerAdapter((mContext as MainActivity).supportFragmentManager)
         binding.mainTopViewPager.adapter = mMainTopViewPagerAdapter
 
+        //완성된 배너 어댑터에서 ->2초마다 다음 그림으로 넘어가게
+
+        //다음 그림으로 넘어가게 -> 할 일(코드) 생성
+        val nextPage = {
+
+        } //Runnable : 할일이 담긴 변수
+
+
+//        타이머 안에서 -> 할 일을 -> UIThread로 전달해주는 도구(Handler)
+        val myHandler = Handler(Looper.getMainLooper())
+
+
+        //Timer 클래스 활용 => 할 일(코드)를 2초마다 반복.
+        val timer = Timer()
+        timer.schedule( object : TimerTask(){
+            override fun run() {
+
+//                반복 수행할 코드=> UI쓰레드가 아님(UI 조작하면 앱이 죽는다)
+//                UI쓰레드에다 -> nextPage에 적힌 할 일 실행하도록 넘겨주자.
+                myHandler.post(nextPage)
+            }
+
+
+        },2000, 2000)
 
 //        val storage = FirebaseStorage.getInstance("gs://mindcafeclone.appspot.com")
 //        val storageRef = storage.reference
