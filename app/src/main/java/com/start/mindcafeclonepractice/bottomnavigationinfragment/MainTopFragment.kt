@@ -55,10 +55,19 @@ class MainTopFragment: BaseFragment() {
         mMainTopViewPagerAdapter = HomeMainTopBennerViewPagerAdapter((mContext as MainActivity).supportFragmentManager)
         binding.mainTopViewPager.adapter = mMainTopViewPagerAdapter
 
-        //완성된 배너 어댑터에서 ->2초마다 다음 그림으로 넘어가게
+        //완성된 배너 어댑터에서 ->2초마다 다음 배너로 넘어가게(ViewPager에게 다음페이지로) =>할일(코드) 생성
 
         //다음 그림으로 넘어가게 -> 할 일(코드) 생성
+        var currentPage = 0 //시작은 0페이지에서
         val nextPage = {
+
+            currentPage++ //다음 페이지로 이동. 페이지수 증가
+
+//            증가후 검사 -> 7장 짜리인데 7번째칸으로 가게하면? 범위를 벗어나는 에러
+            if (currentPage == 7) {
+                currentPage = 0 //가야할 페이지가 7번칸이라면 처음으로 돌가가게 하자.
+            }
+            binding.mainTopViewPager.currentItem = currentPage //뷰페이저 페이지 이동.
 
         } //Runnable : 할일이 담긴 변수
 
@@ -76,8 +85,6 @@ class MainTopFragment: BaseFragment() {
 //                UI쓰레드에다 -> nextPage에 적힌 할 일 실행하도록 넘겨주자.
                 myHandler.post(nextPage)
             }
-
-
         },2000, 2000)
 
 //        val storage = FirebaseStorage.getInstance("gs://mindcafeclone.appspot.com")
