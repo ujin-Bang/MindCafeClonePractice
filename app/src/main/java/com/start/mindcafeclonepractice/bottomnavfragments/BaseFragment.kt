@@ -1,4 +1,4 @@
-package com.start.mindcafeclonepractice.fragments
+package com.start.mindcafeclonepractice.bottomnavfragments
 
 import android.content.Context
 import android.os.Bundle

@@ -1,25 +1,23 @@
-package com.start.mindcafeclonepractice.fragments
+package com.start.mindcafeclonepractice.bottomnavfragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.Fragment
 import com.start.mindcafeclonepractice.R
-import com.start.mindcafeclonepractice.databinding.FragmentConsultingBinding
-import com.start.mindcafeclonepractice.databinding.FragmentHomeBinding
+import com.start.mindcafeclonepractice.databinding.FragmentCommunityBinding
 
-class ConsultingFragment: BaseFragment() {
+class CommunityFragment: BaseFragment() {
 
-    lateinit var binding: FragmentConsultingBinding
+    lateinit var binding: FragmentCommunityBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_consulting, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_community, container, false)
         return binding.root
     }
 

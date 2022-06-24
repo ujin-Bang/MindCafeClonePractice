@@ -1,17 +1,15 @@
 package com.start.mindcafeclonepractice.maintopbennerfragments
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.Fragment
 import com.start.mindcafeclonepractice.R
-import com.start.mindcafeclonepractice.databinding.FragmentMainTopBenner2Binding
-import com.start.mindcafeclonepractice.databinding.FragmentMainTopBenner3Binding
 import com.start.mindcafeclonepractice.databinding.FragmentMainTopBenner4Binding
-import com.start.mindcafeclonepractice.databinding.FragmentMainTopBinding
-import com.start.mindcafeclonepractice.fragments.BaseFragment
+import com.start.mindcafeclonepractice.bottomnavfragments.BaseFragment
 
 class MainTopBenner4Fragment: BaseFragment() {
 
@@ -34,6 +32,12 @@ class MainTopBenner4Fragment: BaseFragment() {
     }
 
     override fun setupEvents() {
+
+        binding.imgBanner4.setOnClickListener {
+            val myUri = Uri.parse("https://www.youtube.com")
+            val myIntent = Intent(Intent.ACTION_VIEW, myUri)
+            startActivity(myIntent)
+        }
 
     }
 

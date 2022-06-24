@@ -1,35 +1,31 @@
-package com.start.mindcafeclonepractice.bottomnavigationinfragment
+package com.start.mindcafeclonepractice.bottomnavhomefragment
 
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
-import com.bumptech.glide.Glide
-import com.google.firebase.storage.FirebaseStorage
 import com.start.mindcafeclonepractice.MainActivity
 import com.start.mindcafeclonepractice.R
 import com.start.mindcafeclonepractice.adapters.HomeMainTopBennerViewPagerAdapter
-import com.start.mindcafeclonepractice.databinding.FragmentMainTopBinding
-import com.start.mindcafeclonepractice.fragments.BaseFragment
+import com.start.mindcafeclonepractice.bottomnavfragments.BaseFragment
+import com.start.mindcafeclonepractice.databinding.FragmentHomeTopBinding
 import java.util.*
 
 
-class MainTopFragment: BaseFragment() {
+class HomeTopFragment: BaseFragment() {
 
-    lateinit var binding: FragmentMainTopBinding
-    lateinit var mMainTopViewPagerAdapter: HomeMainTopBennerViewPagerAdapter
+    lateinit var binding: FragmentHomeTopBinding
+    private lateinit var mMainTopViewPagerAdapter: HomeMainTopBennerViewPagerAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate(inflater,R.layout.fragment_main_top,container,false)
+        binding = DataBindingUtil.inflate(inflater,R.layout.fragment_home_top,container,false)
         return binding.root
     }
 

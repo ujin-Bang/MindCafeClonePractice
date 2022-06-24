@@ -7,12 +7,14 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.start.mindcafeclonepractice.databinding.ActivityMainBinding
-import com.start.mindcafeclonepractice.fragments.CommunityFragment
-import com.start.mindcafeclonepractice.fragments.ConsultingFragment
-import com.start.mindcafeclonepractice.fragments.ExpertFindFragment
-import com.start.mindcafeclonepractice.fragments.HomeFragment
+import com.start.mindcafeclonepractice.bottomnavfragments.CommunityFragment
+import com.start.mindcafeclonepractice.bottomnavfragments.ConsultingFragment
+import com.start.mindcafeclonepractice.bottomnavfragments.ExpertFindFragment
+import com.start.mindcafeclonepractice.bottomnavfragments.HomeFragment
 
 class MainActivity : BaseActivity() {
+
+
 
     lateinit var binding: ActivityMainBinding
 
@@ -79,6 +81,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
 
 
     }
+
 
 
 }
