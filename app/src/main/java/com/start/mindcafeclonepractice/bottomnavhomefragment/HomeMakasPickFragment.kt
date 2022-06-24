@@ -9,10 +9,12 @@ import androidx.databinding.DataBindingUtil
 import com.start.mindcafeclonepractice.R
 import com.start.mindcafeclonepractice.bottomnavfragments.BaseFragment
 import com.start.mindcafeclonepractice.databinding.FragmentHomeMakasPickBinding
+import com.start.mindcafeclonepractice.datas.UserData
 
 class HomeMakasPickFragment : BaseFragment() {
 
     lateinit var binding: FragmentHomeMakasPickBinding
+    val mMakasUserList = ArrayList<UserData>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -53,6 +55,8 @@ class HomeMakasPickFragment : BaseFragment() {
     }
 
     override fun setValues() {
+
+
 
     }
 }
