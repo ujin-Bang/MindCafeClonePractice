@@ -97,6 +97,7 @@ class HomeMakasPickFragment : BaseFragment() {
 
     override fun setValues() {
 
+        //자연스럽게 넘어가지 않은 수정 필요
         binding.makasRecyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener(){
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                 super.onScrollStateChanged(recyclerView, newState)
