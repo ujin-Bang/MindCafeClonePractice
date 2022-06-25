@@ -6,11 +6,11 @@ import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.start.mindcafeclonepractice.databinding.ActivityMainBinding
 import com.start.mindcafeclonepractice.bottomnavfragments.CommunityFragment
 import com.start.mindcafeclonepractice.bottomnavfragments.ConsultingFragment
 import com.start.mindcafeclonepractice.bottomnavfragments.ExpertFindFragment
 import com.start.mindcafeclonepractice.bottomnavfragments.HomeFragment
+import com.start.mindcafeclonepractice.databinding.ActivityMainBinding
 
 class MainActivity : BaseActivity() {
 
@@ -24,6 +24,7 @@ class MainActivity : BaseActivity() {
             R.id.home -> {
                 println("home pressed")
                 replaceFragment(HomeFragment())
+
                 return@OnNavigationItemSelectedListener true
             }
 
@@ -71,6 +72,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
         binding.mainBottomNavView.setOnNavigationItemSelectedListener(mOnNavigationiItemSelectedListener)
 
         replaceFragment(HomeFragment())
+
 
 
     }

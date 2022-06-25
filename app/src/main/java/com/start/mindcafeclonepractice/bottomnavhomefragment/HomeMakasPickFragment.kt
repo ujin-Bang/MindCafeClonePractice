@@ -1,20 +1,28 @@
 package com.start.mindcafeclonepractice.bottomnavhomefragment
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.firebase.database.*
+import com.google.firebase.ktx.Firebase
 import com.start.mindcafeclonepractice.R
+import com.start.mindcafeclonepractice.adapters.WriterAdapter
 import com.start.mindcafeclonepractice.bottomnavfragments.BaseFragment
 import com.start.mindcafeclonepractice.databinding.FragmentHomeMakasPickBinding
-import com.start.mindcafeclonepractice.datas.UserData
+import com.start.mindcafeclonepractice.datas.WriterData
 
 class HomeMakasPickFragment : BaseFragment() {
 
     lateinit var binding: FragmentHomeMakasPickBinding
-    val mMakasUserList = ArrayList<UserData>()
+    val mWriterList = ArrayList<WriterData>()
+    var firebase: FirebaseDatabase? = null
+    var ref: DatabaseReference? = null
+    lateinit var mWriterAdapter: WriterAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -22,6 +30,36 @@ class HomeMakasPickFragment : BaseFragment() {
         savedInstanceState: Bundle?
     ): View? {
     binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home_makas_pick, container, false)
+
+
+        firebase = FirebaseDatabase.getInstance()
+
+        ref = FirebaseDatabase.getInstance().getReference("write")
+
+        ref?.addValueEventListener(object : ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+
+                if(snapshot!!.exists()){
+                    for (h in snapshot.children){
+                        val witer = h.getValue(WriterData::class.java)
+                        mWriterList.add(witer!!)
+
+                    }
+                    mWriterAdapter = WriterAdapter(mContext, mWriterList)
+                    binding.makasRecyclerView.adapter = mWriterAdapter
+                    binding.makasRecyclerView.setHasFixedSize(true)
+                    binding.makasRecyclerView.layoutManager = LinearLayoutManager(mContext,LinearLayoutManager.HORIZONTAL, false)
+
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+
+                Log.d("파이어베이스 응답에러 메시지",error.toString())
+            }
+
+
+        })
         return binding.root
     }
 
@@ -56,7 +94,6 @@ class HomeMakasPickFragment : BaseFragment() {
 
     override fun setValues() {
 
-
-
     }
+
 }
