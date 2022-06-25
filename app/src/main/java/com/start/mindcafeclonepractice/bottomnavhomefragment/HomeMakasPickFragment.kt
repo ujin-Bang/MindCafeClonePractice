@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
 import com.google.firebase.ktx.Firebase
 import com.start.mindcafeclonepractice.R
@@ -15,6 +16,8 @@ import com.start.mindcafeclonepractice.adapters.WriterAdapter
 import com.start.mindcafeclonepractice.bottomnavfragments.BaseFragment
 import com.start.mindcafeclonepractice.databinding.FragmentHomeMakasPickBinding
 import com.start.mindcafeclonepractice.datas.WriterData
+import java.util.Collections.max
+import kotlin.math.max
 
 class HomeMakasPickFragment : BaseFragment() {
 
@@ -94,6 +97,24 @@ class HomeMakasPickFragment : BaseFragment() {
 
     override fun setValues() {
 
+        binding.makasRecyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener(){
+            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+                super.onScrollStateChanged(recyclerView, newState)
+                if (newState == RecyclerView.SCROLL_STATE_IDLE){
+                    val firstPos = (binding.makasRecyclerView.layoutManager as LinearLayoutManager).findFirstCompletelyVisibleItemPosition()
+                    val secondPos = (binding.makasRecyclerView.layoutManager as LinearLayoutManager).findFirstVisibleItemPosition()
+                    val selectedPos = max(firstPos,secondPos)
+                    if(selectedPos!=-1){
+                        val viewItem = (binding.makasRecyclerView.layoutManager as LinearLayoutManager).findViewByPosition(selectedPos)
+                        viewItem?.run{
+                            val itemMargin = (binding.makasRecyclerView.measuredWidth-viewItem.measuredWidth)/2
+                            binding.makasRecyclerView.smoothScrollBy( this.x.toInt()-itemMargin , 0)
+                        }
+
+                    }
+                }
+            }
+        })
     }
 
 }
