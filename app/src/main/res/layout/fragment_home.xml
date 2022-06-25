@@ -30,6 +30,12 @@
                 class="com.start.mindcafeclonepractice.bottomnavhomefragment.HomeMakasPickFragment"/>
 
 
+            <fragment
+                android:tag="view4"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                class="com.start.mindcafeclonepractice.bottomnavhomefragment.Home4ViewFragment"/>
 
 
         </LinearLayout>

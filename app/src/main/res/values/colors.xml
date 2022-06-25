@@ -13,4 +13,11 @@
     <color name="dark_gray">#555151</color>
     <color name="light_gray">#F0ECEC</color>
     <color name="light_teal">#B9D3D0</color>
+    <color name="light_green">#B2DCBB</color>
+    <color name="dark_green">#74CD87</color>
+    <color name="sky">#9ECBE8</color>
+    <color name="pink">#E8A6BD</color>
+    <color name="dark_pink">#D15A83</color>
+    <color name="light_purple">#B08EEC</color>
+    <color name="jjin_blue">#088AC5</color>
 </resources>
