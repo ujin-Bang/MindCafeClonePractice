@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.start.mindcafeclonepractice.R
 import com.start.mindcafeclonepractice.datas.CoachData
 
@@ -25,6 +26,10 @@ class CoachAdapter(val mContext: Context,val mList: ArrayList<CoachData>): Recyc
 
             txtCoachName.text = data.name
             txtCoachIntroduction.text = data.introduction
+            Glide.with(mContext).load(data.profileImg).into(imgProfile)
+            Glide.with(mContext).load(data.talkImg).into(imgTalk)
+            Glide.with(mContext).load(data.phoneImg).into(imgPhone)
+            Glide.with(mContext).load(data.meetImg).into(imgmeet)
 
         }
 

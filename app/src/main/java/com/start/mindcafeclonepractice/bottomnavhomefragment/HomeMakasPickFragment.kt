@@ -10,13 +10,11 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
-import com.google.firebase.ktx.Firebase
 import com.start.mindcafeclonepractice.R
 import com.start.mindcafeclonepractice.adapters.WriterAdapter
 import com.start.mindcafeclonepractice.bottomnavfragments.BaseFragment
 import com.start.mindcafeclonepractice.databinding.FragmentHomeMakasPickBinding
 import com.start.mindcafeclonepractice.datas.WriterData
-import java.util.Collections.max
 import kotlin.math.max
 
 class HomeMakasPickFragment : BaseFragment() {
@@ -43,8 +41,10 @@ class HomeMakasPickFragment : BaseFragment() {
             override fun onDataChange(snapshot: DataSnapshot) {
 
                 if(snapshot!!.exists()){
+
                     for (h in snapshot.children){
                         val witer = h.getValue(WriterData::class.java)
+
                         mWriterList.add(witer!!)
 
                     }
@@ -52,7 +52,7 @@ class HomeMakasPickFragment : BaseFragment() {
                     binding.makasRecyclerView.adapter = mWriterAdapter
                     binding.makasRecyclerView.setHasFixedSize(true)
                     binding.makasRecyclerView.layoutManager = LinearLayoutManager(mContext,LinearLayoutManager.HORIZONTAL, false)
-
+                    mWriterAdapter.notifyDataSetChanged()
                 }
             }
 
