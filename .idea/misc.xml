@@ -14,8 +14,10 @@
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.278125" />
         <entry key="app/src/main/res/layout/activity_write.xml" value="0.125" />
         <entry key="app/src/main/res/layout/activity_write_next_button_click.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/expert_list_item.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_community.xml" value="0.1296875" />
         <entry key="app/src/main/res/layout/fragment_consulting.xml" value="0.1296875" />
+        <entry key="app/src/main/res/layout/fragment_expert.xml" value="0.13020833333333334" />
         <entry key="app/src/main/res/layout/fragment_expert_find.xml" value="0.1296875" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.12864583333333332" />
         <entry key="app/src/main/res/layout/fragment_home_4_view.xml" value="0.25" />
