@@ -16,7 +16,6 @@ import com.start.mindcafeclonepractice.adapters.WriterAdapter
 import com.start.mindcafeclonepractice.bottomnavfragments.BaseFragment
 import com.start.mindcafeclonepractice.databinding.FragmentHomeMakasPickBinding
 import com.start.mindcafeclonepractice.datas.WriterData
-import kotlin.math.max
 
 class HomeMakasPickFragment : BaseFragment() {
 
@@ -97,9 +96,10 @@ class HomeMakasPickFragment : BaseFragment() {
     }
 
     override fun setValues() {
-
+        //리싸이클러뷰 항목 스크롤 자연스러운 효과
         val snap = PagerSnapHelper()
         snap.attachToRecyclerView(binding.makasRecyclerView)
+
 
         //자연스럽게 넘어가지 않은 수정 필요
 //        binding.makasRecyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener(){

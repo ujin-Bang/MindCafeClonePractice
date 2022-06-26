@@ -3,6 +3,7 @@ package com.start.mindcafeclonepractice.bottomnavfragments
 import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.RecyclerView
 
 abstract class BaseFragment: Fragment() {
 
@@ -18,4 +19,5 @@ abstract class BaseFragment: Fragment() {
 
     abstract fun setupEvents()
     abstract fun setValues()
+
 }

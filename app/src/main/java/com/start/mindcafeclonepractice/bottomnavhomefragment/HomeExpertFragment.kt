@@ -2,6 +2,7 @@ package com.start.mindcafeclonepractice.bottomnavhomefragment
 
 import android.os.Bundle
 import android.util.Log
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
+import com.github.rubensousa.gravitysnaphelper.GravitySnapHelper
 import com.google.firebase.database.*
 import com.start.mindcafeclonepractice.R
 import com.start.mindcafeclonepractice.adapters.CoachAdapter
@@ -61,41 +63,15 @@ class HomeExpertFragment: BaseFragment() {
 
         } )
 
+        //리싸이클러뷰 자연스럽게 넘김효과 페이지 중앙으로 정렬됨
+//        val snap = PagerSnapHelper()
+//        snap.attachToRecyclerView(binding.expertRecyclerView)
 
-        val snap = PagerSnapHelper()
-        snap.attachToRecyclerView(binding.expertRecyclerView)
 
+        //리싸이클러뷰 페이지 자연스럽게 넘김 효과. gravitysnaphelper 의존성추가해서 사용해서 해결!!
+        val snapHelper = GravitySnapHelper(Gravity.START)
+        snapHelper.attachToRecyclerView(binding.expertRecyclerView)
 
-//        val snapHelper: LinearSnapHelper = object : LinearSnapHelper() {
-//            override fun findTargetSnapPosition(
-//                layoutManager: RecyclerView.LayoutManager,
-//                velocityX: Int,
-//                velocityY: Int
-//            ): Int {
-//                val centerView = findSnapView(layoutManager) ?: return RecyclerView.NO_POSITION
-//                val position = layoutManager.getPosition(centerView)
-//                var targetPosition = -1
-//                if (layoutManager.canScrollHorizontally()) {
-//                    targetPosition = if (velocityX < 0) {
-//                        position - 1
-//                    } else {
-//                        position + 1
-//                    }
-//                }
-//                if (layoutManager.canScrollVertically()) {
-//                    targetPosition = if (velocityY < 0) {
-//                        position - 1
-//                    } else {
-//                        position + 1
-//                    }
-//                }
-//                val firstItem = 0
-//                val lastItem = layoutManager.itemCount - 1
-//                targetPosition = Math.min(lastItem, Math.max(targetPosition, firstItem))
-//                return targetPosition
-//            }
-//        }
-//        snapHelper.attachToRecyclerView(binding.expertRecyclerView)
         return binding.root
 
     }
