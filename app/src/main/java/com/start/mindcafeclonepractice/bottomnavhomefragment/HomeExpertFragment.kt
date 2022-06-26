@@ -5,16 +5,18 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.LinearSnapHelper
+import androidx.recyclerview.widget.PagerSnapHelper
+import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
-import com.google.firebase.ktx.Firebase
 import com.start.mindcafeclonepractice.R
 import com.start.mindcafeclonepractice.adapters.CoachAdapter
 import com.start.mindcafeclonepractice.bottomnavfragments.BaseFragment
 import com.start.mindcafeclonepractice.databinding.FragmentExpertBinding
 import com.start.mindcafeclonepractice.datas.CoachData
+
 
 class HomeExpertFragment: BaseFragment() {
 
@@ -60,7 +62,42 @@ class HomeExpertFragment: BaseFragment() {
         } )
 
 
+        val snap = PagerSnapHelper()
+        snap.attachToRecyclerView(binding.expertRecyclerView)
+
+
+//        val snapHelper: LinearSnapHelper = object : LinearSnapHelper() {
+//            override fun findTargetSnapPosition(
+//                layoutManager: RecyclerView.LayoutManager,
+//                velocityX: Int,
+//                velocityY: Int
+//            ): Int {
+//                val centerView = findSnapView(layoutManager) ?: return RecyclerView.NO_POSITION
+//                val position = layoutManager.getPosition(centerView)
+//                var targetPosition = -1
+//                if (layoutManager.canScrollHorizontally()) {
+//                    targetPosition = if (velocityX < 0) {
+//                        position - 1
+//                    } else {
+//                        position + 1
+//                    }
+//                }
+//                if (layoutManager.canScrollVertically()) {
+//                    targetPosition = if (velocityY < 0) {
+//                        position - 1
+//                    } else {
+//                        position + 1
+//                    }
+//                }
+//                val firstItem = 0
+//                val lastItem = layoutManager.itemCount - 1
+//                targetPosition = Math.min(lastItem, Math.max(targetPosition, firstItem))
+//                return targetPosition
+//            }
+//        }
+//        snapHelper.attachToRecyclerView(binding.expertRecyclerView)
         return binding.root
+
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

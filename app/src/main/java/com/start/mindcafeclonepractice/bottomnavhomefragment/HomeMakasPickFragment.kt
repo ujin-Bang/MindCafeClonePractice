@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
 import com.start.mindcafeclonepractice.R
@@ -97,25 +98,28 @@ class HomeMakasPickFragment : BaseFragment() {
 
     override fun setValues() {
 
-        //자연스럽게 넘어가지 않은 수정 필요
-        binding.makasRecyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener(){
-            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
-                super.onScrollStateChanged(recyclerView, newState)
-                if (newState == RecyclerView.SCROLL_STATE_IDLE){
-                    val firstPos = (binding.makasRecyclerView.layoutManager as LinearLayoutManager).findFirstCompletelyVisibleItemPosition()
-                    val secondPos = (binding.makasRecyclerView.layoutManager as LinearLayoutManager).findFirstVisibleItemPosition()
-                    val selectedPos = max(firstPos,secondPos)
-                    if(selectedPos!=-1){
-                        val viewItem = (binding.makasRecyclerView.layoutManager as LinearLayoutManager).findViewByPosition(selectedPos)
-                        viewItem?.run{
-                            val itemMargin = (binding.makasRecyclerView.measuredWidth-viewItem.measuredWidth)/2
-                            binding.makasRecyclerView.smoothScrollBy( this.x.toInt()-itemMargin , 0)
-                        }
+        val snap = PagerSnapHelper()
+        snap.attachToRecyclerView(binding.makasRecyclerView)
 
-                    }
-                }
-            }
-        })
+        //자연스럽게 넘어가지 않은 수정 필요
+//        binding.makasRecyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener(){
+//            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+//                super.onScrollStateChanged(recyclerView, newState)
+//                if (newState == RecyclerView.SCROLL_STATE_IDLE){
+//                    val firstPos = (binding.makasRecyclerView.layoutManager as LinearLayoutManager).findFirstCompletelyVisibleItemPosition()
+//                    val secondPos = (binding.makasRecyclerView.layoutManager as LinearLayoutManager).findFirstVisibleItemPosition()
+//                    val selectedPos = max(firstPos,secondPos)
+//                    if(selectedPos!=-1){
+//                        val viewItem = (binding.makasRecyclerView.layoutManager as LinearLayoutManager).findViewByPosition(selectedPos)
+//                        viewItem?.run{
+//                            val itemMargin = (binding.makasRecyclerView.measuredWidth-viewItem.measuredWidth)/2
+//                            binding.makasRecyclerView.smoothScrollBy( this.x.toInt()-itemMargin , 0)
+//                        }
+//
+//                    }
+//                }
+//            }
+//        })
     }
 
 }
