@@ -1,6 +1,6 @@
 package com.start.mindcafeclonepractice.datas
 
-class GroupProgramData(
+data class GroupProgramData(
     val programImg: String? = null,
     val programTitle: String? = null,
     val programTime: String? = null,
