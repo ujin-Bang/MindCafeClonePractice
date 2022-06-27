@@ -48,6 +48,8 @@
             android:layout_marginTop="10dp"
             android:text="이곳은 커뮤니티에서 고민사연들에 대한 답변을 \n 기록하였습니다. 공감되는 사연과 고민이 있다면 함께 나눠요."
             android:textColor="@color/black"
+            android:maxLines="4"
+            android:ellipsize="end"
             android:textSize="15sp" />
 
         <TextView
