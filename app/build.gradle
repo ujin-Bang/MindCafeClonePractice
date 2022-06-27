@@ -38,6 +38,8 @@ android {
 
 dependencies {
 
+    implementation "ru.tinkoff.scrollingpagerindicator:scrollingpagerindicator:1.0.6"
+    implementation 'com.github.chahine:pageindicator:0.2.8'
     implementation 'com.github.rubensousa:gravitysnaphelper:2.2.2'
     implementation "androidx.cardview:cardview:1.0.0"
     implementation 'androidx.recyclerview:recyclerview:1.2.1'

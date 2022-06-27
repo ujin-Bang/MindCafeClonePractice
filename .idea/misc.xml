@@ -17,11 +17,13 @@
         <entry key="app/src/main/res/layout/expert_list_item.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_community.xml" value="0.1296875" />
         <entry key="app/src/main/res/layout/fragment_consulting.xml" value="0.1296875" />
-        <entry key="app/src/main/res/layout/fragment_expert.xml" value="0.13020833333333334" />
+        <entry key="app/src/main/res/layout/fragment_expert.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_expert_find.xml" value="0.1296875" />
+        <entry key="app/src/main/res/layout/fragment_group_program.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.12864583333333332" />
         <entry key="app/src/main/res/layout/fragment_home_4_view.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_home_four_view.xml" value="0.28935185185185186" />
+        <entry key="app/src/main/res/layout/fragment_home_group_program.xml" value="0.12916666666666668" />
         <entry key="app/src/main/res/layout/fragment_home_makas_pick.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_main_to.xml" value="0.27708333333333335" />
         <entry key="app/src/main/res/layout/fragment_main_top.xml" value="0.24351851851851852" />

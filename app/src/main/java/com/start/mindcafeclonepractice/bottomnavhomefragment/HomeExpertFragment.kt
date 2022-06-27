@@ -8,9 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.LinearSnapHelper
-import androidx.recyclerview.widget.PagerSnapHelper
-import androidx.recyclerview.widget.RecyclerView
 import com.github.rubensousa.gravitysnaphelper.GravitySnapHelper
 import com.google.firebase.database.*
 import com.start.mindcafeclonepractice.R
@@ -18,6 +15,7 @@ import com.start.mindcafeclonepractice.adapters.CoachAdapter
 import com.start.mindcafeclonepractice.bottomnavfragments.BaseFragment
 import com.start.mindcafeclonepractice.databinding.FragmentExpertBinding
 import com.start.mindcafeclonepractice.datas.CoachData
+import ru.tinkoff.scrollingpagerindicator.ScrollingPagerIndicator
 
 
 class HomeExpertFragment: BaseFragment() {
@@ -48,10 +46,7 @@ class HomeExpertFragment: BaseFragment() {
 
                         mExpertProfileList.add(coachPforile!!)
                     }
-                    mExpertProfileAdapter = CoachAdapter(mContext,mExpertProfileList)
-                    binding.expertRecyclerView.adapter = mExpertProfileAdapter
-                    binding.expertRecyclerView.layoutManager = LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false)
-                    binding.expertRecyclerView.setHasFixedSize(true)
+
                     mExpertProfileAdapter.notifyDataSetChanged()
                 }
             }
@@ -62,19 +57,27 @@ class HomeExpertFragment: BaseFragment() {
             }
 
         } )
+        mExpertProfileAdapter = CoachAdapter(mContext,mExpertProfileList)
+        binding.expertRecyclerView.adapter = mExpertProfileAdapter
+        binding.expertRecyclerView.layoutManager = LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false)
+        binding.expertRecyclerView.setHasFixedSize(true)
 
         //리싸이클러뷰 자연스럽게 넘김효과 페이지 중앙으로 정렬됨
 //        val snap = PagerSnapHelper()
 //        snap.attachToRecyclerView(binding.expertRecyclerView)
 
-
         //리싸이클러뷰 페이지 자연스럽게 넘김 효과. gravitysnaphelper 의존성추가해서 사용해서 해결!!
+        //GravitySnapHelper --> Gravity.START
         val snapHelper = GravitySnapHelper(Gravity.START)
         snapHelper.attachToRecyclerView(binding.expertRecyclerView)
+
+
 
         return binding.root
 
     }
+
+
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
@@ -85,6 +88,8 @@ class HomeExpertFragment: BaseFragment() {
     }
 
     override fun setValues() {
+
+
 
     }
 
