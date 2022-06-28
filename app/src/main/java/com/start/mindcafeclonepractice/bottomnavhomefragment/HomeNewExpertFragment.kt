@@ -2,12 +2,14 @@ package com.start.mindcafeclonepractice.bottomnavhomefragment
 
 import android.os.Bundle
 import android.util.Log
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
+import com.github.rubensousa.gravitysnaphelper.GravitySnapHelper
 import com.google.firebase.database.*
 import com.start.mindcafeclonepractice.R
 import com.start.mindcafeclonepractice.adapters.NewExpertAdapter
@@ -60,9 +62,12 @@ class HomeNewExpertFragment: BaseFragment() {
         binding.newExpertRecyclerView.setHasFixedSize(true) //리스스타이템 내용이 달라져도 자동으로 잘 보이도록 화면세팅
 
         //리싸이클러뷰를 뷰페이저처럼 화면넘김 해주기
-        val snapHelper = PagerSnapHelper()
-        snapHelper.attachToRecyclerView(binding.newExpertRecyclerView)
+//        val snapHelper = PagerSnapHelper()
+//        snapHelper.attachToRecyclerView(binding.newExpertRecyclerView)
 
+        //PagerSnapHelper는 중앙정렬로 되어 처음과 마지막 리스트아이템 선택불가 -> GravitySnapHelper로 전환
+        val snapHelper = GravitySnapHelper(Gravity.START)
+        snapHelper.attachToRecyclerView(binding.newExpertRecyclerView)
 
 
         return binding.root
