@@ -7,6 +7,6 @@ data class ReviewData(
     val solutionImg: String? = null,
     val content: String? = null,
     val ratingImg: String? = null,
-    val ratingNum: Float? = null
+    val ratingNum: Int? = null
 ) {
 }

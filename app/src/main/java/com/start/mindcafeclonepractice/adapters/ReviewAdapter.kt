@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.start.mindcafeclonepractice.R
 import com.start.mindcafeclonepractice.datas.ReviewData
-import org.w3c.dom.Text
 
 class ReviewAdapter(val mList: ArrayList<ReviewData>, val mContext: Context): RecyclerView.Adapter<ReviewAdapter.ReviewHolderView>() {
 

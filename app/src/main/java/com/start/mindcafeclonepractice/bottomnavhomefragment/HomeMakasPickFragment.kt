@@ -9,7 +9,6 @@ import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
-import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
 import com.start.mindcafeclonepractice.R
 import com.start.mindcafeclonepractice.adapters.WriterAdapter
@@ -30,39 +29,43 @@ class HomeMakasPickFragment : BaseFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-    binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home_makas_pick, container, false)
+        binding =
+            DataBindingUtil.inflate(inflater, R.layout.fragment_home_makas_pick, container, false)
 
 
         firebase = FirebaseDatabase.getInstance()
 
         ref = FirebaseDatabase.getInstance().getReference("write")
 
-        ref?.addValueEventListener(object : ValueEventListener{
+        ref?.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
 
-                if(snapshot!!.exists()){
+                if (snapshot!!.exists()) {
 
-                    for (h in snapshot.children){
-                        val witer = h.getValue(WriterData::class.java)
+                    for (h in snapshot.children) {
+                        val writer = h.getValue(WriterData::class.java)
 
-                        mWriterList.add(witer!!)
+                        mWriterList.add(writer!!)
 
                     }
-                    mWriterAdapter = WriterAdapter(mContext, mWriterList)
-                    binding.makasRecyclerView.adapter = mWriterAdapter
-                    binding.makasRecyclerView.setHasFixedSize(true)
-                    binding.makasRecyclerView.layoutManager = LinearLayoutManager(mContext,LinearLayoutManager.HORIZONTAL, false)
                     mWriterAdapter.notifyDataSetChanged()
                 }
             }
 
             override fun onCancelled(error: DatabaseError) {
 
-                Log.d("파이어베이스 응답에러 메시지",error.toString())
+                Log.d("파이어베이스 응답에러 메시지", error.toString())
             }
 
 
         })
+        mWriterAdapter = WriterAdapter(mContext, mWriterList)
+        binding.makasRecyclerView.adapter = mWriterAdapter
+        binding.makasRecyclerView.layoutManager =
+            LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false)
+        binding.makasRecyclerView.setHasFixedSize(true)
+
+
         return binding.root
     }
 
@@ -78,11 +81,13 @@ class HomeMakasPickFragment : BaseFragment() {
 
             val alert = AlertDialog.Builder(mContext)
             alert.setTitle("마카's PICK이란?")
-            alert.setMessage("마인드카페 커뮤니티 내 전문답변을 \n받은 사연들 " +
-                    "중 선택된 사연들입니다.\n \n전문답변 \n고민요약, 고민과 관련된 원인 분석, " +
-                    "\n고민에 대한 해결방안과 대처 방안" +
-                    "을 더 도움 \n받을 수 있는 측면에 대한전문가들의 " +
-                    "답변을 \n받을 수 있습니다.")
+            alert.setMessage(
+                "마인드카페 커뮤니티 내 전문답변을 \n받은 사연들 " +
+                        "중 선택된 사연들입니다.\n \n전문답변 \n고민요약, 고민과 관련된 원인 분석, " +
+                        "\n고민에 대한 해결방안과 대처 방안" +
+                        "을 더 도움 \n받을 수 있는 측면에 대한전문가들의 " +
+                        "답변을 \n받을 수 있습니다."
+            )
             alert.setPositiveButton("확인", null)
             alert.show()
 
