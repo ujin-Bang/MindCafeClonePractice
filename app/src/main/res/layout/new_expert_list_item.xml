@@ -25,6 +25,7 @@
                     android:orientation="horizontal">
 
                     <de.hdodenhof.circleimageview.CircleImageView
+                       android:id="@+id/imgProfile"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@mipmap/ic_launcher"/>
@@ -43,6 +44,7 @@
                 </LinearLayout>
 
                 <TextView
+                    android:id="@+id/txtName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -50,6 +52,7 @@
                     android:text="다마고치"/>
 
                 <TextView
+                    android:id="@+id/txtIntroduction"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -64,11 +67,13 @@
                     android:layout_marginTop="10dp">
 
                     <ImageView
+                        android:id="@+id/imgConsultingTool1"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:src="@drawable/expert_profile_talk_icon"/>
 
                     <ImageView
+                        android:id="@+id/imgConsultingTool2"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_marginStart="5dp"
