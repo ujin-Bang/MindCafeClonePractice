@@ -69,7 +69,7 @@
             <fragment
                 android:tag="review"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="wrap_content"
                 class="com.start.mindcafeclonepractice.bottomnavhomefragment.HomeReviewFragment"/>
 
             <ImageView
@@ -78,6 +78,13 @@
                 android:layout_height="100dp"
                 android:src="@mipmap/ic_launcher"
                 android:scaleType="centerCrop"/>
+
+            <fragment
+                android:tag="newExpert"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                class="com.start.mindcafeclonepractice.bottomnavhomefragment.HomeNewExpertFragment"/>
         </LinearLayout>
 
     </ScrollView>
