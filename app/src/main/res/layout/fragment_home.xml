@@ -69,9 +69,15 @@
             <fragment
                 android:tag="review"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="200dp"
                 class="com.start.mindcafeclonepractice.bottomnavhomefragment.HomeReviewFragment"/>
 
+            <ImageView
+                android:id="@+id/imgBanner"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@mipmap/ic_launcher"
+                android:scaleType="centerCrop"/>
         </LinearLayout>
 
     </ScrollView>

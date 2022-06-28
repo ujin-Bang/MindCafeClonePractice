@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.PagerSnapHelper
 import com.google.firebase.database.*
 import com.start.mindcafeclonepractice.R
 import com.start.mindcafeclonepractice.adapters.ReviewAdapter
@@ -42,7 +43,7 @@ class HomeReviewFragment: BaseFragment() {
                         val reviewData = h.getValue(ReviewData::class.java)
                         mReviewList.add(reviewData!!)
                     }
-                    mReviewAdapter.notifyDataSetChanged()
+                    mReviewAdapter.notifyDataSetChanged() //리스트에 파이어베이스 실제 데이터 추가 후 어댑터 바로 새로고침
 
                 }
             }
@@ -54,7 +55,11 @@ class HomeReviewFragment: BaseFragment() {
         mReviewAdapter = ReviewAdapter(mReviewList, mContext)
         binding.reviewRecyclerView.adapter = mReviewAdapter
         binding.reviewRecyclerView.layoutManager = LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL,false)
-        binding.reviewRecyclerView.setHasFixedSize(true)
+        binding.reviewRecyclerView.setHasFixedSize(true) //리싸이클러뷰 내용물에 따라 길이 변경시 자동으로 최적화 세팅해줌.
+
+        //스냅핼퍼 객체화, 리싸이클러뷰에 적용, 뷰페이져처럼 페이지 넘기는 효과
+        val snapHelper = PagerSnapHelper()
+        snapHelper.attachToRecyclerView(binding.reviewRecyclerView)
 
 
         return binding.root
