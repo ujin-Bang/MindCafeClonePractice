@@ -7,6 +7,7 @@
         <entry key="app/src/main/res/drawable/login_button_box.xml" value="0.161" />
         <entry key="app/src/main/res/drawable/main_icon_background_box.xml" value="0.25" />
         <entry key="app/src/main/res/drawable/makas_background.xml" value="0.1395" />
+        <entry key="app/src/main/res/drawable/orenge_background_box.xml" value="0.1525" />
         <entry key="app/src/main/res/layout/activity_community.xml" value="0.1296875" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.26145833333333335" />
@@ -40,6 +41,7 @@
         <entry key="app/src/main/res/layout/makas_list_item.xml" value="0.361794500723589" />
         <entry key="app/src/main/res/layout/my_custom_action_bar_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/my_custom_actionbar.xml" value="0.27708333333333335" />
+        <entry key="app/src/main/res/layout/new_expert_list_item.xml" value="0.55" />
         <entry key="app/src/main/res/layout/review_list_item.xml" value="0.375" />
         <entry key="app/src/main/res/menu/makas_bottom_nav.xml" value="0.2791666666666667" />
         <entry key="app/src/main/res/menu/navigation_mene.xml" value="0.278125" />
