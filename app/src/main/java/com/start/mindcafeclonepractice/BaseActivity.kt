@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.MotionEvent
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.ActionBar
@@ -17,9 +18,11 @@ abstract class BaseActivity : AppCompatActivity() {
     //xml에 아이디 부여 액션바 사용하는 액티비티에서 커스텀 하기 위해 멤버변수로 지정.
     lateinit var mLinearLayoutMainActionBar: LinearLayout
     lateinit var mLinearLayoutWriteActionbar: LinearLayout
+    lateinit var mLinearLayoutNewExpertActionbar: LinearLayout
 
     lateinit var mBtnBack: TextView
     lateinit var mBtnNext: TextView
+    lateinit var mBtnBack2: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,9 +60,11 @@ abstract class BaseActivity : AppCompatActivity() {
         //멤버변수로 지정된 아이디 객체로 만들기( 버튼이미지는 기능부여)
         mLinearLayoutMainActionBar = defActionBar.customView.findViewById(R.id.mainActionBar)
         mLinearLayoutWriteActionbar = defActionBar.customView.findViewById(R.id.writeActionBar)
+        mLinearLayoutNewExpertActionbar = defActionBar.customView.findViewById(R.id.newExpertProfileActionbar)
 
         mBtnBack = defActionBar.customView.findViewById(R.id.btnBack)
         mBtnNext = defActionBar.customView.findViewById(R.id.btnNext)
+        mBtnBack2 = defActionBar.customView.findViewById(R.id.btnBack2)
 
         mBtnBack.setOnTouchListener { v, event ->
 

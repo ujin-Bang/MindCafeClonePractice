@@ -80,6 +80,8 @@
                     android:layout_height="wrap_content"
                     android:maxLines="3"
                     android:text="#감정코칭 #의사소통 # 인간관계\n#관계개선 #양육 #느린학습자\n세상의 모든 감정과 마주합니다."/>
+
+
             </LinearLayout>
 
 
