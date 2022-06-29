@@ -66,6 +66,10 @@ abstract class BaseActivity : AppCompatActivity() {
         mBtnNext = defActionBar.customView.findViewById(R.id.btnNext)
         mBtnBack2 = defActionBar.customView.findViewById(R.id.btnBack2)
 
+        mBtnBack2.setOnClickListener {
+            finish()
+        }
+
         mBtnBack.setOnTouchListener { v, event ->
 
             when (event.action) {
