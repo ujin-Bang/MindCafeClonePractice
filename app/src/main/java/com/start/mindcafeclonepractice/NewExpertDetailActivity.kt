@@ -24,13 +24,13 @@ class NewExpertDetailActivity : BaseActivity() {
 
     override fun setValues() {
 
-//        data = intent.getSerializableExtra("detailProfile") as NewExpertData
-//
-//        Glide.with(mContext).load(data.profileImg).into(binding.imgProfile)
-//        binding.txtIntroduction.text = data.introduction
-//        binding.txtCoachName.text = data.name
-//        Glide.with(mContext).load(data.consultingTool1).into(binding.imgConsultingTool1)
-//        Glide.with(mContext).load(data.consultingTool2).into(binding.imgConsultingTool2)
+        data = intent.getSerializableExtra("data") as NewExpertData
+
+        Glide.with(mContext).load(data.profileImg).into(binding.imgProfile)
+        binding.txtIntroduction.text = data.introduction
+        binding.txtCoachName.text = data.name
+        Glide.with(mContext).load(data.consultingTool1).into(binding.imgConsultingTool1)
+        Glide.with(mContext).load(data.consultingTool2).into(binding.imgConsultingTool2)
 
 
     }
