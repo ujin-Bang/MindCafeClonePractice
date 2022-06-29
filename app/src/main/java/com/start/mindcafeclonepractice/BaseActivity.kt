@@ -1,15 +1,18 @@
 package com.start.mindcafeclonepractice
 
+import android.R.attr.button
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.MotionEvent
+import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+
 
 abstract class BaseActivity : AppCompatActivity() {
 
@@ -60,7 +63,8 @@ abstract class BaseActivity : AppCompatActivity() {
         //멤버변수로 지정된 아이디 객체로 만들기( 버튼이미지는 기능부여)
         mLinearLayoutMainActionBar = defActionBar.customView.findViewById(R.id.mainActionBar)
         mLinearLayoutWriteActionbar = defActionBar.customView.findViewById(R.id.writeActionBar)
-        mLinearLayoutNewExpertActionbar = defActionBar.customView.findViewById(R.id.newExpertProfileActionbar)
+        mLinearLayoutNewExpertActionbar =
+            defActionBar.customView.findViewById(R.id.newExpertProfileActionbar)
 
         mBtnBack = defActionBar.customView.findViewById(R.id.btnBack)
         mBtnNext = defActionBar.customView.findViewById(R.id.btnNext)
@@ -69,6 +73,8 @@ abstract class BaseActivity : AppCompatActivity() {
         mBtnBack2.setOnClickListener {
             finish()
         }
+
+
 
         mBtnBack.setOnTouchListener { v, event ->
 

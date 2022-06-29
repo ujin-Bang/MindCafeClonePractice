@@ -117,11 +117,13 @@
             android:gravity="center_vertical"
             android:paddingHorizontal="10dp">
 
-            <de.hdodenhof.circleimageview.CircleImageView
+            <ImageView
                 android:id="@+id/btnBack2"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:background="?attr/selectableItemBackground"
+                android:background="@drawable/ripple_effect_background"
+                android:clickable="true"
+                android:focusable="true"
                 android:src="@drawable/left_arrow_back"/>
 
             <TextView
