@@ -11,7 +11,17 @@ import com.bumptech.glide.Glide
 import com.start.mindcafeclonepractice.R
 import com.start.mindcafeclonepractice.datas.NewExpertData
 
-class NewExpertAdapter(val mList: ArrayList<NewExpertData>, val mContext: Context): RecyclerView.Adapter<NewExpertAdapter.NewExpertViewHolder>() {
+class NewExpertAdapter(
+    val mList: ArrayList<NewExpertData>,
+    val mContext: Context): RecyclerView.Adapter<NewExpertAdapter.NewExpertViewHolder>() {
+
+    interface OnItemClickListener{
+        fun onItemClick(v:View, data: NewExpertData, pos : Int)
+    }
+    private var listener : OnItemClickListener? = null
+    fun setOnItemClickListener(listener : OnItemClickListener) {
+        this.listener = listener
+    }
 
     inner class NewExpertViewHolder(row: View): RecyclerView.ViewHolder(row) {
 
@@ -28,6 +38,14 @@ class NewExpertAdapter(val mList: ArrayList<NewExpertData>, val mContext: Contex
             txtIntroduction.text = data.introduction
             Glide.with(mContext).load(data.consultingTool1).into(imgConsultingTool1)
             Glide.with(mContext).load(data.consultingTool2).into(imgConsultingTool2)
+
+            val pos = adapterPosition
+            if(pos!= RecyclerView.NO_POSITION)
+            {
+                itemView.setOnClickListener {
+                    listener?.onItemClick(itemView,data,pos)
+                }
+            }
         }
     }
 
@@ -40,6 +58,7 @@ class NewExpertAdapter(val mList: ArrayList<NewExpertData>, val mContext: Contex
     override fun onBindViewHolder(holder: NewExpertViewHolder, position: Int) {
 
         holder.bind(mList[position])
+
     }
 
     override fun getItemCount(): Int {

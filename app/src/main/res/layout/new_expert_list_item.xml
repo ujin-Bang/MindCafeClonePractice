@@ -26,14 +26,14 @@
 
                     <de.hdodenhof.circleimageview.CircleImageView
                        android:id="@+id/imgProfile"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
                         android:src="@mipmap/ic_launcher"/>
 
                     <TextView
                         android:layout_width="30dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="70dp"
+                        android:layout_marginStart="60dp"
                         android:gravity="center"
                         android:text="신규"
                         android:fontFamily="@font/font_3"
@@ -68,14 +68,14 @@
 
                     <ImageView
                         android:id="@+id/imgConsultingTool1"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
                         android:src="@drawable/expert_profile_talk_icon"/>
 
                     <ImageView
                         android:id="@+id/imgConsultingTool2"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
                         android:layout_marginStart="5dp"
                         android:src="@drawable/exper_profile_phone_icon"/>
                 </LinearLayout>
