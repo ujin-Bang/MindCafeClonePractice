@@ -1,11 +1,9 @@
 package com.start.mindcafeclonepractice
 
-import android.R.attr.button
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.MotionEvent
-import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
