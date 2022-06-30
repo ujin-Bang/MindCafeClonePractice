@@ -8,51 +8,10 @@
         android:layout_marginVertical="20dp"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:text="상담을 망설이시는 분에게"/>
-
-        <TextView
-            android:id="@+id/txtScruple"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="내용 자리"
-            android:layout_marginTop="10dp"/>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="경력"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:textColor="@color/black"/>
-
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="5dp"
-                android:src="@drawable/viewpager2_in_icon"/>
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/txtCareer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="내용 자리"
-            android:layout_marginTop="10dp"/>
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/viewPager2In1RecyclerView"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"/>
 
     </LinearLayout>
 

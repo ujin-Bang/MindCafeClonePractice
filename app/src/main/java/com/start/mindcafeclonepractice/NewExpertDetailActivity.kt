@@ -52,11 +52,17 @@ class NewExpertDetailActivity : BaseActivity() {
             when(position){
                 0 -> {
                     tab.text = "소개"
-
                 }
                 1 -> tab.text = "일정"
                 else -> tab.text = "후기"
             }
         }.attach()
+
+
+        //뷰페이저 스와이프기능 제거 :참고하기
+//        binding.newExpertProfileViewPager2.run{
+//            isUserInputEnabled= false
+        //        }
+
     }
 }
