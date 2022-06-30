@@ -3,7 +3,9 @@ package com.start.mindcafeclonepractice
 import android.os.Bundle
 import android.view.View
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.FragmentActivity
 import com.bumptech.glide.Glide
+import com.start.mindcafeclonepractice.adapters.NewExpertDetailViewPager2Adapter
 import com.start.mindcafeclonepractice.databinding.ActivityNewExpertDetailBinding
 import com.start.mindcafeclonepractice.datas.NewExpertData
 
@@ -11,6 +13,7 @@ class NewExpertDetailActivity : BaseActivity() {
 
     lateinit var binding: ActivityNewExpertDetailBinding
     lateinit var data : NewExpertData
+    lateinit var mNewExpertDetailProfileViewPagerAdapter : NewExpertDetailViewPager2Adapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +39,11 @@ class NewExpertDetailActivity : BaseActivity() {
 
     mLinearLayoutNewExpertActionbar.visibility = View.VISIBLE
     mLinearLayoutMainActionBar.visibility = View.GONE
+
+        //ViewPager2 어댑터 연결
+        mNewExpertDetailProfileViewPagerAdapter = NewExpertDetailViewPager2Adapter(mContext as FragmentActivity)
+        binding.newExpertProfileViewPager2.adapter = mNewExpertDetailProfileViewPagerAdapter
+
 
     }
 }
