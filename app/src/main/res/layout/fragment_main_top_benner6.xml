@@ -9,6 +9,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/benner6"
+            android:foreground="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
             android:scaleType="centerCrop"/>
 
 

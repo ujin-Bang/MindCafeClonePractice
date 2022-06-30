@@ -10,6 +10,9 @@
         android:layout_height="match_parent"
         android:background="@drawable/makas_background"
         android:padding="10dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
         android:orientation="vertical">
 
 

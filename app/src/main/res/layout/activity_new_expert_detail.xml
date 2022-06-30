@@ -93,11 +93,9 @@
             android:layout_height="wrap_content"
             android:scrollIndicators="start"
             android:background="@drawable/ripple_effect_background"
-            app:tabIndicatorColor="@color/black"
-            app:tabSelectedTextColor="@color/black">
+            app:tabIndicatorColor="@color/dark_green"
+            app:tabSelectedTextColor="@color/black"/>
 
-
-        </com.google.android.material.tabs.TabLayout>
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/newExpertProfileViewPager2"

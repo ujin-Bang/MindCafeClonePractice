@@ -50,7 +50,10 @@ class NewExpertDetailActivity : BaseActivity() {
         TabLayoutMediator(binding.newExpertProfileTabLayout, binding.newExpertProfileViewPager2) { tab, position ->
 
             when(position){
-                0 -> tab.text = "소개"
+                0 -> {
+                    tab.text = "소개"
+
+                }
                 1 -> tab.text = "일정"
                 else -> tab.text = "후기"
             }
