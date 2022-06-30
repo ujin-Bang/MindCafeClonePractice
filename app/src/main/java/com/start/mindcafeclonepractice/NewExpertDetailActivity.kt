@@ -5,6 +5,7 @@ import android.view.View
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.FragmentActivity
 import com.bumptech.glide.Glide
+import com.google.android.material.tabs.TabLayoutMediator
 import com.start.mindcafeclonepractice.adapters.NewExpertDetailViewPager2Adapter
 import com.start.mindcafeclonepractice.databinding.ActivityNewExpertDetailBinding
 import com.start.mindcafeclonepractice.datas.NewExpertData
@@ -45,5 +46,14 @@ class NewExpertDetailActivity : BaseActivity() {
         binding.newExpertProfileViewPager2.adapter = mNewExpertDetailProfileViewPagerAdapter
 
 
+        // 뷰페이저와 탭레이아웃을 붙임
+        TabLayoutMediator(binding.newExpertProfileTabLayout, binding.newExpertProfileViewPager2) { tab, position ->
+
+            when(position){
+                0 -> tab.text = "소개"
+                1 -> tab.text = "일정"
+                else -> tab.text = "후기"
+            }
+        }.attach()
     }
 }
