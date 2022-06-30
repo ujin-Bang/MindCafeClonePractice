@@ -85,9 +85,22 @@
             </LinearLayout>
 
 
-
-
         </LinearLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/newExpertProfileTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollIndicators="start"
+            android:background="@drawable/ripple_effect_background"
+            app:tabIndicatorColor="@color/black"
+            app:tabSelectedTextColor="@color/black"/>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/newExpertProfileViewPager2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"/>
 
     </LinearLayout>
 </layout>

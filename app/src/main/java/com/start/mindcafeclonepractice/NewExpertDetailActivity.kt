@@ -3,7 +3,6 @@ package com.start.mindcafeclonepractice
 import android.os.Bundle
 import android.view.View
 import androidx.databinding.DataBindingUtil
-import androidx.transition.Visibility
 import com.bumptech.glide.Glide
 import com.start.mindcafeclonepractice.databinding.ActivityNewExpertDetailBinding
 import com.start.mindcafeclonepractice.datas.NewExpertData
