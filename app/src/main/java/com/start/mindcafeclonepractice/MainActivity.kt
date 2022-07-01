@@ -24,7 +24,6 @@ class MainActivity : BaseActivity() {
             R.id.home -> {
                 println("home pressed")
                 replaceFragment(HomeFragment())
-
                 return@OnNavigationItemSelectedListener true
             }
 

@@ -2,6 +2,7 @@ package com.start.mindcafeclonepractice
 
 import android.os.Bundle
 import android.view.View
+import androidx.core.os.bundleOf
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.FragmentActivity
 import com.bumptech.glide.Glide
@@ -9,6 +10,7 @@ import com.google.android.material.tabs.TabLayoutMediator
 import com.start.mindcafeclonepractice.adapters.NewExpertDetailViewPager2Adapter
 import com.start.mindcafeclonepractice.databinding.ActivityNewExpertDetailBinding
 import com.start.mindcafeclonepractice.datas.NewExpertData
+import com.start.mindcafeclonepractice.newexpertdetailviewpager2infragment.NewExpertProfileDetailViewPager2in1
 
 class NewExpertDetailActivity : BaseActivity() {
 
@@ -59,10 +61,13 @@ class NewExpertDetailActivity : BaseActivity() {
         }.attach()
 
 
-        //뷰페이저 스와이프기능 제거 :참고하기
-//        binding.newExpertProfileViewPager2.run{
-//            isUserInputEnabled= false
-        //        }
-
     }
 }
+
+
+
+
+//뷰페이저 스와이프기능 제거 :참고하기
+//        binding.newExpertProfileViewPager2.run{
+//            isUserInputEnabled= false
+//        }
