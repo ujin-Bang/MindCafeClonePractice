@@ -18,7 +18,11 @@ class NewExpertDetailViewPager2Adapter(fa: FragmentActivity): FragmentStateAdapt
 
         return when(position){
 
-            0 -> NewExpertProfileDetailViewPager2in1()
+            0 ->  {
+                val myFrag = NewExpertProfileDetailViewPager2in1()
+//                myFrag.NED = NewExpertDetailActivity().data //액티비티에서 어댑터 콜할때 사용할 데이터도 같이 넣으시면 낫긴 할것 같은데
+                return myFrag
+            }
             1 -> NewExpertProfileDetailViewPager2in2()
             else -> NewExpertProfileDetailViewPager2in3()
         }

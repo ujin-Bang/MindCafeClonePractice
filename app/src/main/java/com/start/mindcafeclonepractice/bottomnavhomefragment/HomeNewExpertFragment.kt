@@ -17,6 +17,8 @@ import com.start.mindcafeclonepractice.bottomnavfragments.BaseFragment
 import com.start.mindcafeclonepractice.databinding.FragmentHomeNewExpertBinding
 import com.start.mindcafeclonepractice.datas.NewExpertData
 import com.start.mindcafeclonepractice.NewExpertDetailActivity
+import com.start.mindcafeclonepractice.adapters.NewExpertDetailViewPager2Adapter
+import com.start.mindcafeclonepractice.newexpertdetailviewpager2infragment.NewExpertProfileDetailViewPager2in1
 
 class HomeNewExpertFragment: BaseFragment() {
 
@@ -92,6 +94,7 @@ class HomeNewExpertFragment: BaseFragment() {
             }
 
         })
+
 
     }
 

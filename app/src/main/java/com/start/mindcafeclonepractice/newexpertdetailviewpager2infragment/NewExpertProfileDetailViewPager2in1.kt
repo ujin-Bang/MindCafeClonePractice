@@ -8,11 +8,13 @@ import androidx.databinding.DataBindingUtil
 import com.start.mindcafeclonepractice.R
 import com.start.mindcafeclonepractice.bottomnavfragments.BaseFragment
 import com.start.mindcafeclonepractice.databinding.FragmentNewExpertProfileDetailViewpager2in1Binding
+import com.start.mindcafeclonepractice.datas.NewExpertData
 
 class NewExpertProfileDetailViewPager2in1 : BaseFragment() {
 
-    lateinit var binding: FragmentNewExpertProfileDetailViewpager2in1Binding
+    lateinit var NED: NewExpertData
 
+    lateinit var binding: FragmentNewExpertProfileDetailViewpager2in1Binding
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,6 +27,8 @@ class NewExpertProfileDetailViewPager2in1 : BaseFragment() {
             container,
             false
         )
+
+
         return binding.root
 
     }
@@ -33,6 +37,9 @@ class NewExpertProfileDetailViewPager2in1 : BaseFragment() {
     }
 
     override fun setValues() {
-
+        NED = NewExpertData()
+        binding.txtCoachingEffect.text = NED.coachingEffect
+        binding.txtCoachingScruple.text = NED.coachingScruple
+        binding.txtCoachingStyle.text = NED.coachingStyle
     }
 }
