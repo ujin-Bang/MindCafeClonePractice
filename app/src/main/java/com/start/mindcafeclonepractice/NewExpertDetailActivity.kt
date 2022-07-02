@@ -1,5 +1,6 @@
 package com.start.mindcafeclonepractice
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -48,6 +49,12 @@ class NewExpertDetailActivity : BaseActivity() {
 
         }
 
+        binding.btnSelect.setOnClickListener {
+
+            val myIntent = Intent(mContext, SelectExpertConsultingMenuActivity::class.java)
+            myIntent.putExtra("data",data)
+            startActivity(myIntent)
+        }
 
     }
 
