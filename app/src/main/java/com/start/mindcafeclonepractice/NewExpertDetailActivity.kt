@@ -2,6 +2,7 @@ package com.start.mindcafeclonepractice
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.FragmentActivity
 import com.bumptech.glide.Glide
@@ -16,6 +17,8 @@ class NewExpertDetailActivity : BaseActivity() {
     lateinit var data : NewExpertData
     lateinit var mNewExpertDetailProfileViewPagerAdapter : NewExpertDetailViewPager2Adapter
 
+    var clicked = true
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_new_expert_detail)
@@ -24,6 +27,27 @@ class NewExpertDetailActivity : BaseActivity() {
     }
 
     override fun setupEvents() {
+
+        binding.btnHeart.setOnClickListener {
+
+
+            if (clicked){
+               binding.btnHeart.visibility = View.GONE
+               binding.btnHeart2.visibility = View.VISIBLE
+                Toast.makeText(mContext, "전문가 찜 완료", Toast.LENGTH_SHORT).show()
+                clicked = false
+            }
+            else {
+
+                binding.btnHeart.visibility = View.VISIBLE
+                binding.btnHeart2.visibility = View.GONE
+                Toast.makeText(mContext, "전문가 찜 취소", Toast.LENGTH_SHORT).show()
+                clicked = true
+
+            }
+
+        }
+
 
     }
 

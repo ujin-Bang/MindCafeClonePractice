@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/drawable/bottom_nav_icon_color.xml" value="0.14" />
         <entry key="app/src/main/res/drawable/custom_ripple_effect2.xml" value="0.1525" />
+        <entry key="app/src/main/res/drawable/ic_baseline_favorite_border_24.xml" value="0.14" />
         <entry key="app/src/main/res/drawable/login_button_box.xml" value="0.161" />
         <entry key="app/src/main/res/drawable/main_icon_background_box.xml" value="0.25" />
         <entry key="app/src/main/res/drawable/makas_background.xml" value="0.1395" />
