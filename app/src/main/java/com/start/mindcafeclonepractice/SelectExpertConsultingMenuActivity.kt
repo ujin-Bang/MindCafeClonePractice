@@ -1,6 +1,7 @@
 package com.start.mindcafeclonepractice
 
 import android.os.Bundle
+import android.view.View
 import androidx.databinding.DataBindingUtil
 import com.start.mindcafeclonepractice.databinding.ActivitySelectExpertConsultingMenuBinding
 import com.start.mindcafeclonepractice.datas.NewExpertData
@@ -23,9 +24,20 @@ class SelectExpertConsultingMenuActivity : BaseActivity() {
 
     override fun setValues() {
 
+
+
         mData = intent.getSerializableExtra("data")as NewExpertData
         binding.txtName.text = mData.name
         binding.txtCoachIntroduction.text = mData.introduction
 
+        actionBarCustom()
+
+    }
+
+    fun actionBarCustom(){
+        mLinearLayoutNewExpertSelectedConsultingMenu.visibility = View.VISIBLE
+        mLinearLayoutMainActionBar.visibility = View.GONE
+
+        mSelectedExpertName.text = mData.name
     }
 }

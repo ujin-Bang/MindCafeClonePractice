@@ -20,10 +20,13 @@ abstract class BaseActivity : AppCompatActivity() {
     lateinit var mLinearLayoutMainActionBar: LinearLayout
     lateinit var mLinearLayoutWriteActionbar: LinearLayout
     lateinit var mLinearLayoutNewExpertActionbar: LinearLayout
+    lateinit var mLinearLayoutNewExpertSelectedConsultingMenu: LinearLayout
 
     lateinit var mBtnBack: TextView
     lateinit var mBtnNext: TextView
     lateinit var mBtnBack2: ImageView
+    lateinit var mBtnBack3: ImageView
+    lateinit var mSelectedExpertName: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,12 +64,21 @@ abstract class BaseActivity : AppCompatActivity() {
         //멤버변수로 지정된 아이디 객체로 만들기( 버튼이미지는 기능부여)
         mLinearLayoutMainActionBar = defActionBar.customView.findViewById(R.id.mainActionBar)
         mLinearLayoutWriteActionbar = defActionBar.customView.findViewById(R.id.writeActionBar)
-        mLinearLayoutNewExpertActionbar =
-            defActionBar.customView.findViewById(R.id.newExpertProfileActionbar)
+        mLinearLayoutNewExpertActionbar = defActionBar.customView.findViewById(R.id.newExpertProfileActionbar)
+        mLinearLayoutNewExpertSelectedConsultingMenu = defActionBar.customView.findViewById(R.id.newExpertSelectedConsultingMenu)
+
 
         mBtnBack = defActionBar.customView.findViewById(R.id.btnBack)
         mBtnNext = defActionBar.customView.findViewById(R.id.btnNext)
         mBtnBack2 = defActionBar.customView.findViewById(R.id.btnBack2)
+        mBtnBack3 = defActionBar.customView.findViewById(R.id.btnBack3)
+        mSelectedExpertName = defActionBar.customView.findViewById(R.id.txtSelectName)
+
+
+        mBtnBack3.setOnClickListener {
+            finish()
+        }
+
 
         mBtnBack2.setOnClickListener {
             finish()
