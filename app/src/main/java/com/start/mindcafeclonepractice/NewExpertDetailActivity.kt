@@ -18,7 +18,7 @@ class NewExpertDetailActivity : BaseActivity() {
     lateinit var data : NewExpertData
     lateinit var mNewExpertDetailProfileViewPagerAdapter : NewExpertDetailViewPager2Adapter
 
-    var clicked = true
+    var clicked = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,18 +32,18 @@ class NewExpertDetailActivity : BaseActivity() {
         binding.btnHeart.setOnClickListener {
 
 
-            if (clicked){
+            if (!clicked){
                binding.btnHeart.visibility = View.GONE
                binding.btnHeart2.visibility = View.VISIBLE
                 Toast.makeText(mContext, "전문가 찜 완료", Toast.LENGTH_SHORT).show()
-                clicked = false
+                clicked = true
             }
-            else {
+            else{
 
                 binding.btnHeart.visibility = View.VISIBLE
                 binding.btnHeart2.visibility = View.GONE
                 Toast.makeText(mContext, "전문가 찜 취소", Toast.LENGTH_SHORT).show()
-                clicked = true
+                clicked = false
 
             }
 
