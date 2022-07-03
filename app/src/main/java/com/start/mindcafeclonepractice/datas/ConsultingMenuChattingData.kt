@@ -1,6 +1,6 @@
 package com.start.mindcafeclonepractice.datas
 
-data class ConsultingMenuData(
+data class ConsultingMenuChattingData(
     val title: String? = null,
     val severalMinutesTime: String? = null,
     val expirationPeriod: String? = null,

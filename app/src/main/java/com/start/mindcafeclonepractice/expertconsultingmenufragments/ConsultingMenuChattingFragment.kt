@@ -8,18 +8,17 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.database.*
 import com.start.mindcafeclonepractice.R
-import com.start.mindcafeclonepractice.adapters.ConsultingMenuDataRecyclerAdapter
+import com.start.mindcafeclonepractice.adapters.ConsultingMenuChattingDataRecyclerAdapter
 import com.start.mindcafeclonepractice.bottomnavfragments.BaseFragment
 import com.start.mindcafeclonepractice.databinding.FragmentConsultingMenuChattingBinding
-import com.start.mindcafeclonepractice.datas.ConsultingMenuData
+import com.start.mindcafeclonepractice.datas.ConsultingMenuChattingData
 import java.util.*
-import kotlin.collections.ArrayList
 
 class ConsultingMenuChattingFragment: BaseFragment() {
 
     lateinit var binding: FragmentConsultingMenuChattingBinding
-    val mChattTabList = ArrayList<ConsultingMenuData>()
-    lateinit var mChattTabAdapter : ConsultingMenuDataRecyclerAdapter
+    val mChattTabList = ArrayList<ConsultingMenuChattingData>()
+    lateinit var mChattTabAdapter : ConsultingMenuChattingDataRecyclerAdapter
 
     var firebase: FirebaseDatabase? = null
     var ref: DatabaseReference? = null
@@ -62,7 +61,7 @@ class ConsultingMenuChattingFragment: BaseFragment() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()){
                     for (h in snapshot.children){
-                        val chattData = h.getValue(ConsultingMenuData::class.java)
+                        val chattData = h.getValue(ConsultingMenuChattingData::class.java)
                         mChattTabList.add(chattData!!)
                     }
                     mChattTabAdapter.notifyDataSetChanged()
@@ -74,7 +73,7 @@ class ConsultingMenuChattingFragment: BaseFragment() {
             }
 
         })
-        mChattTabAdapter = ConsultingMenuDataRecyclerAdapter(mContext, mChattTabList)
+        mChattTabAdapter = ConsultingMenuChattingDataRecyclerAdapter(mContext, mChattTabList)
         binding.consultingMenuRecyclerView.adapter = mChattTabAdapter
         binding.consultingMenuRecyclerView.layoutManager = LinearLayoutManager(mContext)
         binding.consultingMenuRecyclerView.setHasFixedSize(true)

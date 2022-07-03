@@ -7,13 +7,13 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.start.mindcafeclonepractice.R
-import com.start.mindcafeclonepractice.datas.ConsultingMenuData
+import com.start.mindcafeclonepractice.datas.ConsultingMenuChattingData
 import java.text.DecimalFormat
 
-class ConsultingMenuDataRecyclerAdapter(
+class ConsultingMenuChattingDataRecyclerAdapter(
     val mContext:Context,
-    val mList: ArrayList<ConsultingMenuData>
-    ):RecyclerView.Adapter<ConsultingMenuDataRecyclerAdapter.ConsultingMenuViewHolder>() {
+    val mList: ArrayList<ConsultingMenuChattingData>
+    ):RecyclerView.Adapter<ConsultingMenuChattingDataRecyclerAdapter.ConsultingMenuViewHolder>() {
 
     inner class ConsultingMenuViewHolder(row: View): RecyclerView.ViewHolder(row){
 
@@ -22,7 +22,7 @@ class ConsultingMenuDataRecyclerAdapter(
         val txtExpirationPeriod = row.findViewById<TextView>(R.id.txtExpirationPeriod)
         val txtPrice = row.findViewById<TextView>(R.id.txtPrice)
 
-        fun bind(data: ConsultingMenuData){
+        fun bind(data: ConsultingMenuChattingData){
             txtTitle.text = data.title
             txtSeveralMinutesTime.text = data.severalMinutesTime
             txtExpirationPeriod.text = data.expirationPeriod
