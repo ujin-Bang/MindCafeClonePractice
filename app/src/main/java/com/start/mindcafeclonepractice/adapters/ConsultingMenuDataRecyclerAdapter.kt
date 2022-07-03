@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.start.mindcafeclonepractice.R
 import com.start.mindcafeclonepractice.datas.ConsultingMenuData
+import java.text.DecimalFormat
 
 class ConsultingMenuDataRecyclerAdapter(
     val mContext:Context,
@@ -25,7 +26,9 @@ class ConsultingMenuDataRecyclerAdapter(
             txtTitle.text = data.title
             txtSeveralMinutesTime.text = data.severalMinutesTime
             txtExpirationPeriod.text = data.expirationPeriod
-            txtPrice.text = data.price
+
+            val pri = DecimalFormat("#,###")
+            txtPrice.text = "${pri.format(data.price)}원"
         }
     }
 
