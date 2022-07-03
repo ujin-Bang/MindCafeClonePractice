@@ -1,149 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:background="@color/sky"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:padding="30dp">
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="100dp"
+               android:background="@color/sky"
+               android:orientation="horizontal"
+               android:gravity="center_vertical"
+               android:padding="30dp">
 
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginEnd="30dp"
-                android:src="@drawable/expert_profile_talk_icon"/>
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="채팅으로 언제 어디서든 상품을 이용할 수 있고 \n내용을 지속적으로 확인하고 싶으신분"/>
-
-        </LinearLayout>
+               <ImageView
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
+                   android:layout_marginEnd="30dp"
+                   android:src="@drawable/expert_profile_talk_icon"/>
 
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/consultingMenuRecyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="채팅으로 언제 어디서든 상품을 이용할 수 있고 \n내용을 지속적으로 확인하고 싶으신분"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="155dp"
-            android:paddingHorizontal="25dp"
-            android:paddingVertical="20dp"
-            android:background="@color/light_gray"
-            android:orientation="vertical">
+           </LinearLayout>
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/consultingMenuRecyclerView"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Tip!"
-                    android:fontFamily="@font/font_1"
-                    android:textStyle="bold"
-                    android:textColor="@color/bottomnav"
-                    android:textSize="17sp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:text="텍스트(채팅), 이런 분들께 추천해요!"
-                    android:textSize="15sp"
-                    android:textColor="@color/black"/>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="155dp"
+               android:paddingHorizontal="25dp"
+               android:paddingVertical="20dp"
+               android:background="@color/light_gray"
+               android:orientation="vertical">
 
 
-            </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:orientation="horizontal">
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Tip!"
+                       android:fontFamily="@font/font_1"
+                       android:textStyle="bold"
+                       android:textColor="@color/bottomnav"
+                       android:textSize="17sp"/>
 
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/check_icon"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="언제 어디서든 편하게 이용하고 싶어요."
-                    android:layout_marginStart="5dp"/>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/check_icon"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="말하는 것보다 채팅이 편해요."
-                    android:layout_marginStart="5dp"/>
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="10dp"
+                       android:text="텍스트(채팅), 이런 분들께 추천해요!"
+                       android:textSize="15sp"
+                       android:textColor="@color/black"/>
 
 
-            </LinearLayout>
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="15dp"
+                   android:orientation="horizontal">
+
+                   <ImageView
+                       android:layout_width="20dp"
+                       android:layout_height="20dp"
+                       android:src="@drawable/check_icon"/>
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="언제 어디서든 편하게 이용하고 싶어요."
+                       android:layout_marginStart="5dp"/>
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal">
+               </LinearLayout>
 
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/check_icon"/>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="과거 내용을 다시 보며 나의 변화를 직접 확인하고 싶어요."
-                    android:layout_marginStart="5dp"/>
+                   <ImageView
+                       android:layout_width="20dp"
+                       android:layout_height="20dp"
+                       android:src="@drawable/check_icon"/>
 
-
-            </LinearLayout>
-
-        </LinearLayout>
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="말하는 것보다 채팅이 편해요."
+                       android:layout_marginStart="5dp"/>
 
 
-        <TextView
-            android:id="@+id/btnChattingDetail"
-            android:layout_width="360dp"
-            android:layout_height="30dp"
-            android:gravity="center"
-            android:foreground="?attr/selectableItemBackground"
-            android:focusable="true"
-            android:clickable="true"
-            android:background="@drawable/chatting_detail_button_background"
-            android:layout_marginTop="25dp"
-            android:layout_marginStart="20dp"
-            android:paddingLeft="15dp"
-            android:text="텍스트(채팅)에 대해 더 알고 싶어요                                   >"/>
+               </LinearLayout>
 
-    </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:orientation="horizontal">
+
+                   <ImageView
+                       android:layout_width="20dp"
+                       android:layout_height="20dp"
+                       android:src="@drawable/check_icon"/>
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="과거 내용을 다시 보며 나의 변화를 직접 확인하고 싶어요."
+                       android:layout_marginStart="5dp"/>
+
+
+               </LinearLayout>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="80dp"
+               android:orientation="vertical">
+
+
+               <TextView
+                   android:id="@+id/btnChattingDetail"
+                   android:layout_width="360dp"
+                   android:layout_height="30dp"
+                   android:layout_marginEnd="30dp"
+                   android:gravity="center"
+                   android:foreground="?attr/selectableItemBackground"
+                   android:focusable="true"
+                   android:clickable="true"
+                   android:background="@drawable/chatting_detail_button_background"
+                   android:layout_marginTop="25dp"
+                   android:layout_marginStart="20dp"
+                   android:paddingLeft="15dp"
+                   android:text="텍스트(채팅)에 대해 더 알고 싶어요                                   >"/>
+
+           </LinearLayout>
+
+
+       </LinearLayout>
+
+   </ScrollView>
 </layout>
