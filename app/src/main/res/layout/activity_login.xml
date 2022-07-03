@@ -27,7 +27,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="MINDCAFE"
+                android:text="MINDCAFECLONE"
                 android:textSize="50sp"
                 android:layout_marginStart="10dp"
                 android:fontFamily="@font/font_2"
@@ -152,7 +152,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/login_button_box">
+                android:background="@drawable/login_button_sign_up_box">
 
 
                 <LinearLayout
@@ -172,7 +172,6 @@
                     <TextView
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:background="@color/teal"
                         android:text="회원가입"
                         android:paddingStart="2dp"
                         android:textSize="18sp"

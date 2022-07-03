@@ -21,12 +21,15 @@ abstract class BaseActivity : AppCompatActivity() {
     lateinit var mLinearLayoutWriteActionbar: LinearLayout
     lateinit var mLinearLayoutNewExpertActionbar: LinearLayout
     lateinit var mLinearLayoutNewExpertSelectedConsultingMenu: LinearLayout
+    lateinit var mLinearLayoutQandAActionBar: LinearLayout
 
     lateinit var mBtnBack: TextView
     lateinit var mBtnNext: TextView
     lateinit var mBtnBack2: ImageView
     lateinit var mBtnBack3: ImageView
     lateinit var mSelectedExpertName: TextView
+    lateinit var mSetImg: ImageView
+    lateinit var mXBackImg: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -66,13 +69,15 @@ abstract class BaseActivity : AppCompatActivity() {
         mLinearLayoutWriteActionbar = defActionBar.customView.findViewById(R.id.writeActionBar)
         mLinearLayoutNewExpertActionbar = defActionBar.customView.findViewById(R.id.newExpertProfileActionbar)
         mLinearLayoutNewExpertSelectedConsultingMenu = defActionBar.customView.findViewById(R.id.newExpertSelectedConsultingMenu)
-
+        mLinearLayoutQandAActionBar = defActionBar.customView.findViewById(R.id.qAndAActionBar)
 
         mBtnBack = defActionBar.customView.findViewById(R.id.btnBack)
         mBtnNext = defActionBar.customView.findViewById(R.id.btnNext)
         mBtnBack2 = defActionBar.customView.findViewById(R.id.btnBack2)
         mBtnBack3 = defActionBar.customView.findViewById(R.id.btnBack3)
         mSelectedExpertName = defActionBar.customView.findViewById(R.id.txtSelectName)
+        mXBackImg = defActionBar.customView.findViewById(R.id.imgX)
+        mSetImg = defActionBar.customView.findViewById(R.id.imgSet)
 
 
         mBtnBack3.setOnClickListener {

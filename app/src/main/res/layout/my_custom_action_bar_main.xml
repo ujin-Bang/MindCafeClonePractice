@@ -25,7 +25,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="MINDCAFE"
+                android:text="MINDCAFECLONE"
                 android:fontFamily="@font/font_2"
                 android:textStyle="bold"
                 android:textSize="40sp"
@@ -170,6 +170,61 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/qAndAActionBar"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/mind_cafe_logo"
+                android:layout_marginStart="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MINDCAFECLONE"
+                android:fontFamily="@font/font_2"
+                android:textStyle="bold"
+                android:textSize="40sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="8dp"/>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+
+            <ImageView
+                android:id="@+id/imgSet"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/ripple_effect_background"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/set_icon"/>
+
+
+            <ImageView
+                android:id="@+id/imgX"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/ripple_effect_background"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/x_icon"/>
+
+
+        </LinearLayout>
 
 
 

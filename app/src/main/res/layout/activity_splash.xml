@@ -56,7 +56,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="22sp"
-            android:text="MINDCAFE"
+            android:text="MINDCAFECLONE"
             android:fontFamily="@font/font_2"
             android:textStyle="bold"/>
     </LinearLayout>

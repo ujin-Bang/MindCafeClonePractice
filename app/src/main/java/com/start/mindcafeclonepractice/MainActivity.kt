@@ -14,8 +14,6 @@ import com.start.mindcafeclonepractice.databinding.ActivityMainBinding
 
 class MainActivity : BaseActivity() {
 
-
-
     lateinit var binding: ActivityMainBinding
 
     private val mOnNavigationiItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener {item ->
