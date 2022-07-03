@@ -17,7 +17,8 @@
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.26145833333333335" />
         <entry key="app/src/main/res/layout/activity_new_expert_detail.xml" value="0.165" />
-        <entry key="app/src/main/res/layout/activity_select_expert_consulting_menu.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_qand_aactivity.xml" value="0.2640625" />
+        <entry key="app/src/main/res/layout/activity_select_expert_consulting_menu.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.2640625" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.278125" />
         <entry key="app/src/main/res/layout/activity_write.xml" value="0.125" />
@@ -28,7 +29,7 @@
         <entry key="app/src/main/res/layout/fragment_community.xml" value="0.1296875" />
         <entry key="app/src/main/res/layout/fragment_consulting.xml" value="0.1296875" />
         <entry key="app/src/main/res/layout/fragment_consulting_menu_chatting.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_consulting_menu_phone.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/fragment_consulting_menu_phone.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_expert.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_expert_find.xml" value="0.1296875" />
         <entry key="app/src/main/res/layout/fragment_group_program.xml" value="0.335" />
