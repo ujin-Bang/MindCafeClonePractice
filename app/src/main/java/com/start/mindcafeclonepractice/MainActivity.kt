@@ -16,7 +16,8 @@ class MainActivity : BaseActivity() {
 
     lateinit var binding: ActivityMainBinding
 
-    private val mOnNavigationiItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener {item ->
+    private val mOnNavigationiItemSelectedListener
+    = BottomNavigationView.OnNavigationItemSelectedListener {item ->
 
         when(item.itemId){
             R.id.home -> {

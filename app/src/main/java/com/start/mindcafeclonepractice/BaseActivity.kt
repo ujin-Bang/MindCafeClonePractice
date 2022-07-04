@@ -60,9 +60,12 @@ abstract class BaseActivity : AppCompatActivity() {
         //3) 실제 커스텀뷰를 어떤 모양(xml)로 할건지
         defActionBar.setCustomView(R.layout.my_custom_action_bar_main)
 
+
         //4) 좌우 여백 제거 : ToolBar 소환 -> 좌우 여백값 제거하기
         val toolBar = defActionBar.customView.parent as androidx.appcompat.widget.Toolbar
         toolBar.setContentInsetsAbsolute(0, 0)
+
+
 
         //멤버변수로 지정된 아이디 객체로 만들기( 버튼이미지는 기능부여)
         mLinearLayoutMainActionBar = defActionBar.customView.findViewById(R.id.mainActionBar)

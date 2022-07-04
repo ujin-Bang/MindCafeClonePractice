@@ -12,6 +12,7 @@
         <entry key="app/src/main/res/drawable/login_button_sign_up_box.xml" value="0.151" />
         <entry key="app/src/main/res/drawable/main_icon_background_box.xml" value="0.25" />
         <entry key="app/src/main/res/drawable/makas_background.xml" value="0.1395" />
+        <entry key="app/src/main/res/drawable/mind_postit_background.xml" value="0.139" />
         <entry key="app/src/main/res/drawable/orenge_background_box.xml" value="0.1525" />
         <entry key="app/src/main/res/drawable/ripple_effect_background.xml" value="0.1525" />
         <entry key="app/src/main/res/drawable/style.xml" value="0.15" />
@@ -27,6 +28,7 @@
         <entry key="app/src/main/res/layout/activity_write_next_button_click.xml" value="0.25" />
         <entry key="app/src/main/res/layout/consulting_menu_chatting_list_item.xml" value="0.27708333333333335" />
         <entry key="app/src/main/res/layout/consulting_menu_phone_list_item.xml" value="0.27708333333333335" />
+        <entry key="app/src/main/res/layout/dddddddd.xml" value="0.27708333333333335" />
         <entry key="app/src/main/res/layout/expert_list_item.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_community.xml" value="0.1296875" />
         <entry key="app/src/main/res/layout/fragment_consulting.xml" value="0.1296875" />
@@ -35,8 +37,9 @@
         <entry key="app/src/main/res/layout/fragment_expert.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_expert_find.xml" value="0.1296875" />
         <entry key="app/src/main/res/layout/fragment_group_program.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.12864583333333332" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_home_4_view.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_home_bottom_end.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_home_four_view.xml" value="0.28935185185185186" />
         <entry key="app/src/main/res/layout/fragment_home_group_program.xml" value="0.12916666666666668" />
         <entry key="app/src/main/res/layout/fragment_home_makas_pick.xml" value="0.335" />
@@ -56,7 +59,10 @@
         <entry key="app/src/main/res/layout/fragment_new_expert_profile_detail_viewpager2in1.xml" value="0.278125" />
         <entry key="app/src/main/res/layout/fragment_new_expert_profile_detail_viewpager2in2.xml" value="0.278125" />
         <entry key="app/src/main/res/layout/fragment_new_expert_profile_detail_viewpager2in3.xml" value="0.27708333333333335" />
+        <entry key="app/src/main/res/layout/frgement_bottom_until.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/frgement_bottom_until_1.xml" value="0.1296875" />
         <entry key="app/src/main/res/layout/group_program_item.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/layout1_change.xml" value="0.25" />
         <entry key="app/src/main/res/layout/makas_list_item.xml" value="0.25" />
         <entry key="app/src/main/res/layout/my_custom_action_bar_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/my_custom_actionbar.xml" value="0.27708333333333335" />

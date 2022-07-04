@@ -1,6 +1,5 @@
 package com.start.mindcafeclonepractice
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.databinding.DataBindingUtil
@@ -17,6 +16,9 @@ class QandAActivity : BaseActivity() {
     }
 
     override fun setupEvents() {
+        mXBackImg.setOnClickListener {
+            finish()
+        }
 
     }
 

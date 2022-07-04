@@ -11,6 +11,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import com.bumptech.glide.Glide
 import com.start.mindcafeclonepractice.MainActivity
+import com.start.mindcafeclonepractice.QandAActivity
 import com.start.mindcafeclonepractice.R
 import com.start.mindcafeclonepractice.databinding.FragmentHomeBinding
 
@@ -38,6 +39,11 @@ class HomeFragment: BaseFragment() {
         setValues()
     }
     override fun setupEvents() {
+
+
+            binding.btnQandA.setOnClickListener {
+                startActivity(Intent(mContext, QandAActivity::class.java))
+            }
 
         binding.imgBanner.setOnClickListener {
 

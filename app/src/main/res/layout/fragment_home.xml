@@ -5,89 +5,124 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <ScrollView
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
 
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <fragment
-                android:tag="maniTop"
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                class="com.start.mindcafeclonepractice.bottomnavhomefragment.HomeTopFragment"/>
-
-            <fragment
-                android:tag="makasPick"
-                android:layout_marginTop="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                class="com.start.mindcafeclonepractice.bottomnavhomefragment.HomeMakasPickFragment"/>
+                android:layout_height="match_parent">
 
 
-            <fragment
-                android:tag="view4"
-                android:layout_marginTop="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                class="com.start.mindcafeclonepractice.bottomnavhomefragment.Home4ViewFragment"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:background="@color/light_gray"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-            <fragment
-                android:tag="expert"
-                android:layout_marginTop="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                class="com.start.mindcafeclonepractice.bottomnavhomefragment.HomeExpertFragment"/>
+                    <fragment
+                        android:tag="maniTop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        class="com.start.mindcafeclonepractice.bottomnavhomefragment.HomeTopFragment"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:background="@color/light_gray"/>
+                    <fragment
+                        android:tag="makasPick"
+                        android:layout_marginTop="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        class="com.start.mindcafeclonepractice.bottomnavhomefragment.HomeMakasPickFragment"/>
 
-            <fragment
-                android:tag="groupProgram"
-                android:layout_marginTop="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                class="com.start.mindcafeclonepractice.bottomnavhomefragment.HomeGroupProgramFragment"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:background="@color/light_gray"/>
+                    <fragment
+                        android:tag="view4"
+                        android:layout_marginTop="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        class="com.start.mindcafeclonepractice.bottomnavhomefragment.Home4ViewFragment"/>
 
-            <fragment
-                android:tag="review"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                class="com.start.mindcafeclonepractice.bottomnavhomefragment.HomeReviewFragment"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/light_gray"/>
 
-            <ImageView
-                android:id="@+id/imgBanner"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:src="@mipmap/ic_launcher"
-                android:scaleType="centerCrop"/>
+                    <fragment
+                        android:tag="expert"
+                        android:layout_marginTop="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        class="com.start.mindcafeclonepractice.bottomnavhomefragment.HomeExpertFragment"/>
 
-            <fragment
-                android:tag="newExpert"
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                class="com.start.mindcafeclonepractice.bottomnavhomefragment.HomeNewExpertFragment"/>
-        </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/light_gray"/>
 
-    </ScrollView>
+                    <fragment
+                        android:tag="groupProgram"
+                        android:layout_marginTop="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        class="com.start.mindcafeclonepractice.bottomnavhomefragment.HomeGroupProgramFragment"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/light_gray"/>
+
+                    <fragment
+                        android:tag="review"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        class="com.start.mindcafeclonepractice.bottomnavhomefragment.HomeReviewFragment"/>
+
+                    <ImageView
+                        android:id="@+id/imgBanner"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:src="@mipmap/ic_launcher"
+                        android:scaleType="centerCrop"/>
+
+                    <fragment
+                        android:tag="newExpert"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        class="com.start.mindcafeclonepractice.bottomnavhomefragment.HomeNewExpertFragment"/>
+
+                    <fragment
+                        android:tag="bottomUntil"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        class="com.start.mindcafeclonepractice.bottomnavhomefragment.HomeBottomUntilFragment"/>
+
+
+                    <fragment
+                        android:tag="bottomEnd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        class="com.start.mindcafeclonepractice.bottomnavhomefragment.HomeBottomEndFragment"/>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/btnQandA"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/question_icon"
+                android:elevation="5dp"
+                android:background="@drawable/custom_ripple_effect2"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_margin="20dp"
+                android:layout_gravity="end|bottom"/>
+
+        </FrameLayout>
     </LinearLayout>
 
 

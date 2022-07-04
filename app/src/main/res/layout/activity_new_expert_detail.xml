@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -105,7 +105,7 @@
                 android:id="@+id/newExpertProfileViewPager2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"/>
+                android:orientation="vertical" />
 
         </ScrollView>
 
@@ -115,9 +115,6 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
 
                 <ImageView
                     android:id="@+id/btnHeart"
@@ -129,19 +126,7 @@
                     android:layout_marginHorizontal="10dp"
                     android:src="@drawable/heart_icon"/>
 
-                <ImageView
-                    android:id="@+id/btnHeart2"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:background="@drawable/custom_ripple_effect2"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:visibility="gone"
-                    android:layout_marginHorizontal="10dp"
-                    android:src="@drawable/heart_icon_2"/>
 
-
-            </FrameLayout>
 
             <Button
                 android:id="@+id/btnSelect"

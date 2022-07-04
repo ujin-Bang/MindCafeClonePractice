@@ -33,21 +33,21 @@ class NewExpertDetailActivity : BaseActivity() {
 
 
             if (!clicked){
-               binding.btnHeart.visibility = View.GONE
-               binding.btnHeart2.visibility = View.VISIBLE
+               binding.btnHeart.setImageResource(R.drawable.heart_icon_2)
                 Toast.makeText(mContext, "전문가 찜 완료", Toast.LENGTH_SHORT).show()
                 clicked = true
             }
             else{
 
-                binding.btnHeart.visibility = View.VISIBLE
-                binding.btnHeart2.visibility = View.GONE
+                binding.btnHeart.setImageResource(R.drawable.heart_icon)
                 Toast.makeText(mContext, "전문가 찜 취소", Toast.LENGTH_SHORT).show()
                 clicked = false
+
 
             }
 
         }
+
 
         binding.btnSelect.setOnClickListener {
 
