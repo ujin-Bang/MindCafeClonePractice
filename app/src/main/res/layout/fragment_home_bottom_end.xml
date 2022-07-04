@@ -75,6 +75,7 @@
             android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/companyInfo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="15dp"
@@ -95,11 +96,62 @@
                     android:layout_marginStart="10dp"
                     android:src="@drawable/down_arrow_icon"/>
 
+
+
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/companyClickInfo"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:background="#F8F5F5"
+                android:gravity="center_vertical|center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:text="아톰(주) 사업자정보"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/arrow_top_icon"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/companyClickInfo2"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#C1BCBC"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:text="아톰(주) 대표 : 김대표\n사업자 등록번호 : 369-0909-8282\n통신판매업신고: 제 2009-09-경기도고양-1234호\n 주소 : 경기도 고양시 덕양구\n 전화 고객센터 : 1577-7715\n이메일 고객센터 : cs@atomdragon.com\n(운영시간 : 평일 10시~19시, 휴무시간 : 13~14시, 주말 및 공휴일)"/>
+
+
+
+            </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingTop="10dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 

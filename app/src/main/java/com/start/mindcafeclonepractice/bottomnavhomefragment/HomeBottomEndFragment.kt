@@ -22,7 +22,29 @@ class HomeBottomEndFragment:BaseFragment() {
         return binding.root
     }
 
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        setupEvents()
+        setValues()
+
+    }
+
     override fun setupEvents() {
+
+        binding.companyInfo.setOnClickListener {
+
+            binding.companyInfo.visibility = View.GONE
+            binding.companyClickInfo.visibility = View.VISIBLE
+            binding.companyClickInfo2.visibility = View.VISIBLE
+        }
+
+        binding.companyClickInfo.setOnClickListener {
+
+            binding.companyClickInfo.visibility = View.GONE
+            binding.companyInfo.visibility = View.VISIBLE
+            binding.companyClickInfo2.visibility = View.GONE
+        }
 
     }
 
