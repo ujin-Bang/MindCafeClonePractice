@@ -1,10 +1,13 @@
 package com.start.mindcafeclonepractice.bottomnavhomefragment
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import com.start.mindcafeclonepractice.NoticePsychologicalTestActivity
 import com.start.mindcafeclonepractice.R
 import com.start.mindcafeclonepractice.bottomnavfragments.BaseFragment
 import com.start.mindcafeclonepractice.databinding.FragmentHomeBottomEndBinding
@@ -44,6 +47,12 @@ class HomeBottomEndFragment:BaseFragment() {
             binding.companyClickInfo.visibility = View.GONE
             binding.companyInfo.visibility = View.VISIBLE
             binding.companyClickInfo2.visibility = View.GONE
+        }
+
+        binding.btnNotice.setOnClickListener {
+
+            val myIntent = Intent(mContext , NoticePsychologicalTestActivity::class.java)
+            startActivity(myIntent)
         }
 
     }

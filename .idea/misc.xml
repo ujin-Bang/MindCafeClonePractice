@@ -7,6 +7,7 @@
         <entry key="app/src/main/res/drawable/chatting_detail_button_background.xml" value="0.139" />
         <entry key="app/src/main/res/drawable/custom_ripple_effect2.xml" value="0.1525" />
         <entry key="app/src/main/res/drawable/ic_baseline_brightness_low_24.xml" value="0.151" />
+        <entry key="app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.14" />
         <entry key="app/src/main/res/drawable/ic_baseline_favorite_border_24.xml" value="0.14" />
         <entry key="app/src/main/res/drawable/login_button_box.xml" value="0.161" />
         <entry key="app/src/main/res/drawable/login_button_sign_up_box.xml" value="0.151" />
@@ -20,6 +21,8 @@
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.26145833333333335" />
         <entry key="app/src/main/res/layout/activity_new_expert_detail.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_notice_psychological_test.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_original_notice.xml" value="0.2640625" />
         <entry key="app/src/main/res/layout/activity_qand_aactivity.xml" value="0.2640625" />
         <entry key="app/src/main/res/layout/activity_select_expert_consulting_menu.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.2640625" />

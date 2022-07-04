@@ -17,6 +17,12 @@
         android:theme="@style/Theme.MindCafeClonePractice"
         tools:targetApi="31">
         <activity
+            android:name=".OriginalNoticeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NoticePsychologicalTestActivity"
+            android:exported="false" />
+        <activity
             android:name=".QandAActivity"
             android:exported="false" />
         <activity

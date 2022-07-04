@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingHorizontal="13dp"
+            tools:context=".NoticePsychologicalTestActivity">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="[공지사항] '심리검사' 신규 오픈"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="60dp"
+                android:text="안녕하세요. 마인드카페 운영진입니다.\n\n마인드 카페에 '심리검사'가 새롭게 오픈되었습니다.\n하단 '전문가 찾기' 메뉴 -> 상단 '심리검사'탭에서\n마인드카페의 심리검사를 만나보실 수 있어요.\n\n심리검사가 무엇인지 생소하실 마카님들을 위해 \n아래에 간단한 설명을 준비했습니다. \n\n\n1. 심리검사가 무엇인가요? \n\n심리검사는 크게\n심리검사 -> 해석상담 2단계로 진행됩니다.\n\n심리검사를 통해 나의 성격과 현재 심리상태를 \n파악하고, 전문가와 함께 심리검사 결과에 대한 \n해석 상담을 진행합니다. \n\n(심리검사가 가능한 연령대를 사전에 꼭 확인해주세요!)\n\n\n2.심리검사를 하면 무엇이 좋은가요?\n\n첫 번째, 나에 대한 통찰 -> 삶의 방향 설정\n\n심리검사와 해석상담으로 나와 내 마음, 나의 행동에\n대해 깊이 이해하며 스스로에 대한 통찰력을 기르게\n되고, 앞으로 어떤 삶을 살지에 대한 방향을 설정할 수\n있습니다.\n\n두 번째, 더 효과적인 심리상담 진행\n\n심리검사를 통해 나에 대한 이해와 통찰이 깊어지기 \n때문에 이후 심리상담 또한 더욱 효과적으로 진행하실 \n수 있어요.\n\n\n3.심리검사 후 해석상담을 꼭 진행해야 하나요?\n\n검사 결과는 전문가와 함께 해석해야\n가장 정확합니다.\n\n마인드카페 해석상담에서 제공하는 검사는 전문\n검사이므로 전문가의 가이드 없이 해석할 경우 검사\n결과를 오해하거나 잘못 이해하게 될 수 있습니다.\n\n또한 전문가와 함께 검사 결과에 대해 해석하고 상담하며 내 삶의 방향성을 함께 논의하는 과정이 꼭\n필요합니다.\n\n\n마인드카페의 심리검사를 통해 마카님들 스스로에\n대한 깊은 이해와 통찰과 함께, 삶의 방향성을\n설정하실 수 있으시길 바라며\n\n앞으로도 마카님들의 마음 치유와 성장의 여정에 마인드카페 운영진이 함께하겠습니다.\n\n\n\n감사합니다.\n마인드카페클론 드림/"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</layout>

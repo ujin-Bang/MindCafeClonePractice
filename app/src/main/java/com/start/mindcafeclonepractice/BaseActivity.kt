@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import org.w3c.dom.Text
 
 
 abstract class BaseActivity : AppCompatActivity() {
@@ -22,6 +23,8 @@ abstract class BaseActivity : AppCompatActivity() {
     lateinit var mLinearLayoutNewExpertActionbar: LinearLayout
     lateinit var mLinearLayoutNewExpertSelectedConsultingMenu: LinearLayout
     lateinit var mLinearLayoutQandAActionBar: LinearLayout
+    lateinit var mLinearLayoutNoticeActionBar: LinearLayout
+    lateinit var mLinearLayoutOriginNoticeActionBar: LinearLayout
 
     lateinit var mBtnBack: TextView
     lateinit var mBtnNext: TextView
@@ -30,6 +33,10 @@ abstract class BaseActivity : AppCompatActivity() {
     lateinit var mSelectedExpertName: TextView
     lateinit var mSetImg: ImageView
     lateinit var mXBackImg: ImageView
+    lateinit var mBtnNotice: ImageView
+    lateinit var mNoticeTitle: TextView
+    lateinit var mOriginBtnX: ImageView
+    lateinit var mOrignTitle: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -73,6 +80,8 @@ abstract class BaseActivity : AppCompatActivity() {
         mLinearLayoutNewExpertActionbar = defActionBar.customView.findViewById(R.id.newExpertProfileActionbar)
         mLinearLayoutNewExpertSelectedConsultingMenu = defActionBar.customView.findViewById(R.id.newExpertSelectedConsultingMenu)
         mLinearLayoutQandAActionBar = defActionBar.customView.findViewById(R.id.qAndAActionBar)
+        mLinearLayoutNoticeActionBar = defActionBar.customView.findViewById(R.id.noticeActionBar)
+        mLinearLayoutOriginNoticeActionBar = defActionBar.customView.findViewById(R.id.noticeOriginActionBar)
 
         mBtnBack = defActionBar.customView.findViewById(R.id.btnBack)
         mBtnNext = defActionBar.customView.findViewById(R.id.btnNext)
@@ -81,7 +90,22 @@ abstract class BaseActivity : AppCompatActivity() {
         mSelectedExpertName = defActionBar.customView.findViewById(R.id.txtSelectName)
         mXBackImg = defActionBar.customView.findViewById(R.id.imgX)
         mSetImg = defActionBar.customView.findViewById(R.id.imgSet)
+        mNoticeTitle = defActionBar.customView.findViewById(R.id.txtNotice)
+        mBtnNotice = defActionBar.customView.findViewById(R.id.btnNoticeBack)
+        mOriginBtnX = defActionBar.customView.findViewById(R.id.btnOriginX)
+        mOrignTitle = defActionBar.customView.findViewById(R.id.txtNoticeOrigin)
 
+
+        mOriginBtnX.setOnClickListener {
+            finish()
+        }
+
+
+        mBtnNotice.setOnClickListener {
+
+            startActivity(Intent(mContext,OriginalNoticeActivity::class.java))
+            finish()
+        }
 
         mBtnBack3.setOnClickListener {
             finish()
