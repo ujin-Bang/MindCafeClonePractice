@@ -25,6 +25,7 @@ abstract class BaseActivity : AppCompatActivity() {
     lateinit var mLinearLayoutQandAActionBar: LinearLayout
     lateinit var mLinearLayoutNoticeActionBar: LinearLayout
     lateinit var mLinearLayoutOriginNoticeActionBar: LinearLayout
+    lateinit var mlinearLayoutMindPostItActionBar: LinearLayout
 
     lateinit var mBtnBack: TextView
     lateinit var mBtnNext: TextView
@@ -37,6 +38,8 @@ abstract class BaseActivity : AppCompatActivity() {
     lateinit var mNoticeTitle: TextView
     lateinit var mOriginBtnX: ImageView
     lateinit var mOrignTitle: TextView
+    lateinit var mMindPostItBack: ImageView
+    lateinit var mMindPostItTitile: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -82,6 +85,8 @@ abstract class BaseActivity : AppCompatActivity() {
         mLinearLayoutQandAActionBar = defActionBar.customView.findViewById(R.id.qAndAActionBar)
         mLinearLayoutNoticeActionBar = defActionBar.customView.findViewById(R.id.noticeActionBar)
         mLinearLayoutOriginNoticeActionBar = defActionBar.customView.findViewById(R.id.noticeOriginActionBar)
+        mlinearLayoutMindPostItActionBar = defActionBar.customView.findViewById(R.id.mindPostItActionBar)
+
 
         mBtnBack = defActionBar.customView.findViewById(R.id.btnBack)
         mBtnNext = defActionBar.customView.findViewById(R.id.btnNext)
@@ -94,8 +99,14 @@ abstract class BaseActivity : AppCompatActivity() {
         mBtnNotice = defActionBar.customView.findViewById(R.id.btnNoticeBack)
         mOriginBtnX = defActionBar.customView.findViewById(R.id.btnOriginX)
         mOrignTitle = defActionBar.customView.findViewById(R.id.txtNoticeOrigin)
+        mMindPostItBack = defActionBar.customView.findViewById(R.id.btnMindPostItBack)
+        mMindPostItTitile = defActionBar.customView.findViewById(R.id.txtMindPostIt)
 
 
+        mMindPostItBack.setOnClickListener {
+
+            finish()
+        }
         mOriginBtnX.setOnClickListener {
             finish()
         }
