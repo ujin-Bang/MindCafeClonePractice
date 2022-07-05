@@ -54,6 +54,7 @@
             </LinearLayout>
 
             <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/btnPostItWright"
                 android:layout_gravity="end|bottom"
                 android:layout_marginBottom="80dp"
                 android:elevation="5dp"
