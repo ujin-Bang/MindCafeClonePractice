@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+            <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingVertical="20dp"
+            android:paddingHorizontal="20dp"
+            tools:context=".NoticeActivity2">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="[공지사항] 새로운 마인드카페, 어떤 부분이\n달라졌을까?"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="안녕하세요.마인드카페 운영진입니다.\n\n드디어,'마인드카페 Pro'가 '마인드카페'로 새롭게\n단장하고 마카님들을 찾아왔습니다! 참고로,\n'마인드카페 Life'에서도 커뮤니티를 계속해서\n이용하실 수 있습니다.\n\n\n하나. 커뮤니티가 생겼어요.\n\n홈 메뉴 위쪽에 커뮤니티가 생겼습니다.\n\n 어떤 고민이든 익명으로 솔직하게 털어놓고, 따뜻한 \n공감과 응원을 나눠 주세요. 커ㅠ니티 사연들 중\n일부에는 마인드 카페 전문가님들께서 무료로 전문\n답변을 남겨 드립니다.\n\n더 많은 마카님들께서 위로와 공감을 드리기 위해, AI\n댓글봇'로니'도 베타 서비스로 운영되고 있습니다.\n\n\n둘. 무료 셀프 케어를 제공해요\n\n\내 마음을 더 잘 살필 수있도록, 새로운\n마인드카페에서는 100문항의 심리검사'나를 찾아서'\n와 3일마다 나를 돌아보는 질문'마인드포스팃'을\n무료로 제공합니다. 지금 홈 탭 아래쪽에서 \n만나보세요!\n\n\n셋. 통화품질이 개선되었어요.\n\n지금 바로 '보이스 테라피' 또는 '보이스 코칭'을\n신청해 보세요. 통화 품질과 안전성이 훨씬 개선되어,\n이제 전문가님의 따뜻한 목소리를 더 만족스럽게\n들으실 수 있습니다.\n\n\n\넷. 심리검사가 생겼어요.\n\n이제 심리상담, 멤버쉽, 그룹 이용원 신청 시\n심리검사가 제공됩니다. 현재 내 마음의 상황과\n앞으로의 변화를 객관적인 데이터에 근거하여\n알아보실 수 있습니다.\n\n\n앞으로의 마카님들의 치유와 성장 여정에.\n새로운 마인드카페가 함께하겠습니다.\n\n\n감사합니다.\n마인드카페클론 드림" />
+                </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</layout>

@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import com.start.mindcafeclonepractice.NoticeActivity2
 import com.start.mindcafeclonepractice.NoticePsychologicalTestActivity
 import com.start.mindcafeclonepractice.R
 import com.start.mindcafeclonepractice.bottomnavfragments.BaseFragment
@@ -55,6 +56,10 @@ class HomeBottomEndFragment:BaseFragment() {
             startActivity(myIntent)
         }
 
+
+        binding.btnNotice2.setOnClickListener {
+            startActivity(Intent(mContext,NoticeActivity2::class.java))
+        }
     }
 
     override fun setValues() {

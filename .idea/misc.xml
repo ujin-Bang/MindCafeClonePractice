@@ -21,7 +21,8 @@
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.26145833333333335" />
         <entry key="app/src/main/res/layout/activity_new_expert_detail.xml" value="0.165" />
-        <entry key="app/src/main/res/layout/activity_notice_psychological_test.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_notice2.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_notice_psychological_test.xml" value="0.21465517241379312" />
         <entry key="app/src/main/res/layout/activity_original_notice.xml" value="0.2640625" />
         <entry key="app/src/main/res/layout/activity_qand_aactivity.xml" value="0.2640625" />
         <entry key="app/src/main/res/layout/activity_select_expert_consulting_menu.xml" value="0.25" />
@@ -42,7 +43,7 @@
         <entry key="app/src/main/res/layout/fragment_group_program.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_home_4_view.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_home_bottom_end.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/fragment_home_bottom_end.xml" value="0.2603550295857988" />
         <entry key="app/src/main/res/layout/fragment_home_four_view.xml" value="0.28935185185185186" />
         <entry key="app/src/main/res/layout/fragment_home_group_program.xml" value="0.12916666666666668" />
         <entry key="app/src/main/res/layout/fragment_home_makas_pick.xml" value="0.335" />
