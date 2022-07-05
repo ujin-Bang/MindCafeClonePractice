@@ -11,13 +11,20 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
-import com.google.firebase.database.FirebaseDatabase
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.firebase.database.*
+import com.start.mindcafeclonepractice.adapters.MindPostItAdapter
 import com.start.mindcafeclonepractice.databinding.ActivityMindPostitBinding
 import com.start.mindcafeclonepractice.datas.MindPostItData
 
 class MindPostitActivity : BaseActivity() {
 
     lateinit var binding: ActivityMindPostitBinding
+    val mPostItList = ArrayList<MindPostItData>()
+
+    lateinit var mPostItAdapter: MindPostItAdapter
+     var ref: DatabaseReference? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_mind_postit)
@@ -65,5 +72,35 @@ class MindPostitActivity : BaseActivity() {
     override fun setValues() {
         mLinearLayoutMainActionBar.visibility = View.GONE
         mlinearLayoutMindPostItActionBar.visibility = View.VISIBLE
+
+        getPostItDataFromFirebase()
+    }
+
+
+    fun getPostItDataFromFirebase(){
+
+         ref = FirebaseDatabase.getInstance().getReference("mindPostIt")
+        ref?.addValueEventListener(object : ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if (snapshot.exists()){
+                    for(h in snapshot.children){
+                        val data = h.getValue(MindPostItData::class.java)
+                        mPostItList.add(data!!)
+                    }
+                    mPostItAdapter.notifyDataSetChanged()
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+
+                Toast.makeText(mContext, error.message, Toast.LENGTH_SHORT).show()
+            }
+
+        })
+        mPostItAdapter = MindPostItAdapter(mContext, mPostItList)
+        binding.mindPostitRecyclerView.adapter = mPostItAdapter
+        binding.mindPostitRecyclerView.layoutManager = LinearLayoutManager(mContext)
+        binding.mindPostitRecyclerView.setHasFixedSize(true)
+
     }
 }
