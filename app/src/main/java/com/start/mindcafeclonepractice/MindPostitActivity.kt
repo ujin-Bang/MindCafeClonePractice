@@ -1,9 +1,7 @@
 package com.start.mindcafeclonepractice
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.EditText
@@ -28,8 +26,11 @@ class MindPostitActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_mind_postit)
+
         setupEvents()
         setValues()
+
+
     }
 
     override fun setupEvents() {
@@ -53,7 +54,7 @@ class MindPostitActivity : BaseActivity() {
 
                 val mindPostItData = MindPostItData()//데이타베이스에 저장할 데이타객체생성
 
-                //파이어베이스 참조객체 생성 =>mindPostIt 만들어서 푸시하겠다.
+                //파이어베이스 참조객체 생성 => 키: mindPostIt 저장소  만들어서 푸시하겠다.
                 val makeRef = FirebaseDatabase.getInstance().getReference("mindPostIt").push()
 
                 mindPostItData.content = inputContent.toString()
@@ -74,20 +75,30 @@ class MindPostitActivity : BaseActivity() {
         mlinearLayoutMindPostItActionBar.visibility = View.VISIBLE
 
         getPostItDataFromFirebase()
+
+
     }
 
 
     fun getPostItDataFromFirebase(){
 
+
          ref = FirebaseDatabase.getInstance().getReference("mindPostIt")
         ref?.addValueEventListener(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()){
+
+                    mPostItList.clear()
                     for(h in snapshot.children){
                         val data = h.getValue(MindPostItData::class.java)
+
+
                         mPostItList.add(data!!)
                     }
+
+
                     mPostItAdapter.notifyDataSetChanged()
+
                 }
             }
 
@@ -99,8 +110,23 @@ class MindPostitActivity : BaseActivity() {
         })
         mPostItAdapter = MindPostItAdapter(mContext, mPostItList)
         binding.mindPostitRecyclerView.adapter = mPostItAdapter
-        binding.mindPostitRecyclerView.layoutManager = LinearLayoutManager(mContext)
+//        binding.mindPostitRecyclerView.layoutManager = LinearLayoutManager(mContext) 세로목록, 차례대로 나오게
         binding.mindPostitRecyclerView.setHasFixedSize(true)
+//        binding.mindPostitRecyclerView.scrollToPosition(mPostItList.size-1) 마지막 포지션 보여주기 왜 안되지?
+
+        // LinearLayout객체 생성 -> 리버스,스택프롬앤드 :true -> 리싸이클러뷰에 대입
+        // 가장 최근글부터 보이는 효과
+        val linearLayoutManager = LinearLayoutManager(mContext)
+        linearLayoutManager.reverseLayout = true
+        linearLayoutManager.stackFromEnd = true
+        binding.mindPostitRecyclerView.layoutManager = linearLayoutManager
 
     }
+
+
+    override fun onResume() {
+        super.onResume()
+        getPostItDataFromFirebase()
+    }
+
 }

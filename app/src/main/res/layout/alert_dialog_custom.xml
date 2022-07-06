@@ -40,10 +40,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:lines="5"
+        android:maxLength="100"
         android:hint="잠시 현실에서 벗어날 수 있도록 시간이 멈춘다면\n무엇을 하고 싶나요?"
         android:gravity="top"
-        android:backgroundTint="@color/white"
-        android:inputType="text"/>
+        android:backgroundTint="@color/white"/>
 
     <TextView
         android:id="@+id/txtCount"
