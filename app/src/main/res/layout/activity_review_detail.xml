@@ -11,13 +11,13 @@
     tools:context=".ReviewDetailActivity">
 
         <TextView
+            android:id="@+id/txtReviewContent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16sp"
             android:text="후기 내용 자리"/>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/coach"
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -30,6 +30,7 @@
 
 
             <LinearLayout
+                android:id="@+id/btnCoachDetail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="15dp"
@@ -71,6 +72,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
+                        android:gravity="center_vertical"
                         android:orientation="horizontal">
 
 
@@ -85,6 +87,14 @@
                             android:id="@+id/imgSolutionTool2"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
+                            android:src="@drawable/exper_profile_phone_icon"/>
+
+
+                        <ImageView
+                            android:id="@+id/imgSolutionTool3"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="10dp"
                             android:src="@drawable/exper_profile_phone_icon"/>
 
                     </LinearLayout>

@@ -12,5 +12,6 @@ data class ReviewData(
     val ratingNum: Int? = null,
     val coachInstruction: String? = null,
     val solutionImg2: String? = null,
+    val solutionImg3: String? = null,
 ): Serializable {
 }
