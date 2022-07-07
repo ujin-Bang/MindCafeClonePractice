@@ -26,6 +26,7 @@ abstract class BaseActivity : AppCompatActivity() {
     lateinit var mLinearLayoutNoticeActionBar: LinearLayout
     lateinit var mLinearLayoutOriginNoticeActionBar: LinearLayout
     lateinit var mlinearLayoutMindPostItActionBar: LinearLayout
+    lateinit var mLinearLayoutReviewDetailActionBar: LinearLayout
 
     lateinit var mBtnBack: TextView
     lateinit var mBtnNext: TextView
@@ -40,6 +41,8 @@ abstract class BaseActivity : AppCompatActivity() {
     lateinit var mOrignTitle: TextView
     lateinit var mMindPostItBack: ImageView
     lateinit var mMindPostItTitile: TextView
+    lateinit var mTxtBackX: TextView
+    lateinit var mReviewTitle: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -86,7 +89,7 @@ abstract class BaseActivity : AppCompatActivity() {
         mLinearLayoutNoticeActionBar = defActionBar.customView.findViewById(R.id.noticeActionBar)
         mLinearLayoutOriginNoticeActionBar = defActionBar.customView.findViewById(R.id.noticeOriginActionBar)
         mlinearLayoutMindPostItActionBar = defActionBar.customView.findViewById(R.id.mindPostItActionBar)
-
+        mLinearLayoutReviewDetailActionBar = defActionBar.customView.findViewById(R.id.reviewDetailActionBar)
 
         mBtnBack = defActionBar.customView.findViewById(R.id.btnBack)
         mBtnNext = defActionBar.customView.findViewById(R.id.btnNext)
@@ -101,7 +104,14 @@ abstract class BaseActivity : AppCompatActivity() {
         mOrignTitle = defActionBar.customView.findViewById(R.id.txtNoticeOrigin)
         mMindPostItBack = defActionBar.customView.findViewById(R.id.btnMindPostItBack)
         mMindPostItTitile = defActionBar.customView.findViewById(R.id.txtMindPostIt)
+        mTxtBackX = defActionBar.customView.findViewById(R.id.txtBackX)
+        mReviewTitle = defActionBar.customView.findViewById(R.id.txtConsultingTitle)
 
+
+
+        mTxtBackX.setOnClickListener {
+            finish()
+        }
 
         mMindPostItBack.setOnClickListener {
 

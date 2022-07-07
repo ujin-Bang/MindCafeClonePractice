@@ -3,7 +3,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#D5E0EC"
+    android:background="#4879B7E1"
     android:padding="20dp"
     android:orientation="vertical">
 
@@ -16,12 +16,9 @@
             android:id="@+id/txtEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="이메일(닉네임) 공개"/>
+            android:text="자유롭게 작성해주세요.^^"/>
 
-        <CheckBox
-            android:id="@+id/emailCheckBox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+
 
         <TextView
             android:layout_width="0dp"
@@ -32,18 +29,24 @@
             android:id="@+id/btnOk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/bottomnav"
+            android:textStyle="bold"
             android:text="완료" />
+
     </LinearLayout>
 
     <EditText
         android:id="@+id/edtContent"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:lines="5"
         android:maxLength="100"
-        android:hint="잠시 현실에서 벗어날 수 있도록 시간이 멈춘다면\n무엇을 하고 싶나요?"
+        android:hint="잠시 현실에서 벗어날 수 있도록 시간이 멈춘다면 \n무엇을 하고 싶나요?"
         android:gravity="top"
-        android:backgroundTint="@color/white"/>
+        android:textSize="15sp"
+        android:lineSpacingExtra="10dp"
+        android:backgroundTint="#00FFFFFF"/>
 
     <TextView
         android:id="@+id/txtCount"

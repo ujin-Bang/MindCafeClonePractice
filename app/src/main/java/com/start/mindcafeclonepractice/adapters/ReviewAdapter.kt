@@ -11,7 +11,20 @@ import com.bumptech.glide.Glide
 import com.start.mindcafeclonepractice.R
 import com.start.mindcafeclonepractice.datas.ReviewData
 
-class ReviewAdapter(val mList: ArrayList<ReviewData>, val mContext: Context): RecyclerView.Adapter<ReviewAdapter.ReviewHolderView>() {
+class ReviewAdapter(
+    val mList: ArrayList<ReviewData>,
+    val mContext: Context): RecyclerView.Adapter<ReviewAdapter.ReviewHolderView>() {
+
+    interface OnItemClickListener{
+        fun onItemClick(v:View, data: ReviewData, pos: Int)
+    }
+
+    private var listener: OnItemClickListener? = null
+
+
+    fun setOnItemClickListener(listener: OnItemClickListener){
+        this.listener = listener
+    }
 
     inner class ReviewHolderView(row: View): RecyclerView.ViewHolder(row) {
 
@@ -31,6 +44,14 @@ class ReviewAdapter(val mList: ArrayList<ReviewData>, val mContext: Context): Re
             Glide.with(mContext).load(data.solutionImg).into(imgSolutionState)
             txtPurchaseProduct.text = data.purchaseProduct
             txtContent.text = data.content
+
+            val pos = adapterPosition
+            if(pos != RecyclerView.NO_POSITION ){
+
+                itemView.setOnClickListener {
+                    listener?.onItemClick(itemView, data, pos)
+                }
+            }
         }
 
     }

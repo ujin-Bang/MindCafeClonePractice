@@ -1,5 +1,6 @@
 package com.start.mindcafeclonepractice
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
@@ -16,6 +17,7 @@ import com.google.firebase.database.*
 import com.start.mindcafeclonepractice.adapters.MindPostItAdapter
 import com.start.mindcafeclonepractice.databinding.ActivityMindPostitBinding
 import com.start.mindcafeclonepractice.datas.MindPostItData
+import kotlin.math.min
 
 class MindPostitActivity : BaseActivity() {
 
@@ -35,7 +37,10 @@ class MindPostitActivity : BaseActivity() {
 
     }
 
+    @SuppressLint("SetTextI18n", "CutPasteId")
     override fun setupEvents() {
+
+
 
         binding.btnPostItWright.setOnClickListener {
 
@@ -44,7 +49,6 @@ class MindPostitActivity : BaseActivity() {
             val alertDialog = AlertDialog.Builder(mContext)
                 .setView(dialogCustom)
                 .create()
-
 
 
             val inputContent = dialogCustom.findViewById<EditText>(R.id.edtContent).text
@@ -73,6 +77,8 @@ class MindPostitActivity : BaseActivity() {
                 val makeRef = FirebaseDatabase.getInstance().getReference("mindPostIt").push()
 
                 inputContent.toString().also { mindPostItData.content = it }
+                mindPostItData.writeTime = ServerValue.TIMESTAMP
+                mindPostItData.sympathyCount = 0
 
                 makeRef.setValue(mindPostItData)
 

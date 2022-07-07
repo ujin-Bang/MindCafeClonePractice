@@ -3,8 +3,10 @@
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:padding="20dp"
+        android:paddingEnd="10dp"
+        android:layout_margin="10dp"
         android:gravity="center"
+        android:background="#609ADAE3"
         android:orientation="vertical">
 
         <LinearLayout
@@ -14,11 +16,11 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/txtEmail"
+                android:id="@+id/txtWriteTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="90dp"
-                android:text="공개/ 비공개에따른 이메일표시"/>
+                android:text="작성시간"/>
 
 
             <ImageView

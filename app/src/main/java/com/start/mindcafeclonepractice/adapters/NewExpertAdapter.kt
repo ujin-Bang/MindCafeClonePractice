@@ -19,6 +19,7 @@ class NewExpertAdapter(
         fun onItemClick(v:View, data: NewExpertData, pos : Int)
     }
     private var listener : OnItemClickListener? = null
+
     fun setOnItemClickListener(listener : OnItemClickListener) {
         this.listener = listener
     }
