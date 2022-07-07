@@ -234,6 +234,7 @@
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:gravity="center_vertical"
+            style="@style/AppTheme.AppBarOverlay"
             android:paddingHorizontal="10dp">
 
 

@@ -16,8 +16,6 @@ abstract class BaseFragment: Fragment() {
 
 
 
-
-
     abstract fun setupEvents()
     abstract fun setValues()
 
