@@ -1,9 +1,9 @@
 package com.start.mindcafeclonepractice
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import androidx.core.os.bundleOf
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.FragmentActivity
 import com.bumptech.glide.Glide
@@ -11,7 +11,6 @@ import com.google.android.material.tabs.TabLayoutMediator
 import com.start.mindcafeclonepractice.adapters.ExpertProfileViewPager2Adapter
 import com.start.mindcafeclonepractice.databinding.ActivityExpertProfileBinding
 import com.start.mindcafeclonepractice.datas.ReviewData
-import com.start.mindcafeclonepractice.viewpager2fragment.Viewpager2ExpertProfile1Fragment
 
 class ExpertProfileActivity : BaseActivity() {
 
@@ -46,6 +45,13 @@ class ExpertProfileActivity : BaseActivity() {
             
         }
 
+
+        binding.btnSelect.setOnClickListener {
+
+            val myIntent = Intent(mContext, ExpertConsultingMenuActivity::class.java)
+            myIntent.putExtra("data",mData)
+            startActivity(myIntent)
+        }
     }
 
     override fun setValues() {
