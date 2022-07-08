@@ -161,17 +161,14 @@
                         android:gravity="center_vertical"
                         android:elevation="3dp"
                         android:foreground="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:layout_gravity="center"
                         android:background="#F3F0D7"
                         android:text="텍스트(채팅)에 대해 더 알고 싶어요                                       >"/>
 
 
                 </LinearLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="d\nffnfn\fnfn\n\fnf\n\fn\fn\fnfn\f\nf\nfn\fn\fnfn\f\\n\n\n\n\n\nchjvlz\n\n\n\n\nn\\n\djklhlhdagljkn\n\n\n\n\n\n\n\n\djlhfalfhdf"/>
 
             </LinearLayout>
 

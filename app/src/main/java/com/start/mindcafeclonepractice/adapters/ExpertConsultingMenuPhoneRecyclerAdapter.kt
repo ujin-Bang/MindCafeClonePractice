@@ -7,37 +7,38 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.start.mindcafeclonepractice.R
-import com.start.mindcafeclonepractice.datas.ExpertConsultingMenuChattData
+import com.start.mindcafeclonepractice.datas.ExpertConsultingMenuPhoneData
+import org.w3c.dom.Text
 
-class ExpertConsultingMenuChattRecyclerAdapter(
+class ExpertConsultingMenuPhoneRecyclerAdapter (
     val mContext: Context,
-    val mList: ArrayList<ExpertConsultingMenuChattData>
-): RecyclerView.Adapter<ExpertConsultingMenuChattRecyclerAdapter.MenuChattViewHolder>() {
+    val mList: ArrayList<ExpertConsultingMenuPhoneData>
+        ):RecyclerView.Adapter<ExpertConsultingMenuPhoneRecyclerAdapter.PhoneViewHolder>() {
 
-    inner class MenuChattViewHolder(row: View): RecyclerView.ViewHolder(row){
-
+    inner class PhoneViewHolder(row: View) : RecyclerView.ViewHolder(row){
         val txtTitle = row.findViewById<TextView>(R.id.txtTitle)
         val txtPrice = row.findViewById<TextView>(R.id.txtPrice)
         val txtTimeMinutes = row.findViewById<TextView>(R.id.txtTimeMinutes)
         val txtExpiration = row.findViewById<TextView>(R.id.txtExpiration)
 
-
-        fun bind(data: ExpertConsultingMenuChattData){
+        fun bind(data: ExpertConsultingMenuPhoneData){
             txtTitle.text = data.title
             txtExpiration.text = data.expiration
+            txtPrice.text = data.price.toString()
             txtTimeMinutes.text = data.timeMinutes
-            txtPrice.text = data.price?.let { data.getFormattedPrice(it) }
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuChattViewHolder {
-        val row = LayoutInflater.from(mContext).inflate(R.layout.expert_consulting_menu_chatt_list_item, parent,false)
-        return MenuChattViewHolder(row)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PhoneViewHolder {
+
+        val span = LayoutInflater.from(mContext).inflate(R.layout.fragment_expert_consulting_menu_phone,parent,false)
+        return PhoneViewHolder(span)
     }
 
-    override fun onBindViewHolder(holder: MenuChattViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: PhoneViewHolder, position: Int) {
 
         holder.bind(mList[position])
+
     }
 
     override fun getItemCount() = mList.size
