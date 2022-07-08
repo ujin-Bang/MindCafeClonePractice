@@ -20,7 +20,7 @@
         <entry key="app/src/main/res/drawable/style.xml" value="0.15" />
         <entry key="app/src/main/res/drawable/time_background.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_community.xml" value="0.1296875" />
-        <entry key="app/src/main/res/layout/activity_expert_profile.xml" value="0.1640625" />
+        <entry key="app/src/main/res/layout/activity_expert_profile.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.26145833333333335" />
         <entry key="app/src/main/res/layout/activity_mind_postit.xml" value="0.165" />
@@ -71,6 +71,7 @@
         <entry key="app/src/main/res/layout/fragment_new_expert_profile_detail_viewpager2in1.xml" value="0.278125" />
         <entry key="app/src/main/res/layout/fragment_new_expert_profile_detail_viewpager2in2.xml" value="0.278125" />
         <entry key="app/src/main/res/layout/fragment_new_expert_profile_detail_viewpager2in3.xml" value="0.27708333333333335" />
+        <entry key="app/src/main/res/layout/fragment_viepager2_expert_profile_1.xml" value="0.1640625" />
         <entry key="app/src/main/res/layout/fragment_viepager2_expert_profile_2.xml" value="0.1640625" />
         <entry key="app/src/main/res/layout/fragment_viepager2_expert_profile_3.xml" value="0.1640625" />
         <entry key="app/src/main/res/layout/frgement_bottom_until.xml" value="0.25" />
