@@ -32,14 +32,14 @@
                     android:textColor="@color/black"/>
 
                 <TextView
-                    android:id="@+id/txtTimeMinutes"
+                    android:id="@+id/txtTimeMinutess"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="회기당 50분 x 1회"/>
 
                 <TextView
-                    android:id="@+id/txtExpiration"
+                    android:id="@+id/txtExpirations"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="결제일로부터 2주간 유효"/>
