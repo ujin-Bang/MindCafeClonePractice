@@ -9,11 +9,6 @@
         tools:context=".ExpertConsultingMenuActivity">
 
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/consultingMenuTabLayout"
             android:layout_width="match_parent"
@@ -22,21 +17,26 @@
             app:tabSelectedTextColor="@color/black"
             app:tabIndicatorColor="@color/bottomnav"/>
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/consultingMenuViewPager2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/btnQandA"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:src="@drawable/question_icon"
                 android:elevation="5dp"
                 android:background="@drawable/custom_ripple_effect2"
-                android:clickable="true"
-                android:focusable="true"
                 android:layout_gravity="end|bottom"
-                android:layout_marginBottom="100dp"
+                android:layout_marginBottom="80dp"
                 android:layout_marginEnd="20dp"/>
 
         </FrameLayout>

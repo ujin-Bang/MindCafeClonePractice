@@ -115,6 +115,10 @@ abstract class BaseActivity : AppCompatActivity() {
         mTxtCahtTile = defActionBar.customView.findViewById(R.id.txtChattTitle)
 
 
+        mXBackImg.setOnClickListener {
+            finish()
+        }
+
         mBtnChattX.setOnClickListener {
             finish()
         }
