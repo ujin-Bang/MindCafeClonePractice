@@ -1,5 +1,6 @@
 package com.start.mindcafeclonepractice.expertconsultinmenuviewpagerfragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -8,6 +9,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.database.*
+import com.start.mindcafeclonepractice.ChattDetailActivity
 import com.start.mindcafeclonepractice.R
 import com.start.mindcafeclonepractice.adapters.ExpertConsultingMenuChattRecyclerAdapter
 import com.start.mindcafeclonepractice.bottomnavfragments.BaseFragment
@@ -43,6 +45,11 @@ class ExpertConsultingMenuCattFragment:BaseFragment() {
     }
 
     override fun setupEvents() {
+
+        binding.btnDetailChatt.setOnClickListener {
+            val myIntent = Intent(mContext, ChattDetailActivity::class.java)
+            startActivity(myIntent)
+        }
 
     }
 

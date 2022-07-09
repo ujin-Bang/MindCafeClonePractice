@@ -155,6 +155,7 @@
 
 
                     <TextView
+                        android:id="@+id/btnDetailChatt"
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:paddingHorizontal="15dp"

@@ -27,6 +27,7 @@ abstract class BaseActivity : AppCompatActivity() {
     lateinit var mLinearLayoutOriginNoticeActionBar: LinearLayout
     lateinit var mlinearLayoutMindPostItActionBar: LinearLayout
     lateinit var mLinearLayoutReviewDetailActionBar: LinearLayout
+    lateinit var mLinearLayoutChattDetailActionBar: LinearLayout
 
     lateinit var mBtnBack: TextView
     lateinit var mBtnNext: TextView
@@ -43,6 +44,8 @@ abstract class BaseActivity : AppCompatActivity() {
     lateinit var mMindPostItTitile: TextView
     lateinit var mTxtBackX: TextView
     lateinit var mReviewTitle: TextView
+    lateinit var mBtnChattX: ImageView
+    lateinit var mTxtCahtTile: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -90,6 +93,8 @@ abstract class BaseActivity : AppCompatActivity() {
         mLinearLayoutOriginNoticeActionBar = defActionBar.customView.findViewById(R.id.noticeOriginActionBar)
         mlinearLayoutMindPostItActionBar = defActionBar.customView.findViewById(R.id.mindPostItActionBar)
         mLinearLayoutReviewDetailActionBar = defActionBar.customView.findViewById(R.id.reviewDetailActionBar)
+        mLinearLayoutChattDetailActionBar = defActionBar.customView.findViewById(R.id.chattDetailActionBar)
+
 
         mBtnBack = defActionBar.customView.findViewById(R.id.btnBack)
         mBtnNext = defActionBar.customView.findViewById(R.id.btnNext)
@@ -106,8 +111,13 @@ abstract class BaseActivity : AppCompatActivity() {
         mMindPostItTitile = defActionBar.customView.findViewById(R.id.txtMindPostIt)
         mTxtBackX = defActionBar.customView.findViewById(R.id.txtBackX)
         mReviewTitle = defActionBar.customView.findViewById(R.id.txtConsultingTitle)
+        mBtnChattX = defActionBar.customView.findViewById(R.id.btnChattX)
+        mTxtCahtTile = defActionBar.customView.findViewById(R.id.txtChattTitle)
 
 
+        mBtnChattX.setOnClickListener {
+            finish()
+        }
 
         mTxtBackX.setOnClickListener {
             finish()

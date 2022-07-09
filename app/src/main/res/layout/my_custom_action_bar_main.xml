@@ -361,6 +361,37 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/chattDetailActionBar"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="10dp">
+
+
+            <ImageView
+                android:id="@+id/btnChattX"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ripple_effect_background"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_baseline_close_24"/>
+
+
+            <TextView
+                android:id="@+id/txtChattTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="액션바 제목자리"
+                android:textSize="22dp"
+                android:textColor="@color/black"
+                android:layout_marginStart="125dp"/>
+
+
+        </LinearLayout>
 
 
 

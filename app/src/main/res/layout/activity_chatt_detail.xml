@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ChattDetailActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_sky"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="30dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/font_4"
+                            android:text="텍스트"
+                            android:textColor="@color/bottomnav"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:text="(채팅)이란?"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:lineSpacingExtra="5dp"
+                        android:text="장소와 시간의 구애를 받지 않아요. 완성된 문장이나 직접 상대방과 대화하는 것보다, 채팅 대화가 자신의 상황을 명확히 전달할 수 있다고 생각하시는 분께 추천하는 이용 방식입니다. 친구와 채팅하듯 편안한 분위기로 이용하실 수 있습니다."
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="10dp"
+                    android:paddingTop="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="텍스트(채팅) 이용 가능한 상품"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="텍스트 테라피(채팅 상담)\n\n완성된 문장이나 직접 상대방과 대화하는 것보다 채팅 대화가 자신의 상황을 명확히 전달할 수 있는 경우 추천하는 상담 형태입니다.\n\n\n텍스트 코칭(채팅 코칭)\n\n언제 어디서든 코칭 서비스를 받을 수 있다는 장점이 있는 코칭 형태로 코칭 내용을 지속해서 확인하며 차분하게 생각과 목표를 정리할 수 있습니다." />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:text="텍스트(채팅) 이용방법"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/black" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="30dp"
+                        android:lineSpacingExtra="5dp"
+                        android:text="1 |     '전문가 찾기'에서 전문가 선택 후 상담/코칭 이용권을 구매\n2 |     전문가와의 채팅을 통해서 상담/코칭 시간을 확정\n3 |     예약된 시간에 마인드 카페 앱의 '상담하기'에서 담당 상담사\n         /코치와 채팅이 가능한 상담 방/코칭 방에 접속\n4 |     이후 실시간 채팅으로 예약된 시간 동안 상담/코칭 진행" />
+
+                </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/light_gray"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="30dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="50dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/font_4"
+                            android:text="유의사항"
+                            android:textColor="#2B2B2B"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="⚛︎ 안정적인 데이터 환경(3G/LTE/WiFi)을 준비해주세요." />
+
+                    </LinearLayout>
+
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>
