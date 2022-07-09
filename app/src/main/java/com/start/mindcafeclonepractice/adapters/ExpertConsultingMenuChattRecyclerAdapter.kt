@@ -14,6 +14,17 @@ class ExpertConsultingMenuChattRecyclerAdapter(
     val mList: ArrayList<ExpertConsultingMenuChattData>
 ): RecyclerView.Adapter<ExpertConsultingMenuChattRecyclerAdapter.MenuChattViewHolder>() {
 
+    interface OnItemClickListener {
+
+        fun onItemClick(v:View, data:ExpertConsultingMenuChattData, pos: Int)
+    }
+
+    private var listener: OnItemClickListener? = null
+
+    fun setOnItemClickListener(listener: OnItemClickListener){
+        this.listener = listener
+    }
+
     inner class MenuChattViewHolder(row: View): RecyclerView.ViewHolder(row){
 
         val txtTitle = row.findViewById<TextView>(R.id.txtTitle)
@@ -27,6 +38,14 @@ class ExpertConsultingMenuChattRecyclerAdapter(
             txtExpiration.text = data.expiration
             txtTimeMinutes.text = data.timeMinutes
             txtPrice.text = data.price?.let { data.getFormattedPrice(it) }
+
+            val pos = adapterPosition
+            if (pos != RecyclerView.NO_POSITION){
+
+                itemView.setOnClickListener {
+                    listener?.onItemClick(itemView, data, pos)
+                }
+            }
         }
     }
 
