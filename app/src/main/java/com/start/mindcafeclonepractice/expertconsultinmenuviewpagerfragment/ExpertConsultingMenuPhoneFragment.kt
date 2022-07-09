@@ -1,5 +1,7 @@
 package com.start.mindcafeclonepractice.expertconsultinmenuviewpagerfragment
 
+import android.content.Intent
+import android.opengl.Visibility
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -10,6 +12,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.database.*
 import com.start.mindcafeclonepractice.R
+import com.start.mindcafeclonepractice.VoiceDetailActivity
 import com.start.mindcafeclonepractice.adapters.ExpertConsultingMenuPhoneRecyclerAdapter
 import com.start.mindcafeclonepractice.bottomnavfragments.BaseFragment
 import com.start.mindcafeclonepractice.databinding.FragmentExpertConsultingMenuPhoneBinding
@@ -45,6 +48,11 @@ class ExpertConsultingMenuPhoneFragment:BaseFragment() {
 
     override fun setupEvents() {
 
+        FAQ()
+
+        binding.btnVoiceDetail.setOnClickListener {
+            startActivity(Intent(mContext, VoiceDetailActivity::class.java))
+        }
     }
 
     override fun setValues() {
@@ -80,6 +88,59 @@ class ExpertConsultingMenuPhoneFragment:BaseFragment() {
         binding.consultingMenuPhoneRecyclerView.setHasFixedSize(true)
 
 
+    }
+
+    fun FAQ(){
+
+        binding.txtFAQ1.setOnClickListener {
+            binding.txtFAQ1.visibility = View.GONE
+            binding.txtFAQ11.visibility = View.VISIBLE
+        }
+        binding.txtFAQ11.setOnClickListener {
+            binding.txtFAQ11.visibility = View.GONE
+            binding.txtFAQ1.visibility = View.VISIBLE
+
+        }
+
+        binding.txtFAQ2.setOnClickListener {
+            binding.txtFAQ2.visibility = View.GONE
+            binding.txtFAQ22.visibility = View.VISIBLE
+        }
+
+        binding.txtFAQ22.setOnClickListener {
+            binding.txtFAQ22.visibility = View.GONE
+            binding.txtFAQ2.visibility = View.VISIBLE
+        }
+
+        binding.txtFAQ3.setOnClickListener {
+            binding.txtFAQ3.visibility = View.GONE
+            binding.txtFAQ33.visibility = View.VISIBLE
+        }
+
+        binding.txtFAQ33.setOnClickListener {
+            binding.txtFAQ33.visibility = View.GONE
+            binding.txtFAQ3.visibility = View.VISIBLE
+        }
+
+        binding.txtFAQ4.setOnClickListener {
+            binding.txtFAQ4.visibility = View.GONE
+            binding.txtFAQ44.visibility = View.VISIBLE
+        }
+
+        binding.txtFAQ44.setOnClickListener {
+            binding.txtFAQ44.visibility = View.GONE
+            binding.txtFAQ4.visibility = View.VISIBLE
+        }
+
+        binding.txtFAQ5.setOnClickListener {
+            binding.txtFAQ5.visibility = View.GONE
+            binding.txtFAQ55.visibility = View.VISIBLE
+        }
+
+        binding.txtFAQ55.setOnClickListener {
+            binding.txtFAQ55.visibility = View.GONE
+            binding.txtFAQ5.visibility = View.VISIBLE
+        }
     }
 
 }
