@@ -10,6 +10,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.database.*
 import com.start.mindcafeclonepractice.ChattDetailActivity
+import com.start.mindcafeclonepractice.PaymentActivity
 import com.start.mindcafeclonepractice.R
 import com.start.mindcafeclonepractice.adapters.ExpertConsultingMenuChattRecyclerAdapter
 import com.start.mindcafeclonepractice.bottomnavfragments.BaseFragment
@@ -51,12 +52,15 @@ class ExpertConsultingMenuCattFragment:BaseFragment() {
             startActivity(myIntent)
         }
 
+        chattTabRecyclerItemClickListener()
     }
 
     override fun setValues() {
 
+
     }
 
+    //파이어 베이스 데이터 가져오기
     fun getTherapyListFromFirebase(){
         ref = FirebaseDatabase.getInstance().getReference("review").child("1").child("textTherapy")
         ref?.addValueEventListener(object : ValueEventListener{
@@ -80,6 +84,21 @@ class ExpertConsultingMenuCattFragment:BaseFragment() {
         binding.consultingMenuChattingRecyclerView.adapter = mAdapter
         binding.consultingMenuChattingRecyclerView.layoutManager = LinearLayoutManager(mContext)
         binding.consultingMenuChattingRecyclerView.setHasFixedSize(true)
+
+    }
+
+    //리싸이클러뷰 아이템클릭 이벤트 처리 : 클릭된 아이템의 데이터 다른 액티비티(결제화면)로 넘기기
+    fun chattTabRecyclerItemClickListener(){
+
+        mAdapter.setOnItemClickListener(object : ExpertConsultingMenuChattRecyclerAdapter.OnItemClickListener{
+            override fun onItemClick(v: View, data: ExpertConsultingMenuChattData, pos: Int) {
+                Intent(activity,PaymentActivity::class.java).apply {
+                    putExtra("data", data)
+                    addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                }.run { startActivity(this) }
+            }
+
+        })
 
     }
 }

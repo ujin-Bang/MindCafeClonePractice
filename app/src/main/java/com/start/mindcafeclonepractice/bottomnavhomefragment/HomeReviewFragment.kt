@@ -9,14 +9,11 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import com.google.firebase.database.*
-import com.start.mindcafeclonepractice.NewExpertDetailActivity
 import com.start.mindcafeclonepractice.R
 import com.start.mindcafeclonepractice.ReviewDetailActivity
-import com.start.mindcafeclonepractice.adapters.NewExpertAdapter
 import com.start.mindcafeclonepractice.adapters.ReviewAdapter
 import com.start.mindcafeclonepractice.bottomnavfragments.BaseFragment
 import com.start.mindcafeclonepractice.databinding.FragmentHomeReviewBinding
-import com.start.mindcafeclonepractice.datas.NewExpertData
 import com.start.mindcafeclonepractice.datas.ReviewData
 
 class HomeReviewFragment: BaseFragment() {
