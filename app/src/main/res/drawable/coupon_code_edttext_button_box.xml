@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:state_pressed="false">
+
+        <layer-list>
+
+            <item>
+
+                <shape
+                    android:shape="rectangle">
+
+                    <solid
+                        android:color="@color/coupon_button"/>
+
+                    <corners
+                        android:radius="4dp"/>
+
+                </shape>
+
+            </item>
+
+            <item
+                android:top="1dp"
+                android:bottom="1dp"
+                android:start="1dp"
+                android:end="1dp">
+
+                <shape
+                    android:shape="rectangle">
+
+                    <solid
+                        android:color="@color/white"/>
+
+                    <corners
+                        android:radius="4dp"/>
+
+                </shape>
+
+            </item>
+        </layer-list>
+
+
+    </item>
+</selector>
