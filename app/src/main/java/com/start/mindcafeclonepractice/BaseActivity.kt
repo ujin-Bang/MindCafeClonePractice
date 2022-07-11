@@ -28,6 +28,7 @@ abstract class BaseActivity : AppCompatActivity() {
     lateinit var mlinearLayoutMindPostItActionBar: LinearLayout
     lateinit var mLinearLayoutReviewDetailActionBar: LinearLayout
     lateinit var mLinearLayoutChattDetailActionBar: LinearLayout
+    lateinit var mLinearLayoutPaymentActionBar: LinearLayout
 
     lateinit var mBtnBack: TextView
     lateinit var mBtnNext: TextView
@@ -46,6 +47,8 @@ abstract class BaseActivity : AppCompatActivity() {
     lateinit var mReviewTitle: TextView
     lateinit var mBtnChattX: ImageView
     lateinit var mTxtCahtTile: TextView
+    lateinit var mBtnPaymentBack: ImageView
+    lateinit var mTxtPaymentTitle: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -94,7 +97,7 @@ abstract class BaseActivity : AppCompatActivity() {
         mlinearLayoutMindPostItActionBar = defActionBar.customView.findViewById(R.id.mindPostItActionBar)
         mLinearLayoutReviewDetailActionBar = defActionBar.customView.findViewById(R.id.reviewDetailActionBar)
         mLinearLayoutChattDetailActionBar = defActionBar.customView.findViewById(R.id.chattDetailActionBar)
-
+        mLinearLayoutPaymentActionBar = defActionBar.customView.findViewById(R.id.paymentActionBar)
 
         mBtnBack = defActionBar.customView.findViewById(R.id.btnBack)
         mBtnNext = defActionBar.customView.findViewById(R.id.btnNext)
@@ -113,7 +116,13 @@ abstract class BaseActivity : AppCompatActivity() {
         mReviewTitle = defActionBar.customView.findViewById(R.id.txtConsultingTitle)
         mBtnChattX = defActionBar.customView.findViewById(R.id.btnChattX)
         mTxtCahtTile = defActionBar.customView.findViewById(R.id.txtChattTitle)
+        mBtnPaymentBack = defActionBar.customView.findViewById(R.id.btnPaymentBack)
+        mTxtPaymentTitle = defActionBar.customView.findViewById(R.id.txtPaymentActionBarTitle)
 
+
+        mBtnPaymentBack.setOnClickListener {
+            finish()
+        }
 
         mXBackImg.setOnClickListener {
             finish()
