@@ -1,7 +1,6 @@
 package com.start.mindcafeclonepractice.expertconsultinmenuviewpagerfragment
 
 import android.content.Intent
-import android.opengl.Visibility
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -11,6 +10,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.database.*
+import com.start.mindcafeclonepractice.PaymentPhoneActivity
 import com.start.mindcafeclonepractice.R
 import com.start.mindcafeclonepractice.VoiceDetailActivity
 import com.start.mindcafeclonepractice.adapters.ExpertConsultingMenuPhoneRecyclerAdapter
@@ -50,8 +50,12 @@ class ExpertConsultingMenuPhoneFragment:BaseFragment() {
 
         FAQ()
 
+        recyclerViewItemClickEvent()
+
         binding.btnVoiceDetail.setOnClickListener {
             startActivity(Intent(mContext, VoiceDetailActivity::class.java))
+
+
         }
     }
 
@@ -141,6 +145,25 @@ class ExpertConsultingMenuPhoneFragment:BaseFragment() {
             binding.txtFAQ55.visibility = View.GONE
             binding.txtFAQ5.visibility = View.VISIBLE
         }
+    }
+
+    //리싸이클러뷰 아이템 클릭 이벤트처리 : 클릭된 아이템에 데이터 담아서 다른 화면(결제화면)으로 넘기기
+    fun recyclerViewItemClickEvent(){
+
+       mAdapter.setOnItemClickListener(object : ExpertConsultingMenuPhoneRecyclerAdapter.OnItemClickListener {
+           override fun onItemClick(v: View, data: ExpertConsultingMenuPhoneData, position: Int) {
+               Intent(activity,PaymentPhoneActivity::class.java).apply {
+
+                   putExtra("data",data)
+                   addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+
+               }.run { startActivity(this) }
+
+               Log.d("리싸이클러뷰아이템클릭이벤트",data.title.toString())
+           }
+
+       })
+
     }
 
 }

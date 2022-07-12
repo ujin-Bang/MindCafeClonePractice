@@ -1,5 +1,6 @@
 package com.start.mindcafeclonepractice.datas
 
+import java.io.Serializable
 import java.text.DecimalFormat
 
 data class ExpertConsultingMenuPhoneData(
@@ -7,7 +8,7 @@ data class ExpertConsultingMenuPhoneData(
     val price: Int? = null,
     val timeMinutes: String? = null,
     val expiration: String? = null,
-) {
+):Serializable {
     fun getFormattedPrice(price: Int): String {
 
         val dec = DecimalFormat("#,###")
