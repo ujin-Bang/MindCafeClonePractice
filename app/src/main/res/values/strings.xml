@@ -6,7 +6,6 @@
     <string name="view4_4">심리검사</string>
     <string name="expert_button">선택하기</string>
     <string-array name="coupon">
-
         <item>쿠폰을 선택해주세요</item>
         <item>10%할인</item>
         <item>20%할인</item>
@@ -14,6 +13,16 @@
         <item>여름 방학 할인</item>
         <item>휴가철 할인</item>
         <item>주중 할인</item>
+    </string-array>
+
+    <string-array name="coupon2">
+        <item>쿠폰을 선택해주세요</item>
+        <item>매월 첫째주 10% 할인</item>
+        <item>매월 마지막주 10% 할인</item>
+        <item>청소년 방학 특별 할인</item>
+        <item>자영업자 할인</item>
+        <item>가정주부 할인</item>
+        <item>가족 할인</item>
 
 
     </string-array>
