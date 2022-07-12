@@ -159,7 +159,6 @@ class ExpertConsultingMenuPhoneFragment:BaseFragment() {
 
                }.run { startActivity(this) }
 
-               Log.d("리싸이클러뷰아이템클릭이벤트",data.title.toString())
            }
 
        })

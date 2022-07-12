@@ -29,6 +29,7 @@ abstract class BaseActivity : AppCompatActivity() {
     lateinit var mLinearLayoutReviewDetailActionBar: LinearLayout
     lateinit var mLinearLayoutChattDetailActionBar: LinearLayout
     lateinit var mLinearLayoutPaymentActionBar: LinearLayout
+    lateinit var mLinearlayoutPaymentPhoneActionBar: LinearLayout
 
     lateinit var mBtnBack: TextView
     lateinit var mBtnNext: TextView
@@ -49,6 +50,9 @@ abstract class BaseActivity : AppCompatActivity() {
     lateinit var mTxtCahtTile: TextView
     lateinit var mBtnPaymentBack: ImageView
     lateinit var mTxtPaymentTitle: TextView
+    lateinit var mTxtPaymentPhoneTitle: TextView
+    lateinit var mBtnPaymentPhoneBack: ImageView
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -98,6 +102,9 @@ abstract class BaseActivity : AppCompatActivity() {
         mLinearLayoutReviewDetailActionBar = defActionBar.customView.findViewById(R.id.reviewDetailActionBar)
         mLinearLayoutChattDetailActionBar = defActionBar.customView.findViewById(R.id.chattDetailActionBar)
         mLinearLayoutPaymentActionBar = defActionBar.customView.findViewById(R.id.paymentActionBar)
+        mLinearlayoutPaymentPhoneActionBar = defActionBar.customView.findViewById(R.id.paymentPhoneActionBar)
+
+
 
         mBtnBack = defActionBar.customView.findViewById(R.id.btnBack)
         mBtnNext = defActionBar.customView.findViewById(R.id.btnNext)
@@ -118,7 +125,13 @@ abstract class BaseActivity : AppCompatActivity() {
         mTxtCahtTile = defActionBar.customView.findViewById(R.id.txtChattTitle)
         mBtnPaymentBack = defActionBar.customView.findViewById(R.id.btnPaymentBack)
         mTxtPaymentTitle = defActionBar.customView.findViewById(R.id.txtPaymentActionBarTitle)
+        mTxtPaymentPhoneTitle = defActionBar.customView.findViewById(R.id.txtPaymentPhoneActionBarTitle)
+        mBtnPaymentPhoneBack = defActionBar.customView.findViewById(R.id.btnPaymentPhoneBack)
 
+
+        mBtnPaymentPhoneBack.setOnClickListener {
+            finish()
+        }
 
         mBtnPaymentBack.setOnClickListener {
             finish()
