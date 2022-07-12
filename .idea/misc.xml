@@ -22,6 +22,8 @@
         <entry key="app/src/main/res/drawable/post_it_alert_background.xml" value="0.1215" />
         <entry key="app/src/main/res/drawable/ripple_effect_background.xml" value="0.1525" />
         <entry key="app/src/main/res/drawable/spinner_background_box.xml" value="0.5" />
+        <entry key="app/src/main/res/drawable/spinner_background_box_2.xml" value="0.175" />
+        <entry key="app/src/main/res/drawable/spinner_background_box_2_checked.xml" value="0.175" />
         <entry key="app/src/main/res/drawable/style.xml" value="0.15" />
         <entry key="app/src/main/res/drawable/time_background.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_chatt_detail.xml" value="0.25" />
