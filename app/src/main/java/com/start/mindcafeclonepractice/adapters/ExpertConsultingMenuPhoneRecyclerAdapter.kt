@@ -6,6 +6,7 @@ import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.start.mindcafeclonepractice.R
@@ -15,6 +16,19 @@ class ExpertConsultingMenuPhoneRecyclerAdapter (
     val mContext: Context,
     val mList: ArrayList<ExpertConsultingMenuPhoneData>
         ):RecyclerView.Adapter<ExpertConsultingMenuPhoneRecyclerAdapter.PhoneViewHolder>() {
+
+    interface OnItemClickListener{
+
+        fun onItemClick(v: View, data: ExpertConsultingMenuPhoneData, position: Int)
+
+    }
+
+    private var listener: OnItemClickListener? = null
+
+    fun setOnItemClickListener(listener: OnItemClickListener){
+
+            this.listener = listener
+    }
 
     inner class PhoneViewHolder(row: View) : RecyclerView.ViewHolder(row){
 
@@ -26,6 +40,15 @@ class ExpertConsultingMenuPhoneRecyclerAdapter (
         fun bind(data: ExpertConsultingMenuPhoneData){
             txtTitle.text = data.title
             txtPrice.text = data.price?.let { data.getFormattedPrice(it) }
+
+            val position = adapterPosition
+            if (position != RecyclerView.NO_POSITION){
+
+                itemView.setOnClickListener {
+                    listener?.onItemClick(itemView, data, position)
+                }
+
+            }
         }
     }
 

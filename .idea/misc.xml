@@ -64,7 +64,7 @@
         <entry key="app/src/main/res/layout/fragment_consulting_menu_phone.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_expert.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_expert_consulting_menu_chatt.xml" value="0.165" />
-        <entry key="app/src/main/res/layout/fragment_expert_consulting_menu_phone.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/fragment_expert_consulting_menu_phone.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_expert_find.xml" value="0.1296875" />
         <entry key="app/src/main/res/layout/fragment_expert_profile_1.xml" value="0.16302083333333334" />
         <entry key="app/src/main/res/layout/fragment_group_program.xml" value="0.335" />
