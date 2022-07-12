@@ -8,6 +8,7 @@ data class ExpertConsultingMenuChattData(
     val price: Int? = null,
     val timeMinutes: String? = null,
     val expiration: String? = null,
+    val fixedPrice: Int? = null,
 ):Serializable {
     fun getFormattedPrice(price: Int):String{
 

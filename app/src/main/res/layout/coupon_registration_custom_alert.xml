@@ -113,7 +113,7 @@
 
 
         <TextView
-            android:id="@+id/txtCodeInput"
+            android:id="@+id/txtMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="쿠폰 코드를 입력해주세요."
@@ -141,6 +141,7 @@
                 android:layout_height="wrap_content"
                 android:paddingStart="20dp"
                 android:hint="XXXX-XXXX-XXXX-XXXX"
+                android:maxLength="19"
                 android:backgroundTint="@color/white"
                 android:inputType="number"/>
 

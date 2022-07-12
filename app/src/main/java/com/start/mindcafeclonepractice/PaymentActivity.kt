@@ -1,18 +1,25 @@
 package com.start.mindcafeclonepractice
 
 import android.annotation.SuppressLint
-import androidx.appcompat.app.AppCompatActivity
+import android.os.Build
 import android.os.Bundle
+import android.os.Handler
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.*
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
+import androidx.core.widget.addTextChangedListener
 import androidx.databinding.DataBindingUtil
-import androidx.recyclerview.widget.RecyclerView
-import com.start.mindcafeclonepractice.adapters.ExpertConsultingMenuChattRecyclerAdapter
 import com.start.mindcafeclonepractice.databinding.ActivityPaymentBinding
 import com.start.mindcafeclonepractice.datas.ExpertConsultingMenuChattData
+import java.text.DecimalFormat
+import java.util.*
+import java.util.stream.IntStream
 
 class PaymentActivity : BaseActivity() {
 
@@ -24,7 +31,6 @@ class PaymentActivity : BaseActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_payment)
         setupEvents()
         setValues()
-
 
     }
 
@@ -48,7 +54,11 @@ class PaymentActivity : BaseActivity() {
             val btnCouponName2 = customDialog.findViewById<TextView>(R.id.txtCouponName2)
             val edtCouponCode = customDialog.findViewById<EditText>(R.id.edtCouponCode)
             val edtCouponName = customDialog.findViewById<EditText>(R.id.edtCouponCode2)
-            val btnCouponissued = customDialog.findViewById<TextView>(R.id.btnCouponIssued)
+            val btnCouponIssued = customDialog.findViewById<TextView>(R.id.btnCouponIssued)
+            val txtMessage = customDialog.findViewById<TextView>(R.id.txtMessage)
+
+
+
 
 
             btnX.setOnClickListener {
@@ -63,6 +73,7 @@ class PaymentActivity : BaseActivity() {
                 btnCouponName2.visibility = View.GONE
                 edtCouponCode.visibility = View.VISIBLE
                 edtCouponName.visibility = View.GONE
+                txtMessage.text = "쿠폰 코드를 입력해주세요."
 
             }
 
@@ -74,6 +85,8 @@ class PaymentActivity : BaseActivity() {
                 btnCouponName2.visibility = View.GONE
                 edtCouponCode.visibility = View.VISIBLE
                 edtCouponName.visibility = View.GONE
+                txtMessage.text = "쿠폰 코드를 입력해주세요."
+
 
             }
 
@@ -85,6 +98,7 @@ class PaymentActivity : BaseActivity() {
                 btnCouponCode2.visibility = View.VISIBLE
                 edtCouponCode.visibility = View.GONE
                 edtCouponName.visibility = View.VISIBLE
+                txtMessage.text = "쿠폰 이름을 입력해주세요."
 
 
             }
@@ -97,7 +111,25 @@ class PaymentActivity : BaseActivity() {
                 btnCouponCode2.visibility = View.VISIBLE
                 edtCouponCode.visibility = View.GONE
                 edtCouponName.visibility = View.VISIBLE
+                txtMessage.text = "쿠폰 이름을 입력해주세요."
 
+            }
+
+            btnCouponIssued.setOnClickListener {
+                if (btnCouponCode.visibility==View.VISIBLE) {
+
+                    if (edtCouponCode.text.isEmpty()){
+
+                        Toast.makeText(mContext, "쿠폰 코드를 입력해주세요.", Toast.LENGTH_SHORT).show()
+                        return@setOnClickListener
+                    }
+
+                }
+
+                else {
+                    Toast.makeText(mContext, "쿠폰 이름을 입력해주세요.", Toast.LENGTH_SHORT).show()
+                    return@setOnClickListener
+                }
             }
 
                 alert.show()
@@ -107,12 +139,52 @@ class PaymentActivity : BaseActivity() {
 
         }
 
+        @SuppressLint("SetTextI18n")
         override fun setValues() {
             mData = intent.getSerializableExtra("data") as ExpertConsultingMenuChattData
 
             mLinearLayoutMainActionBar.visibility = View.GONE
             mLinearLayoutPaymentActionBar.visibility = View.VISIBLE
             mTxtPaymentTitle.text = mData.title
+
+
+            val dec = DecimalFormat("#,###") //DecimalFomat객체화 : 3자리마다 콤마 기능
+            val fixedPrice = mData.fixedPrice // 받아온 데이타가격 데이터 변수에 담기
+
+            val fixedPriceStr = dec.format(fixedPrice) // 받아온 데이타 3자리마다 콤마찍기
+           binding.txtFixedPrice.text = "${fixedPriceStr}원" // 실제 데이터 정가 텍스트뷰의 텍스트에 표현
+
+            //널 체크 후 => 상담금액에 따른 할인률 적용하기
+            if (fixedPrice != null) {
+
+            //if문 사용 fixedPrice 가 100000~199999 이라면
+                if(fixedPrice in 100000..199999){
+
+                    val discountPrice = fixedPrice * 0.05
+                    binding.txtDiscount.text = "-${dec.format(discountPrice)}원"
+
+                    val totalPrice = fixedPrice - discountPrice
+                    binding.txtTotalPrice.text = "${dec.format(totalPrice)}원"
+                }
+
+                //fixedPrice 값이 0~ 99999 이라면
+                if(fixedPrice in 0..99999){
+                    binding.txtDiscount.text = "0원"
+
+                    binding.txtTotalPrice.text = "${fixedPriceStr}원"
+                }
+
+                //fixedPrice값이 200000~2000000 이라면
+                if(fixedPrice in 200000..2000000){
+                    val discountPrice = fixedPrice * 0.1
+                    binding.txtDiscount.text = "-${dec.format(discountPrice)}원"
+
+                    val totalPrice = fixedPrice - discountPrice
+                    binding.txtTotalPrice.text = "${dec.format(totalPrice)}원"
+                }
+            }
+
+
         }
 
 
@@ -150,3 +222,6 @@ class PaymentActivity : BaseActivity() {
                 }
         }
     }
+
+
+
