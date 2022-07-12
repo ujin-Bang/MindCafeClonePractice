@@ -1,6 +1,7 @@
 package com.start.mindcafeclonepractice
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
@@ -132,6 +133,11 @@ class PaymentActivity : BaseActivity() {
 
             alert.show()
 
+        }
+
+        binding.btnOk.setOnClickListener {
+
+            startActivity(Intent(mContext,FinalPaymentPageActivity::class.java))
         }
 
 
