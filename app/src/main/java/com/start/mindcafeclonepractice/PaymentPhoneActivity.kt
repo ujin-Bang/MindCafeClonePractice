@@ -1,5 +1,6 @@
 package com.start.mindcafeclonepractice
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -24,6 +25,10 @@ class PaymentPhoneActivity : BaseActivity() {
     }
 
     override fun setupEvents() {
+
+        binding.btnPaymentTry.setOnClickListener {
+            startActivity(Intent(mContext,FinalPaymentActivity::class.java))
+        }
 
         spinner()
 
@@ -247,10 +252,6 @@ class PaymentPhoneActivity : BaseActivity() {
                 binding.txtResultPrice.text = "${normalPriceStr}원"
             }
         }
-
-
-
-
 
     }
 }

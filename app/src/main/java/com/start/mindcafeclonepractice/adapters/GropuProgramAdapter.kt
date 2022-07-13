@@ -13,6 +13,18 @@ import com.start.mindcafeclonepractice.datas.GroupProgramData
 
 class GropuProgramAdapter(val mContext:Context, val mList: ArrayList<GroupProgramData>): RecyclerView.Adapter<GropuProgramAdapter.GroupProgramViewHolder>() {
 
+    //리싸이클러뷰 아이템 클릭시 인터페이스 호출하기 위해 인터페이스 만들기
+    interface OnItemClickListener{
+        fun onItemClick(v: View, data: GroupProgramData, position: Int)
+    }
+
+    private var listener: OnItemClickListener? = null
+
+    fun setOnItemClickListener(listener: OnItemClickListener){
+
+        this.listener = listener
+    }
+
     inner class GroupProgramViewHolder(row: View): RecyclerView.ViewHolder(row){
 
         val imgGroupProgram = row.findViewById<ImageView>(R.id.imgGroupProgram)
@@ -25,6 +37,16 @@ class GropuProgramAdapter(val mContext:Context, val mList: ArrayList<GroupProgra
             txtTitle.text = data.programTitle
             txtTime.text = data.programTime
             txtCoachName.text = data.programCoachName
+
+            val position = adapterPosition
+            if (position != RecyclerView.NO_POSITION){
+
+                itemView.setOnClickListener {
+
+                    listener?.onItemClick(itemView, data, position)
+
+                }
+            }
         }
 
     }
