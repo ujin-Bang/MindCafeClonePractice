@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
+
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -9,41 +10,42 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:padding="20dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:padding="20dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="쿠폰 등록하기"
-                android:textSize="24sp"
-                android:textColor="@color/black"
                 android:fontFamily="@font/font_4"
-                android:textStyle="bold"/>
+                android:text="쿠폰 등록하기"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
 
             <ImageView
-                android:id="@+id/btnX"
+                android:id="@+id/btnXPhone"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/x_icon"/>
+                android:background="@drawable/ripple_effect_background"
+                android:src="@drawable/x_icon" />
 
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="3dp"
-            android:background="@color/bottomnav"/>
+            android:background="@color/bottomnav" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="20dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="20dp">
 
 
             <LinearLayout
@@ -53,85 +55,89 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/btnCouponCode"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textColor="@color/white"
-                    android:background="@drawable/coupon_code_button_box"
-                    android:backgroundTint="@color/coupon_button"
-                    android:text="쿠폰코드"/>
-
-                <TextView
                     android:id="@+id/btnCouponCode2"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:layout_weight="1"
-                    android:gravity="center"
-                    android:visibility="gone"
-                    android:textColor="@color/bottomnav"
                     android:background="@drawable/coupon_code_button_box"
-                    android:text="쿠폰코드"/>
+                    android:backgroundTint="@color/coupon_button"
+                    android:gravity="center"
+                    android:text="쿠폰코드"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/btnCouponCode1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/coupon_code_button_box"
+                    android:gravity="center"
+                    android:text="쿠폰코드"
+                    android:textColor="@color/bottomnav"
+                    android:visibility="gone" />
 
 
+                <TextView
+                    android:id="@+id/btnCouponName1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/coupon_code_button_box"
+                    android:gravity="center"
+                    android:text="쿠폰명"
+                    android:textColor="@color/bottomnav" />
 
                 <TextView
                     android:id="@+id/btnCouponName2"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:layout_weight="1"
-                    android:gravity="center"
-                    android:textColor="@color/bottomnav"
-                    android:background="@drawable/coupon_code_button_box"
-                    android:text="쿠폰명"/>
-
-                <TextView
-                    android:id="@+id/btnCouponName"
-                    android:visibility="gone"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textColor="@color/white"
                     android:background="@color/coupon_button"
-                    android:text="쿠폰명"/>
+                    android:gravity="center"
+                    android:text="쿠폰명"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
 
 
             </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="쿠폰 코드를 입력해주세요."
-            android:layout_marginTop="20dp"
-            android:textSize="15sp"
-            android:textColor="#494949"/>
+            <TextView
+                android:id="@+id/txtCouponCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="쿠폰 코드를 입력해주세요."
+                android:textColor="#494949"
+                android:textSize="15sp" />
+
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/spinner_background_box"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="10dp">
 
                 <EditText
                     android:id="@+id/edtCouponCode"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:hint="XXXX-XXXX-XXXX-XXXX"
-                    android:background="@color/white"/>
+                    android:background="@color/white"
+                    android:inputType="number"
+                    android:maxLength="16"
+                    android:hint="XXXX-XXXX-XXXX-XXXX" />
 
                 <EditText
                     android:id="@+id/edtCouponName"
-                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:background="@color/white"/>
+                    android:background="@color/white"
+                    android:inputType="text"
+                    android:visibility="gone" />
 
 
             </LinearLayout>
@@ -141,10 +147,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:layout_marginTop="25dp"
-                android:text="쿠폰 발급받기"
                 android:backgroundTint="@color/coupon_button"
-                android:textSize="18sp"
-                android:fontFamily="@font/font_3"/>
+                android:fontFamily="@font/font_3"
+                android:text="쿠폰 발급받기"
+                android:textSize="18sp" />
         </LinearLayout>
 
 
