@@ -20,250 +20,475 @@
                 android:orientation="vertical">
 
 
-    <LinearLayout
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/comma_icon"/>
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/comma_icon" />
 
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/comma_icon"/>
-
-
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="1회기 당 보이스 코칭 시간은 50분이며\n결제일로부터 12주간 사용할 수 있습니다"
-            android:textSize="15sp"
-            android:layout_marginVertical="25dp"
-            android:gravity="center"
-            android:lineSpacingExtra="6dp"
-            android:textColor="#979797"
-            android:textStyle="bold"/>
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/comma_icon" />
 
 
-    </LinearLayout>
+                    </LinearLayout>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/light_gray"/>
-
-        <LinearLayout
-            android:layout_marginTop="25dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:src="@drawable/check_icon"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="구매 전 유의사항"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                android:layout_marginStart="5dp"
-                android:textColor="@color/black"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="25dp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="6dp"
+                        android:text="1회기 당 보이스 코칭 시간은 50분이며\n결제일로부터 12주간 사용할 수 있습니다"
+                        android:textColor="#979797"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
 
 
-        </LinearLayout>
+                </LinearLayout>
 
-        <TextView
-            android:layout_marginTop="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="13sp"
-            android:text="         -본 이용권의 유효기간은 결제일로부터 12주입니다."/>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="          이용기간 내에 이용권 사용을 완료"
-                android:textColor="@color/bottomnav"
-                android:textSize="13sp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="해 주세요."
-                android:textSize="13sp"
-                android:layout_marginTop="10dp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:layout_marginTop="25dp"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:src="@drawable/check_icon"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="진행 과정"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:layout_marginStart="5dp"/>
-
-        </LinearLayout>
-
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <LinearLayout
-                android:layout_marginTop="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/light_gray"
-                android:background="@drawable/spinner_background_box"
-                android:paddingHorizontal="40dp"
-                android:paddingVertical="25dp"
-                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/light_gray" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/payment1"/>
+                        android:src="@drawable/check_icon" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="결제 후 생성된 방에서 안내메시지 확인"
-                        android:layout_marginStart="10dp"/>
+                        android:layout_marginStart="5dp"
+                        android:text="구매 전 유의사항"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:layout_marginTop="10dp"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:src="@drawable/payment2"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="전문가와 일정 조율 및 예약 확정"
-                        android:layout_marginStart="10dp"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:text="         -본 이용권의 유효기간은 결제일로부터 12주입니다."
+                    android:textSize="13sp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="          이용기간 내에 이용권 사용을 완료"
+                        android:textColor="@color/bottomnav"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="해 주세요."
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/payment4"/>
+                        android:src="@drawable/check_icon" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="예약 확정된 일정에 이용권 이용"
-                        android:layout_marginStart="10dp"/>
-
+                        android:layout_marginStart="5dp"
+                        android:text="진행 과정"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
-            </LinearLayout>
-
-            <ImageView
-                android:layout_marginTop="20dp"
-                android:layout_width="50dp"
-                android:layout_height="140dp"
-                android:src="@drawable/round_vertical_icon"/>
-        </FrameLayout>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="13.5sp"
-            android:layout_marginTop="10dp"
-            android:text="❊ 전문가 사정에 따라 첫 응대까지 시간이 소요될 수 있습니다."
-            android:textColor="#7C7C7C"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="쿠폰 선택"
-            android:textSize="15sp"
-            android:textColor="@color/black"
-            android:layout_marginTop="25dp"/>
 
 
-        <LinearLayout
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:gravity="center"
-            android:background="@drawable/spinner_background_box"
-            android:orientation="vertical">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-            <Spinner
-                android:id="@+id/phoneCouponSpinner"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:entries="@array/coupon2" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/spinner_background_box"
+                        android:backgroundTint="@color/light_gray"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="40dp"
+                        android:paddingVertical="25dp">
 
-        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/btnCouponRegistration"
-                android:background="@drawable/spinner_background_box"
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:gravity="center"
-                android:textColor="#393939"
-                android:text="⌹  새로운 쿠폰 등록하기"/>
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/payment1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="결제 후 생성된 방에서 안내메시지 확인" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/payment2" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="전문가와 일정 조율 및 예약 확정" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/payment4" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="예약 확정된 일정에 이용권 이용" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="140dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/round_vertical_icon" />
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="❊ 전문가 사정에 따라 첫 응대까지 시간이 소요될 수 있습니다."
+                    android:textColor="#7C7C7C"
+                    android:textSize="13.5sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="쿠폰 선택"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/spinner_background_box"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Spinner
+                        android:id="@+id/phoneCouponSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/coupon2" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/btnCouponRegistration"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/spinner_background_box"
+                    android:gravity="center"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:text="⌹  새로운 쿠폰 등록하기"
+                    android:textColor="#393939" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="최종 결제금액"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="20dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/light_gray"
+                    android:background="@drawable/spinner_background_box"
+                    android:padding="20dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="정상가"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="360,000원"
+                            android:textSize="15sp"
+                            android:textColor="@color/dark_gray"/>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray"
+                        android:layout_marginVertical="15dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="즉시 할인"
+                            android:textSize="15sp"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-36,000원"
+                            android:textSize="15sp"
+                            android:textColor="@color/dark_gray"/>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray"
+                        android:layout_marginVertical="15dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="쿠폰 할인"
+                            android:textSize="15sp"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0원"
+                            android:textSize="15sp"
+                            android:textColor="@color/dark_gray"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_marginVertical="15dp"
+                        android:layout_height="3dp"
+                        android:background="@color/black"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="결제 예정 금액"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="324,000원"
+                            android:textColor="@color/bottomnav"
+                            android:textSize="16sp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="결제 수단 선택"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:layout_marginVertical="20dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/btnCreditCardChecked"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:text="신용카드"
+                        android:gravity="center"
+                        android:background="@drawable/spinner_background_box_2_checked"/>
+
+
+                    <TextView
+                        android:id="@+id/btnCreditCard"
+                        android:layout_width="70dp"
+                        android:visibility="gone"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:text="신용카드"
+                        android:gravity="center"
+                        android:background="@drawable/spinner_background_box"/>
+
+                    <TextView
+                        android:id="@+id/btnPhonePayment"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="12dp"
+                        android:text="휴대폰결제"
+                        android:gravity="center"
+                        android:background="@drawable/spinner_background_box"/>
+
+
+                    <TextView
+                        android:id="@+id/btnPhonePaymentChecked"
+                        android:visibility="gone"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="12dp"
+                        android:text="휴대폰결제"
+                        android:gravity="center"
+                        android:background="@drawable/spinner_background_box_2_checked"/>
+
+                    <TextView
+                        android:id="@+id/btnRealtimeAccountTransfer"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:text="실시간 계좌이체"
+                        android:gravity="center"
+                        android:background="@drawable/spinner_background_box"/>
+
+
+                    <TextView
+                        android:id="@+id/btnRealtimeAccountTransferChecked"
+                        android:visibility="gone"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:text="실시간 계좌이체"
+                        android:gravity="center"
+                        android:background="@drawable/spinner_background_box_2_checked"/>
+
+                </LinearLayout>
             </LinearLayout>
         </ScrollView>
     </LinearLayout>

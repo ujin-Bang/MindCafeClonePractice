@@ -27,6 +27,8 @@ class PaymentPhoneActivity : BaseActivity() {
         spinner()
 
         couponRegistration()
+
+        methodPaymentSelect()
     }
 
     override fun setValues() {
@@ -39,6 +41,7 @@ class PaymentPhoneActivity : BaseActivity() {
 
     }
 
+    //스피너 클릭시
     fun spinner() {
         val spinnerList = arrayListOf(
             "쿠폰을 선택해주세요.",
@@ -169,6 +172,40 @@ class PaymentPhoneActivity : BaseActivity() {
 
             alert.show()
 
+        }
+    }
+
+
+    //결제수단 선택하기
+    fun methodPaymentSelect(){
+
+        binding.btnCreditCard.setOnClickListener {
+
+            binding.btnCreditCard.visibility = View.GONE
+            binding.btnCreditCardChecked.visibility = View.VISIBLE
+            binding.btnPhonePayment.visibility = View.VISIBLE
+            binding.btnPhonePaymentChecked.visibility = View.GONE
+            binding.btnRealtimeAccountTransfer.visibility = View.VISIBLE
+            binding.btnRealtimeAccountTransferChecked.visibility = View.GONE
+
+        }
+
+        binding.btnPhonePayment.setOnClickListener {
+            binding.btnPhonePayment.visibility = View.GONE
+            binding.btnPhonePaymentChecked.visibility = View.VISIBLE
+            binding.btnCreditCard.visibility = View.VISIBLE
+            binding.btnCreditCardChecked.visibility = View.GONE
+            binding.btnRealtimeAccountTransfer.visibility = View.VISIBLE
+            binding.btnRealtimeAccountTransferChecked.visibility = View.GONE
+        }
+
+        binding.btnRealtimeAccountTransfer.setOnClickListener {
+            binding.btnRealtimeAccountTransfer.visibility = View.GONE
+            binding.btnRealtimeAccountTransferChecked.visibility = View.VISIBLE
+            binding.btnPhonePayment.visibility = View.VISIBLE
+            binding.btnPhonePaymentChecked.visibility = View.GONE
+            binding.btnCreditCard.visibility = View.VISIBLE
+            binding.btnCreditCardChecked.visibility = View.GONE
         }
     }
 }
