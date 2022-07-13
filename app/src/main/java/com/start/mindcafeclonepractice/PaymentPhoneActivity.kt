@@ -9,6 +9,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import com.start.mindcafeclonepractice.databinding.ActivityPaymentPhoneBinding
 import com.start.mindcafeclonepractice.datas.ExpertConsultingMenuPhoneData
+import java.text.DecimalFormat
 
 class PaymentPhoneActivity : BaseActivity() {
 
@@ -38,6 +39,8 @@ class PaymentPhoneActivity : BaseActivity() {
 
         mData = intent.getSerializableExtra("data") as ExpertConsultingMenuPhoneData
         mTxtPaymentPhoneTitle.text = mData.title
+
+        paymentMoney()
 
     }
 
@@ -153,17 +156,17 @@ class PaymentPhoneActivity : BaseActivity() {
 
 //            쿠폰발급버튼 클릭이벤트처리
             btnCouponIssued.setOnClickListener {
-                if(btnCouponCode2.visibility == View.VISIBLE){
+                if (btnCouponCode2.visibility == View.VISIBLE) {
 
-                    if(edtCouponCode.length() == 0 || edtCouponCode.length() < 16 ){
+                    if (edtCouponCode.length() == 0 || edtCouponCode.length() < 16) {
                         Toast.makeText(mContext, "투폰코드 16자리를 입력해주세요.", Toast.LENGTH_SHORT).show()
-                     return@setOnClickListener
+                        return@setOnClickListener
                     }
 
                 }
-                if(btnCouponName2.visibility == View.VISIBLE){
+                if (btnCouponName2.visibility == View.VISIBLE) {
 
-                    if(edtCouponName.length() == 0 ) {
+                    if (edtCouponName.length() == 0) {
                         Toast.makeText(mContext, "쿠폰이름을 입력해주세요.", Toast.LENGTH_SHORT).show()
                         return@setOnClickListener
                     }
@@ -177,7 +180,7 @@ class PaymentPhoneActivity : BaseActivity() {
 
 
     //결제수단 선택하기
-    fun methodPaymentSelect(){
+    fun methodPaymentSelect() {
 
         binding.btnCreditCard.setOnClickListener {
 
@@ -207,5 +210,47 @@ class PaymentPhoneActivity : BaseActivity() {
             binding.btnCreditCard.visibility = View.VISIBLE
             binding.btnCreditCardChecked.visibility = View.GONE
         }
+    }
+
+    //최종결제금액 받아온 데이터로 표현하기
+    fun paymentMoney() {
+        val dec = DecimalFormat("#,###")
+        val normalPrice = mData.normalPrice
+        val normalPriceStr = dec.format(normalPrice)
+
+        binding.txtNormalPrice.text = "${normalPriceStr}원" //정상가 받아온 데이터에 3자리마다 콤마 찍어서 표현
+
+        val discountMoney5DC = (normalPrice?.times(0.05))?.toInt()
+
+        val discountMoney10DC = (normalPrice?.times(0.1))?.toInt()
+
+        if (normalPrice != null) {
+
+            if((normalPrice > 100000) && (200000 > normalPrice)){
+
+                    binding.txtDiscountPrice.text = "-${dec.format(discountMoney5DC)}원"
+
+                val resultPayment = discountMoney5DC?.let { normalPrice?.minus(it) }
+                binding.txtResultPrice.text = "${dec.format(resultPayment)}원"
+
+            }
+
+            else if(normalPrice in 200000..2000000){
+
+                binding.txtDiscountPrice.text = "-${dec.format(discountMoney10DC)}원"
+                val resultPayment = discountMoney10DC?.let { normalPrice?.minus(it) }
+                binding.txtResultPrice.text = "${dec.format(resultPayment)}원"
+            }
+
+            else {
+                binding.txtDiscountPrice.text = "0원"
+                binding.txtResultPrice.text = "${normalPriceStr}원"
+            }
+        }
+
+
+
+
+
     }
 }

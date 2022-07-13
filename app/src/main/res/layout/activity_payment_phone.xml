@@ -303,6 +303,7 @@
                             android:layout_weight="1"/>
 
                         <TextView
+                            android:id="@+id/txtNormalPrice"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="360,000원"
@@ -337,6 +338,7 @@
                             android:layout_weight="1"/>
 
                         <TextView
+                            android:id="@+id/txtDiscountPrice"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="-36,000원"
@@ -403,6 +405,7 @@
                             android:layout_weight="1"/>
 
                         <TextView
+                            android:id="@+id/txtResultPrice"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="324,000원"
@@ -419,7 +422,8 @@
                     android:text="결제 수단 선택"
                     android:textSize="15sp"
                     android:textColor="@color/black"
-                    android:layout_marginVertical="20dp"/>
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="12dp"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
