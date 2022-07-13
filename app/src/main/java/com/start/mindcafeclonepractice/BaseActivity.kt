@@ -30,6 +30,7 @@ abstract class BaseActivity : AppCompatActivity() {
     lateinit var mLinearLayoutChattDetailActionBar: LinearLayout
     lateinit var mLinearLayoutPaymentActionBar: LinearLayout
     lateinit var mLinearlayoutPaymentPhoneActionBar: LinearLayout
+    lateinit var mLinearLayoutGroupDetailActionBar: LinearLayout
 
     lateinit var mBtnBack: TextView
     lateinit var mBtnNext: TextView
@@ -52,7 +53,8 @@ abstract class BaseActivity : AppCompatActivity() {
     lateinit var mTxtPaymentTitle: TextView
     lateinit var mTxtPaymentPhoneTitle: TextView
     lateinit var mBtnPaymentPhoneBack: ImageView
-
+    lateinit var mBtnGroupDetailActionBarBack: ImageView
+    lateinit var mTxtGroupDetailActionBarTitle: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -103,7 +105,7 @@ abstract class BaseActivity : AppCompatActivity() {
         mLinearLayoutChattDetailActionBar = defActionBar.customView.findViewById(R.id.chattDetailActionBar)
         mLinearLayoutPaymentActionBar = defActionBar.customView.findViewById(R.id.paymentActionBar)
         mLinearlayoutPaymentPhoneActionBar = defActionBar.customView.findViewById(R.id.paymentPhoneActionBar)
-
+        mLinearLayoutGroupDetailActionBar = defActionBar.customView.findViewById(R.id.groupDetailActionBar)
 
 
         mBtnBack = defActionBar.customView.findViewById(R.id.btnBack)
@@ -127,7 +129,13 @@ abstract class BaseActivity : AppCompatActivity() {
         mTxtPaymentTitle = defActionBar.customView.findViewById(R.id.txtPaymentActionBarTitle)
         mTxtPaymentPhoneTitle = defActionBar.customView.findViewById(R.id.txtPaymentPhoneActionBarTitle)
         mBtnPaymentPhoneBack = defActionBar.customView.findViewById(R.id.btnPaymentPhoneBack)
+        mBtnGroupDetailActionBarBack = defActionBar.customView.findViewById(R.id.btnGroupDetailActionBarBack)
+        mTxtGroupDetailActionBarTitle = defActionBar.customView.findViewById(R.id.txtGroupDetailActionBarTitle)
 
+
+        mBtnGroupDetailActionBarBack.setOnClickListener {
+            finish()
+        }
 
         mBtnPaymentPhoneBack.setOnClickListener {
             finish()
