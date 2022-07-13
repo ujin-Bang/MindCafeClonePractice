@@ -1,5 +1,6 @@
 package com.start.mindcafeclonepractice.bottomnavhomefragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.Gravity
@@ -13,7 +14,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import com.github.rubensousa.gravitysnaphelper.GravitySnapHelper
 import com.google.firebase.database.*
+import com.start.mindcafeclonepractice.GroupDetailActivity
 import com.start.mindcafeclonepractice.R
+import com.start.mindcafeclonepractice.adapters.ExpertConsultingMenuPhoneRecyclerAdapter
 import com.start.mindcafeclonepractice.adapters.GropuProgramAdapter
 import com.start.mindcafeclonepractice.bottomnavfragments.BaseFragment
 import com.start.mindcafeclonepractice.databinding.FragmentHomeGroupProgramBinding
@@ -89,6 +92,7 @@ class HomeGroupProgramFragment: BaseFragment() {
                 alert.show()
         }
 
+        groupProgramRecyclerViewItemClicked()
     }
 
     override fun setValues() {
@@ -96,4 +100,18 @@ class HomeGroupProgramFragment: BaseFragment() {
     }
 
 
+    fun groupProgramRecyclerViewItemClicked(){
+
+        mGroupProgramAdapter.setOnItemClickListener(object : GropuProgramAdapter.OnItemClickListener{
+            override fun onItemClick(v: View, data: GroupProgramData, position: Int) {
+                Intent(mContext, GroupDetailActivity::class.java).apply {
+
+                    putExtra("data",data)
+                    addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                }.run { startActivity(this) }
+            }
+
+        })
+
+    }
 }

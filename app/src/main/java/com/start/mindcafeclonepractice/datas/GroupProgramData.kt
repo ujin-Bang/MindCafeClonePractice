@@ -1,5 +1,7 @@
 package com.start.mindcafeclonepractice.datas
 
+import java.io.Serializable
+
 data class GroupProgramData(
     val programImg: String? = null,
     val programTitle: String? = null,
@@ -7,5 +9,5 @@ data class GroupProgramData(
     val programCoachName: String? = null,
     val numberOfParticipants: String? = null,
     val price: Int? = null,
-) {
+): Serializable {
 }
