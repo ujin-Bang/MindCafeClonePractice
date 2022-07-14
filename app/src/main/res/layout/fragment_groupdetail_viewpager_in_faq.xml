@@ -3,12 +3,204 @@
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
         android:orientation="vertical">
 
         <TextView
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="이곳은 그룹상세 FAQ 페이지입니다."/>
+            android:text="FAQ"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/faq1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"
+                    android:text="그룹 프로그램은 어떤 서비스인가요?                                           ⌄"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/faq11"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:text="그룹 프로그램은 어떤 서비스인가요?                                           ⌃"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="20dp"
+                        android:paddingBottom="20dp"
+                        android:text="그룹 프로그램은 심리치유 및 구체적 문제해결과 목표 성취를 돕는 소규모의 그룹(4~10명)으로 진행됩니다. 그룹 프로그램리더(상담사/코치)는 다양한 기법을 활용하여 비슷한 고민이나 프로그램 참가자들의 잠재력 실현과 성장 경험을 제공합니다. 심리 치유를 주요 목적으로 하는 그룹 프로그램은 정신적 고통을 치유하고 대인 관계와 관련된 개인의 태도나 생활양식, 가치관 등을 점검하고 다양한 관계 내에서의 고민과 문제를 해결해 나가도록 돕는 과정입니다. 그룹 프로그램 참가자들의 감정, 사고, 행동 등을 변화시키도록 도와주며, 일상 생활에서 필요한 새로운 기술을 연습하거나 배울 수 있습니다. 꿈과 목표의 달성을 주요 목적으로 하는 그룹 프로그램은 개인의 구체적인 꿈의 실현과 목표의 성취를 조력하는 과정이 진행됩니다. 그룹 프로그램에서의 경험을 통해서 자신의 잠재력을 극대화하고 목표에 도달할 수 있도록 도움을 받을 수 있습니다."/>
+
+                </LinearLayout>
+
+
+
+
+
+                <TextView
+                    android:layout_marginVertical="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray"/>
+
+                <TextView
+                    android:id="@+id/faq2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="20dp"
+                    android:textColor="@color/black"
+                    android:text="그룹 프로그램은 누가 진행하나요?                                               ⌄"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/faq22"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="20dp"
+                        android:text="그룹 프로그램은 누가 진행하나요?                                               ⌃"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="20dp"
+                        android:text="마인드 카페클론의 그룹 프로그램 리더는 공인 전문자격증, 학위, 경력을 보유한 심리상담사 및 코치로서 그룹 프로그램을 이끌 수 있는 충분한 교육과 훈련을 받은 전문가로 구성되어 있습니다. 그룹 프로그램 리더는 그룹 참가자들의 역동관계를 바탕으로 마음의 치유 혹은 목표의 달성 등에 필요한 다양한 기법과 활동을 적용하며, 상담사/ 코치로서의 윤리강령을 준수하여 그룹 프로그램을 진행합니다."
+                        android:layout_marginTop="15dp"/>
+
+                </LinearLayout>
+
+
+
+
+
+                <TextView
+                    android:layout_marginVertical="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray"/>
+
+                <TextView
+                    android:id="@+id/faq3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:textColor="@color/black"
+                    android:text="그룹 프로그램은 누구에게 적합한가요?                                       ⌄"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/faq33"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="그룹 프로그램은 누구에게 적합한가요?                                       ⌃"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="그룹 프로그램은 같은 고민이나 마음의 고통을 지닌 여러 사람들이 그룹 프로그램 리더(상담사/코치)의 가이드에 따라 안전한 상황에서 함께 진행하는 방식입니다. 고민이 되는 주제 및 관심사에 대해 다른 사람의 조언, 반응의 확인, 건강과 관계 형성의 연습이 필요한 분에게 유용하고, 개인의 다양성을 더 잘 이해하고 타인과의 유대감과 소속감이 필요한 분에게 적합합니다. 하지만, 공유하기 어려운 심각한 문제를 개인 내면에 가졌거나 대인관계에 트라우마 경험이 있는 경우, 혹은 사람들 앞에서 말하는 것에 심한 두려움이나 공포가 있는 경우에는 1:1로 진행되는 심리상담/ 코칭이 더 적합합니다."
+                        android:paddingTop="10dp"
+                        android:paddingHorizontal="20dp"
+                        android:paddingBottom="20dp"/>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_marginVertical="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray"/>
+
+                <TextView
+                    android:id="@+id/faq4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:textColor="@color/black"
+                    android:text="그룹 프로그램은 심리상담이나 코칭과 어떤 차이가 있나요?      ⌄"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/faq44"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="그룹 프로그램은 심리상담이나 코칭과 어떤 차이가 있나요?      ⌃"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="심리상담/코칭은 전문가(상담사/코치)와의 1:1 방식으로 진행됩니다. 이와 달리 그룹 프로그램은 비슷한 고민ㅇ르 가진 참가자들이 함께하며(4~10명), 그룹 프로그램 리더(상담사/코치)의 가이드에 따라 치유를 경험하고 목표를 달성하는 과정이 진행됩니다. 그룹 프로그램 참가자들은 그룹 프로그램에 참여하며 서로의 관심사, 고민, 감정을 편안하게 이야기하고 수용받는 경험을 할 수 있습니다. 서로를 격려하고 도움을 주고 받는 과정 속에서 자신과 타인에 대한 이해를 증진시키고 자아존중감을 높일 수 있습니다. 그룹 프로그램 참가자들의 상호작용 속에서 타인에 대한 이해를 증진시키고 자아존중감을 높일 수 있습니다. 그룹 프로그램 참가자들의 상호작용 속에서 타인데 대한 바람직한 태도와 행동을 확인하고 문제해결에 필요한 적응적 기술과 대인관계 능력을 함양하여, 상처받은 마음을 치유하고 목표에 도달하기 위한 능력을 키울 수 있습니다"
+                        android:paddingTop="10dp"
+                        android:paddingHorizontal="20dp"
+                        android:paddingBottom="20dp"
+                        />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray"/>
+
+            </LinearLayout>
+
+        </ScrollView>
     </LinearLayout>
 </layout>

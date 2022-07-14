@@ -5,12 +5,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import com.bumptech.glide.Glide
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import com.start.mindcafeclonepractice.R
 import com.start.mindcafeclonepractice.bottomnavfragments.BaseFragment
-import com.start.mindcafeclonepractice.databinding.FragmentGroupdetailViewpagerInIntroductionBinding
 import com.start.mindcafeclonepractice.databinding.FragmentGroupdetailViewpagerInReaderBinding
+import com.start.mindcafeclonepractice.datas.GroupProgramData
 
-class GroupDetailViewPagerInReaderFragment: BaseFragment() {
+class GroupDetailViewPagerInReaderFragment : BaseFragment() {
 
     lateinit var binding: FragmentGroupdetailViewpagerInReaderBinding
 
@@ -19,7 +22,15 @@ class GroupDetailViewPagerInReaderFragment: BaseFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_groupdetail_viewpager_in_reader,container, false)
+        binding = DataBindingUtil.inflate(
+            inflater,
+            R.layout.fragment_groupdetail_viewpager_in_reader,
+            container,
+            false
+        )
+
+        binding.imgProfile.setImageResource(R.drawable.trangks)
+        binding.imgSallProfile.setImageResource(R.drawable.trangks)
         return binding.root
     }
 
@@ -36,6 +47,7 @@ class GroupDetailViewPagerInReaderFragment: BaseFragment() {
     }
 
     override fun setValues() {
+
 
     }
 }

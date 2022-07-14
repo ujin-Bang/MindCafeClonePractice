@@ -1,14 +1,249 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <ScrollView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="이곳은 그룹상세소개 페이지입니다."/>
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/group_detail_emotional_control_backgrount"
+                    android:gravity="center"
+                    android:text="감정 조절"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="내 마음 속 욱하는 마음을 물리치는 \n트랭크스 리더의 마음백신"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:elevation="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardUseCompatPadding="true">
+
+                    <ImageView
+                        android:id="@+id/imgGroupEmotion"
+                        android:layout_width="match_parent"
+                        android:layout_height="240dp"
+                        android:elevation="5dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/ic_launcher" />
+
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="튼튼한 마음 근육으로\n 욱하는 미로에서 빠져나오기"
+                    android:textColor="#474747"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/group_note_book" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="ZOOM\n온라인 테라피"
+                            android:textColor="@color/dark_pink"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/group_member" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="그룹원\n최대 8명"
+                            android:textColor="@color/dark_pink"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/group_calendar" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="7.22(금)\n13시"
+                            android:textColor="@color/dark_pink"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginVertical="40dp"
+                    android:src="@drawable/line_diagonal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="'전부 내 탓이야'\n'난 혼자야. 아무도 내 마음을 모를 거야.'\n'그냥 다 포기하고 싶어'\n'이젠 막다른 길이야.난 몰라'"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:lineSpacingExtra="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_marginTop="5dp"
+                    android:text="라는 마음이 드나요?"/>
+
+
+                <ImageView
+                    android:id="@+id/imgGroupEmotion2"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="30dp"
+                    android:src="@mipmap/ic_launcher"/>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="178dp"
+                        android:layout_height="11dp"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/group_text_content_background_color"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="누구나 이러한 마음이 듭니다."
+                        android:textSize="14.5sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="항상 기분좋은 것들만 생각하는 사람은 아무도 없어요"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="다만 자신의 감정과 상황을 올바르게 바라보고"
+                    android:layout_marginTop="20dp"/>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="210dp"
+                        android:layout_height="11dp"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/group_text_content_background_color"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="부정적인 마음과 생가깅 들어올 때"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="14.5sp"/>
+
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="3dp"
+                    android:text="그 자리에서 조금 더 쉽게 벗어날 수 있는지 아니면 그렇지 않고 그 자리에 머물러 있게 되는지에 따라 그 고통의 크기가 달라지는 거죠.\n\n내가 그것을 알아차리고 더 쉽게 벗어나기 위해서는 내 마음속의 부정적인 감정, 긍정적인 감정을 자연스럽게 받아들이고 이를 잘 조절하여 균형을 잡는 것이 필요합니다.\n\n이 그룹 테라피에서는 지금 우리가 경험하는 다양한 감정을 그대로 바라보고, 우리 모두에게 잠재되어 있는 마음의 근육(회복 탄력성)을 키워서 복잡한 마음의 미로에서 함게 빠져나와봅시다." />
+
+            </LinearLayout>
+
+        </ScrollView>
     </LinearLayout>
 </layout>
