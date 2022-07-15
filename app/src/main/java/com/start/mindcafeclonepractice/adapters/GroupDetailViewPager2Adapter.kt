@@ -19,8 +19,8 @@ class GroupDetailViewPager2Adapter(fa: FragmentActivity): FragmentStateAdapter(f
 
             0 -> {
                 val groupDetail = GroupDetailViewPagerInIntroductionFragment()
-                val groupDetailActivity = GroupDetailActivity()
-                groupDetail.mData = groupDetailActivity.mData
+//                val groupDetailActivity = GroupDetailActivity()
+//                groupDetail.mData = groupDetailActivity.mData
                 return groupDetail
             }
 

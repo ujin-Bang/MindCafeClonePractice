@@ -1,5 +1,6 @@
 package com.start.mindcafeclonepractice
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.databinding.DataBindingUtil
@@ -14,7 +15,7 @@ import java.text.DecimalFormat
 class GroupDetailActivity : BaseActivity() {
 
     lateinit var binding: ActivityGroupDetailBinding
-    var mData: GroupProgramData? = null
+    lateinit var mData: GroupProgramData
     lateinit var mViewPagerAdapter: GroupDetailViewPager2Adapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,6 +26,13 @@ class GroupDetailActivity : BaseActivity() {
     }
 
     override fun setupEvents() {
+
+        binding.btnPurchase.setOnClickListener {
+
+            val myIntent = Intent(mContext, GroupPaymentActivity::class.java)
+            myIntent.putExtra("paymentData", mData)
+            startActivity(myIntent)
+        }
 
     }
 
@@ -41,16 +49,16 @@ class GroupDetailActivity : BaseActivity() {
         mTxtGroupDetailActionBarTitle.text = "그룹상세"
 
         //받아온 데이터 반영
-        binding.txtGroupTitle.text = mData?.programTitle
-        binding.txtGroupNumberOfParticipants.text = mData?.numberOfParticipants
-        binding.txtGroupTime.text = "2022/${mData?.programTime}"
-        binding.txtGroupNumberOfParticipants.text = mData?.numberOfParticipants
+        binding.txtGroupTitle.text = mData.programTitle
+        binding.txtGroupNumberOfParticipants.text = mData.numberOfParticipants
+        binding.txtGroupTime.text = "2022/${mData.programTime}"
+        binding.txtGroupNumberOfParticipants.text = mData.numberOfParticipants
 
         val dec = DecimalFormat("#,###")
-        val price = mData?.price
+        val price = mData.price
         binding.txtGroupConsultingPrice.text = "${dec.format(price)}원"
 
-        Glide.with(mContext).load(mData?.programImg).into(binding.imgGroupConsulting)
+        Glide.with(mContext).load(mData.programImg).into(binding.imgGroupConsulting)
 
 
         //뷰페이저2 어댑터 연결

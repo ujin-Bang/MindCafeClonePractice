@@ -76,7 +76,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
+                    android:layout_gravity="center"
                     android:orientation="vertical">
 
                     <TextView
@@ -84,6 +84,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:gravity="center"
+                        android:lineSpacingExtra="5dp"
                         android:text="우리 마음의 문제는 생각과 논리로 인한 것이 아닌 \n감정으로 인해 비롯됩니다. 우리 함께" />
 
 
@@ -91,7 +92,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
+                        android:layout_gravity="center"
                         android:gravity="center"
+                        android:lineSpacingExtra="5dp"
                         android:text="마음의 소리에 귀 기울이고, \n감정이 외치는 메세지를 들어볼까요?"
                         android:textColor="@color/black"
                         android:textSize="14.5sp"
@@ -102,7 +105,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="50dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
@@ -180,7 +183,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="40dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/spinner_background_box"

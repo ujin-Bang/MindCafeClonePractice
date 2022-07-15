@@ -26,4 +26,17 @@
 
 
     </string-array>
+
+    <string-array name="coupon3">
+
+        <item>쿠폰을 선택해주세요</item>
+        <item>오늘의 쿠폰</item>
+        <item>내일의 쿠폰</item>
+        <item>불금 쿠폰</item>
+        <item>주말 쿠폰</item>
+        <item>건강 쿠폰</item>
+        <item>점심 쿠폰</item>
+
+
+    </string-array>
 </resources>

@@ -36,6 +36,7 @@
         <entry key="app/src/main/res/layout/activity_final_payment.xml" value="0.115625" />
         <entry key="app/src/main/res/layout/activity_final_payment_page.xml" value="0.278125" />
         <entry key="app/src/main/res/layout/activity_group_detail.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_group_payment.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.26145833333333335" />
         <entry key="app/src/main/res/layout/activity_mind_postit.xml" value="0.165" />
@@ -76,7 +77,7 @@
         <entry key="app/src/main/res/layout/fragment_groupdetail_viewpager_in_FAQ.xml" value="0.2791666666666667" />
         <entry key="app/src/main/res/layout/fragment_groupdetail_viewpager_in_faq.xml" value="0.165" />
         <entry key="app/src/main/res/layout/fragment_groupdetail_viewpager_in_introduction.xml" value="0.20753424657534247" />
-        <entry key="app/src/main/res/layout/fragment_groupdetail_viewpager_in_reader.xml" value="0.2791666666666667" />
+        <entry key="app/src/main/res/layout/fragment_groupdetail_viewpager_in_reader.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_groupdetail_viewpager_in_review.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_home_4_view.xml" value="0.25" />
