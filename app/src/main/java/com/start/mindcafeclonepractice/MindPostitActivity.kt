@@ -17,6 +17,9 @@ import com.google.firebase.database.*
 import com.start.mindcafeclonepractice.adapters.MindPostItAdapter
 import com.start.mindcafeclonepractice.databinding.ActivityMindPostitBinding
 import com.start.mindcafeclonepractice.datas.MindPostItData
+import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.ArrayList
 import kotlin.math.min
 
 class MindPostitActivity : BaseActivity() {
@@ -77,7 +80,11 @@ class MindPostitActivity : BaseActivity() {
                 val makeRef = FirebaseDatabase.getInstance().getReference("mindPostIt").push()
 
                 inputContent.toString().also { mindPostItData.content = it }
-                mindPostItData.writeTime = ServerValue.TIMESTAMP
+
+                val now = Calendar.getInstance()
+                val sdf = SimpleDateFormat("yy.MM.dd (E) hh:mm:ss")
+                val nowStr = sdf.format(now.time)
+                mindPostItData.writeTime = nowStr
                 mindPostItData.sympathyCount = 0
 
                 makeRef.setValue(mindPostItData)
