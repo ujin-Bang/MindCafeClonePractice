@@ -261,7 +261,7 @@
                             android:id="@+id/txtGroupDiscountPrice"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="할인가격 자리"
+                            android:text="쿠폰을 선택해주세요."
                             android:textSize="15sp" />
 
                     </LinearLayout>

@@ -118,8 +118,8 @@ class GroupPaymentActivity : BaseActivity(), AdapterView.OnItemSelectedListener 
         val dec = DecimalFormat("#,###")
         val normalPriceStr = dec.format(normalPrice)
         binding.txtGroupNormalPrice.text = "${normalPriceStr}원"
-        binding.txtGroupDiscountPrice.text = "0원"
         binding.txtGroupFinalAmount.text = "${normalPriceStr}원"
+
     }
 
     fun spinner() {
@@ -142,6 +142,20 @@ class GroupPaymentActivity : BaseActivity(), AdapterView.OnItemSelectedListener 
 
         Log.d("선택된 스피너 아이템 : ", parent?.selectedItem.toString())
 //        Toast.makeText(mContext, "${parent?.selectedItem} 선택", Toast.LENGTH_SHORT).show()
+        val selectedItemName = parent?.selectedItem
+
+        if (parent?.selectedItemPosition != 0){
+
+            val dec = DecimalFormat("#,###")
+            val price = mData.price
+            val discountPrice = price?.times(0.1)
+            val resultPrice = discountPrice?.let { price?.minus(it) }
+
+            binding.txtGroupDiscountPrice.text = "${selectedItemName}_10%할인 : -${dec.format(discountPrice)}원"
+
+            binding.txtGroupFinalAmount.text = "${dec.format(resultPrice)}원"
+
+        }
     }
 
     override fun onNothingSelected(parent: AdapterView<*>?) {
