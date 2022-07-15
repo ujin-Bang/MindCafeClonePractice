@@ -81,6 +81,8 @@ class HomeExpertFragment: BaseFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        setupEvents()
+        setValues()
     }
 
     override fun setupEvents() {

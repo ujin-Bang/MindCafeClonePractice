@@ -11,7 +11,19 @@ import com.bumptech.glide.Glide
 import com.start.mindcafeclonepractice.R
 import com.start.mindcafeclonepractice.datas.CoachData
 
-class CoachAdapter(val mContext: Context,val mList: ArrayList<CoachData>): RecyclerView.Adapter<CoachAdapter.CoachViewHolder>() {
+class CoachAdapter(
+    val mContext: Context,
+    val mList: ArrayList<CoachData>): RecyclerView.Adapter<CoachAdapter.CoachViewHolder>() {
+
+        interface OnItemClickListener{
+            fun onItemClick(v: View, data: CoachData, position: Int)
+        }
+        private var listener: OnItemClickListener? = null
+
+    fun setOnItemClickListener(listener: OnItemClickListener){
+        this.listener = listener
+    }
+
 
     inner class CoachViewHolder(row: View): RecyclerView.ViewHolder(row) {
 
@@ -31,12 +43,20 @@ class CoachAdapter(val mContext: Context,val mList: ArrayList<CoachData>): Recyc
             Glide.with(mContext).load(data.phoneImg).into(imgPhone)
             Glide.with(mContext).load(data.meetImg).into(imgmeet)
 
+            val position = adapterPosition
+
+            if (position != RecyclerView.NO_POSITION){
+
+                itemView.setOnClickListener {
+
+                    listener?.onItemClick(itemView, data, position)
+                }
+
+            }
+
         }
 
     }
-
-
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CoachViewHolder {
         val row = LayoutInflater.from(mContext).inflate(R.layout.expert_list_item,parent,false)
