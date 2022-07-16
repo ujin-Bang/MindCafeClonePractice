@@ -10,6 +10,17 @@
         android:layout_marginBottom="20dp"
         tools:context=".Payment2Activity">
 
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -237,6 +248,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:paddingVertical="7dp"
             android:layout_marginTop="6dp"
             android:background="@drawable/spinner_background_box">
 
@@ -249,5 +261,18 @@
 
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/couponRegistration2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="☞ 새로운 쿠폰 등록하기"
+            android:textColor="@color/red"
+            android:paddingVertical="10dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:background="@drawable/spinner_background_box"/>
+
+        </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 </layout>
