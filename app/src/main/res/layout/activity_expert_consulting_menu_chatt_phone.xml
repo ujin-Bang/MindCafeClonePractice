@@ -9,13 +9,12 @@
         android:orientation="vertical"
         tools:context=".ExpertConsultingMenuChattPhoneActivity">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="이곳은  채팅 전화 메뉴화면입니다.0"/>
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/menuTabLayout"
+            app:tabIndicatorColor="@color/bottomnav"
+            app:tabSelectedTextColor="@color/black"
+            app:tabTextAppearance="@style/tab_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
@@ -24,5 +23,6 @@
             android:id="@+id/menuViewPager"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
+
     </LinearLayout>
 </layout>

@@ -14,12 +14,17 @@
         <!-- Customize your theme here. -->
 
     </style>
+
     <style name="tab_text" parent="TextAppearance.Design.Tab">
-    <item name="android:textSize">18sp</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
-        <item name="elevation">0dp</item>
+        <item name="android:elevation">0dp</item>
+
+
     </style>
 
 </resources>
