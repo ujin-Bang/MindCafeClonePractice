@@ -6,6 +6,8 @@ class ExpertMenuChattData(
     val expirationPeriod: String? = null,
     val title: String? = null,
     val severalMinutesTime: String? =null,
-    val price: Int? = null
+    val price: Int? = null,
+    val therapyContent: String? = null,
+
 ):Serializable {
 }

@@ -59,7 +59,7 @@ class ExpertDetailActivity : BaseActivity() {
         mLinearLayoutMainActionBar.visibility = View.GONE
         mLinearLayoutPaymentActionBar.visibility = View.VISIBLE
 
-        mTxtPaymentTitle.text = "                     전문가 프로필"
+        mTxtPaymentTitle.text = "전문가 프로필"
         Glide.with(mContext).load(mData.profileImg).into(binding.imgExpertPhoto)
         binding.txtExpertName.text = mData.name
         binding.txtExertIntroduction.text = mData.introduction

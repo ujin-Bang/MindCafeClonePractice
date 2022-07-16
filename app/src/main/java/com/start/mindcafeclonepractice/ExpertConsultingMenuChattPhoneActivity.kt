@@ -33,7 +33,7 @@ class ExpertConsultingMenuChattPhoneActivity : BaseActivity() {
         mLinearLayoutMainActionBar.visibility = View.GONE
         mLinearLayoutPaymentActionBar.visibility = View.VISIBLE
 
-        mTxtPaymentTitle.text = "                         ${mData.name}"
+        mTxtPaymentTitle.text = "${mData.name}"
 
         //뷰페이저에 만들어 놓은 어댑터 연결
         mViewPager2Adapter = ExpertMenuChattPhoneViewPagerAdapter(mContext as FragmentActivity)

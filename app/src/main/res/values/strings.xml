@@ -36,7 +36,17 @@
         <item>주말 쿠폰</item>
         <item>건강 쿠폰</item>
         <item>점심 쿠폰</item>
+    </string-array>
 
+    <string-array name="coupon4">
+
+        <item>쿠폰을 선택해주세요.</item>
+        <item>봄맞이 할인10%</item>
+        <item>여름맞이 할인10%</item>
+        <item>가을맞이 할인10%</item>
+        <item>겨울만지 할인10%</item>
+        <item>인증샷 할인10%</item>
+        <item>묻지마 할인10%</item>
 
     </string-array>
 </resources>
