@@ -19,7 +19,7 @@
 
             <ImageView
                 android:id="@+id/imgExpertPhoto"
-                android:layout_width="60dp"
+                android:layout_width="80dp"
                 android:layout_height="120dp"
                 android:src="@mipmap/ic_launcher"
                 android:scaleType="centerCrop"/>
@@ -51,15 +51,23 @@
                         android:layout_weight="1"/>
 
                     <ImageView
+                        android:id="@+id/img1"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_marginEnd="5dp"
                         android:src="@drawable/expert_profile_talk_icon"/>
 
                     <ImageView
+                        android:id="@+id/img2"
                         android:layout_width="23dp"
                         android:layout_height="23dp"
                         android:src="@drawable/exper_profile_phone_icon"/>
+
+                    <ImageView
+                        android:id="@+id/img3"
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        />
 
                 </LinearLayout>
 
@@ -73,9 +81,19 @@
 
             </LinearLayout>
 
-
-
         </LinearLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/groupDetailTabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/groupDetailViewPager2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
 
     </LinearLayout>
 
