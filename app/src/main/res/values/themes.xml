@@ -15,10 +15,11 @@
 
     </style>
     <style name="tab_text" parent="TextAppearance.Design.Tab">
-    <item name="android:textSize">15sp</item>
+    <item name="android:textSize">18sp</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
-        <item name="elevation">0dp</item></style>
+        <item name="elevation">0dp</item>
+    </style>
 
 </resources>

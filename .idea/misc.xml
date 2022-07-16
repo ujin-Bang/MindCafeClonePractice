@@ -30,6 +30,7 @@
         <entry key="app/src/main/res/drawable/time_background.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_chatt_detail.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_community.xml" value="0.1296875" />
+        <entry key="app/src/main/res/layout/activity_expert_consulting_menu_chatt_phone.xml" value="0.14375" />
         <entry key="app/src/main/res/layout/activity_expert_consulting_menuactivity.xml" value="0.3477366255144033" />
         <entry key="app/src/main/res/layout/activity_expert_consulting_menuctivity.xml" value="0.15" />
         <entry key="app/src/main/res/layout/activity_expert_detail.xml" value="0.165" />

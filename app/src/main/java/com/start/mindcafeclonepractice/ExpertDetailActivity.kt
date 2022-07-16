@@ -1,7 +1,9 @@
 package com.start.mindcafeclonepractice
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.FragmentActivity
 import com.bumptech.glide.Glide
@@ -16,6 +18,9 @@ class ExpertDetailActivity : BaseActivity() {
     lateinit var mData: CoachData
     lateinit var mAdapter: GroupExpertDetailViewPager2Adapter
 
+    var clicked = false
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_expert_detail)
@@ -25,6 +30,26 @@ class ExpertDetailActivity : BaseActivity() {
 
     override fun setupEvents() {
 
+        binding.imgHeart.setOnClickListener {
+
+            clicked = if (!clicked){
+                binding.imgHeart.setImageResource(R.drawable.heart_icon_2)
+                Toast.makeText(mContext, "전문가를 찜하였습니다.", Toast.LENGTH_SHORT).show()
+                true
+            } else {
+                Glide.with(mContext).load(R.drawable.heart_icon).into(binding.imgHeart)
+                Toast.makeText(mContext, "전문가 찜을 취소하였습니다.", Toast.LENGTH_SHORT).show()
+                false
+            }
+
+        }
+
+        binding.btnSelect.setOnClickListener {
+
+            val myIntent = Intent(mContext,ExpertConsultingMenuChattPhoneActivity::class.java)
+            myIntent.putExtra("data",mData)
+            startActivity(myIntent)
+        }
     }
 
     override fun setValues() {
