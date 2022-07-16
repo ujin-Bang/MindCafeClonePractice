@@ -8,13 +8,22 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.start.mindcafeclonepractice.R
 import com.start.mindcafeclonepractice.datas.ExpertMenuChattData
-import org.w3c.dom.Text
 import java.text.DecimalFormat
 
 class ExpertMenuChatRecylerAdapter(
     val mContext: Context,
     val mList: List<ExpertMenuChattData>
 ): RecyclerView.Adapter<ExpertMenuChatRecylerAdapter.MenuChatViewHolder>() {
+
+    interface OnItemClickListener{
+        fun onClick(v:View, data: ExpertMenuChattData, position: Int)
+    }
+
+    private var listener: OnItemClickListener? = null
+
+    fun setOnItemClickListener(listener: OnItemClickListener){
+        this.listener = listener
+    }
 
     inner class MenuChatViewHolder(row: View): RecyclerView.ViewHolder(row){
 
@@ -25,13 +34,21 @@ class ExpertMenuChatRecylerAdapter(
 
         fun bind(data: ExpertMenuChattData){
 
-            ticketTitle.text = data.ticketTitle
-            timeMinutes.text = data.timeMinutes
-            expiration.text = data.expiration
+            ticketTitle.text = data.title
+            timeMinutes.text = data.severalMinutesTime
+            expiration.text = data.expirationPeriod
 
             val dec = DecimalFormat("#,###")
             val priceStr = dec.format(data.price)
             price.text = "${priceStr}원"
+
+            val pos = adapterPosition
+            if ( pos != RecyclerView.NO_POSITION){
+
+                itemView.setOnClickListener {
+                    listener?.onClick(itemView, data, pos)
+                }
+            }
         }
 
     }

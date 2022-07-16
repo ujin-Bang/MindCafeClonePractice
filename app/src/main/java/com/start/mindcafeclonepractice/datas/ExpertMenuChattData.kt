@@ -1,9 +1,11 @@
 package com.start.mindcafeclonepractice.datas
 
+import java.io.Serializable
+
 class ExpertMenuChattData(
-    val ticketTitle: String? = null,
-    val timeMinutes: String? = null,
-    val expiration: String? =null,
+    val expirationPeriod: String? = null,
+    val title: String? = null,
+    val severalMinutesTime: String? =null,
     val price: Int? = null
-) {
+):Serializable {
 }
