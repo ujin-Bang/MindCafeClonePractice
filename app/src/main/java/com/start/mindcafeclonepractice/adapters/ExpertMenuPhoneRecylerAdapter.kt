@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.start.mindcafeclonepractice.R
+import com.start.mindcafeclonepractice.datas.ExpertConsultingMenuPhoneData
 import com.start.mindcafeclonepractice.datas.ExpertMenuPhoneData
 import java.text.DecimalFormat
 
@@ -14,6 +15,18 @@ class ExpertMenuPhoneRecylerAdapter(
     val mContext: Context,
     val mList: List<ExpertMenuPhoneData>
 ): RecyclerView.Adapter<ExpertMenuPhoneRecylerAdapter.PhoneRecyclerViewHoler>() {
+
+    interface OnItemClickListener{
+        fun onClick(v: View, data: ExpertMenuPhoneData, position: Int)
+    }
+
+    private var listener: OnItemClickListener? = null
+
+    fun setOnItemClickListener(listener: OnItemClickListener){
+
+        this.listener = listener
+
+    }
 
     inner class PhoneRecyclerViewHoler(row: View): RecyclerView.ViewHolder(row){
 
@@ -30,6 +43,14 @@ class ExpertMenuPhoneRecylerAdapter(
             val dec = DecimalFormat("#,###")
             val priceStr = dec.format(data.price)
             txtPrice.text = "${priceStr}원"
+
+            val positon = adapterPosition
+            if (positon != RecyclerView.NO_POSITION){
+
+                itemView.setOnClickListener {
+                    listener?.onClick(itemView, data, positon)
+                }
+            }
         }
 
     }

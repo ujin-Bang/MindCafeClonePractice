@@ -1,5 +1,7 @@
 package com.start.mindcafeclonepractice.datas
 
+import java.io.Serializable
+
 class ExpertMenuPhoneData(
     val expirationPeriod : String? = null,
     val normalPrice : Int? = null,
@@ -8,5 +10,5 @@ class ExpertMenuPhoneData(
     val title: String? = null,
     val detailContent: String? = null,
 
-) {
+): Serializable {
 }

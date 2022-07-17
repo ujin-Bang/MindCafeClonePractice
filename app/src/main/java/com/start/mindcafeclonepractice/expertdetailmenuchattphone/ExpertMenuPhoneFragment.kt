@@ -9,6 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.SnapHelper
 import com.google.firebase.database.*
+import com.start.mindcafeclonepractice.Payment22Activity
 import com.start.mindcafeclonepractice.R
 import com.start.mindcafeclonepractice.VoiceDetailActivity
 import com.start.mindcafeclonepractice.adapters.ExpertMenuPhoneRecylerAdapter
@@ -37,9 +38,9 @@ class ExpertMenuPhoneFragment:BaseFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        setupEvents()
-        setValues()
 
+        setValues()
+        setupEvents()
     }
     override fun setupEvents() {
 
@@ -48,6 +49,8 @@ class ExpertMenuPhoneFragment:BaseFragment() {
         }
 
         FAQClickEvents()
+
+        recyclerViewItemClickListener()
 
     }
 
@@ -158,5 +161,19 @@ class ExpertMenuPhoneFragment:BaseFragment() {
         binding.phoneRecyclerView.setHasFixedSize(true)
 
 
+    }
+
+    //리싸이클러뷰 아이템 클릭이벤트
+    fun recyclerViewItemClickListener(){
+
+        mAdapter.setOnItemClickListener(object : ExpertMenuPhoneRecylerAdapter.OnItemClickListener{
+            override fun onClick(v: View, data: ExpertMenuPhoneData, position: Int) {
+                Intent(mContext, Payment22Activity::class.java).apply {
+                    putExtra("data",data)
+                    addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                }.run { startActivity(this) }
+            }
+
+        })
     }
 }
