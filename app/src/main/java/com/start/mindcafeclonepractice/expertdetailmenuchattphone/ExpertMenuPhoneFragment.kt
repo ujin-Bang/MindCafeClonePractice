@@ -7,14 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.SnapHelper
 import com.google.firebase.database.*
 import com.start.mindcafeclonepractice.Payment22Activity
 import com.start.mindcafeclonepractice.R
 import com.start.mindcafeclonepractice.VoiceDetailActivity
 import com.start.mindcafeclonepractice.adapters.ExpertMenuPhoneRecylerAdapter
 import com.start.mindcafeclonepractice.bottomnavfragments.BaseFragment
-import com.start.mindcafeclonepractice.databinding.FragmentExpertMenuChattBinding
 import com.start.mindcafeclonepractice.databinding.FragmentExpertMenuPhoneBinding
 import com.start.mindcafeclonepractice.datas.ExpertMenuPhoneData
 
