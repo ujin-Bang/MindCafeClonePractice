@@ -12,256 +12,384 @@
             android:layout_height="wrap_content">
 
 
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="20dp"
-                android:background="@color/sky"
-                android:gravity="center_vertical"
-                android:paddingHorizontal="30dp"
-                android:paddingVertical="13dp">
+                android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/expert_profile_talk_icon"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="28dp"
-                    android:text="전화로 전문가의 즉각적인 소통을 하고 싶으신 분"/>
-
-            </LinearLayout>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/phoneRecyclerView"
-                android:layout_marginTop="30dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-
-            <LinearLayout
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@color/light_gray">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/sky"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
                     android:paddingHorizontal="30dp"
-                    android:paddingVertical="20dp"
+                    android:paddingVertical="13dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/expert_profile_talk_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:text="전화로 전문가의 즉각적인 소통을 하고 싶으신 분" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/phoneRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/light_gray"
                     android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
+                        android:orientation="vertical"
+                        android:paddingHorizontal="30dp"
+                        android:paddingVertical="20dp">
 
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Tip!"
-                            android:textSize="15sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/bottomnav"/>
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
 
-                        <TextView
-                            android:layout_width="wrap_content"
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tip!"
+                                android:textColor="@color/bottomnav"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="보이스(전화), 이런 분들께 추천해요!"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:textSize="15sp"
-                            android:textStyle="bold"
-                            android:layout_marginStart="10dp"
-                            android:text="보이스(전화), 이런 분들께 추천해요!"/>
+                            android:layout_marginTop="20dp"
+                            android:orientation="horizontal">
+
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/check_icon" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="언제 어디서든 편하게 이용하고 싶어요."
+                                android:textSize="13.5sp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:orientation="horizontal">
+
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/check_icon" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="채팅보다 전화 통화가 편해요"
+                                android:textSize="13.5sp" />
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:orientation="horizontal">
+
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/check_icon" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="음성으로 대화하며 대답을 바로 듣고 싶어요."
+                                android:textSize="13.5sp" />
+
+
+                        </LinearLayout>
 
 
                     </LinearLayout>
 
+                </LinearLayout>
 
-                    <LinearLayout
+
+                <TextView
+                    android:id="@+id/btnVoiceDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="50dp"
+                    android:background="@drawable/spinner_background_box"
+                    android:backgroundTint="#F4F2DC"
+                    android:elevation="3dp"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="10dp"
+                    android:text="보이스(전화)에 대해 더 알고 싶어요                                     >" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="FAQ"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@color/light_gray"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtNormal1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:orientation="horizontal">
-
-
-                        <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@drawable/check_icon"/>
-
-                        <TextView
-                            android:textSize="13.5sp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="언제 어디서든 편하게 이용하고 싶어요."
-                            android:layout_marginStart="10dp"/>
-
-
-                    </LinearLayout>
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="10dp"
+                        android:text="텍스트(채팅)와 보이스(전화), 어떤 차이가 있나요?                     ⌄" />
 
                     <LinearLayout
+                        android:id="@+id/layoutClicked1"
+                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="13dp"
-                        android:orientation="horizontal">
-
-
-                        <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@drawable/check_icon"/>
+                        android:background="@color/white"
+                        android:orientation="vertical">
 
                         <TextView
-                            android:textSize="13.5sp"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="채팅보다 전화 통화가 편해요"
-                            android:layout_marginStart="10dp"/>
+                            android:paddingHorizontal="20dp"
+                            android:paddingVertical="10dp"
+                            android:text="텍스트(채팅)와 보이스(전화), 어떤 차이가 있나요?                     ⌃" />
 
-
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="20dp"
+                            android:paddingVertical="10dp"
+                            android:text="텍스트(채팅)와 보이스(전화)는 동일하게 50분간 진행이 됩니다. 그러나 같은 시간 동안 심리상담/코칭이 진행되더라도 보이스(전화)의 경우, 텍스트(채팅)에 비해서 훨씬 많은 양의 대화가 오고가기 때문에 더 많은 내용이 심리상담/코칭에서 다뤄질 수 있습니다. 또한, 문자로 주고받는 것에 비해서 비언어적인 측면들의 정보가 전달될 수 있어서 내용 전달에서 오해 발생 소지가 낮고 상담사 /코치와 더욱 빨리 친밀한 관계를 형성하는데 도움이 됩니다. \n\n\n 그러나 보다 더 익명성이 보장되길 원하고, 음성을 통해 상담을 진행하는 것이 어려우신 분들은 텍스트(채팅)가 더 효과적일 수 있습니다. 대화 시, 질문에 바로 대답하기가 어렵고 생가가이나 감정을 전달하는 데 시간이 필요하며 어느 정도 자신의 어려움에 대한 파악이 이루어지신 분들은 텍스트(채팅)의 효과가 더 좋을 수도 있습니다." />
                     </LinearLayout>
 
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:background="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/txtNormal2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="10dp"
+                        android:text="심리상담과 코칭을 몇 번이나 받아야 하나요?                              ⌄" />
 
                     <LinearLayout
+                        android:id="@+id/layoutClicked2"
+                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="13dp"
-                        android:orientation="horizontal">
-
-
-                        <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@drawable/check_icon"/>
+                        android:background="@color/white"
+                        android:orientation="vertical">
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="13.5sp"
-                            android:text="음성으로 대화하며 대답을 바로 듣고 싶어요."
-                            android:layout_marginStart="10dp"/>
+                            android:paddingHorizontal="20dp"
+                            android:paddingVertical="10dp"
+                            android:text="심리상담과 코칭을 몇 번이나 받아야 하나요?                              ⌃" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="20dp"
+                            android:paddingVertical="10dp"
+                            android:text="심리상담/코칭을 받고자 하는 주제나 목적, 자신에 대한 통찰의 정도에 따라서 횟수와 기간이 달라질 수 있습니다.\n\n\n 심리상담은 예를 들어, 현재 경험하는 어려움의 원인을 알고자 하는 측면이라면 1~4회기 내에서 해결될 수 있으나, 그러한 어려움을 해결하고 삶의 변화를 원하는 측면이라면 8회기 이상의 상담이 필요할 수 있습니다.\n\n\n 코칭은 예를 들어, 목표를 달리하기 위한 현재 계획의 적합성과 실행 단계의 수준에 따라 1~4회기 내에서 충분한 목적 달성이 이루어질 수도 있으나, 지속적인 전문성 축적과 자기계발의 측면이라면 장기적인 계획과 관리가 이루어지는 8회기 이상의 코칭이 필요할 수 있습니다.\n\n\n 첫 심리상담/코칭 시, 심리상담/코칭을 받고자 하는 목적 및 처한 환경, 겪고 있는 어려움의 수준 등에 대한 핵심 내용이 상담사/ 코치에게 전달된 후에 자신에게 가장 적합한 심리상담/코칭 플랜과 기간을 확인하실 수 있습니다." />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:background="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/txtNormal3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="10dp"
+                        android:text="심리상담과 코칭은 얼마나 자주 받아야 하나요?                          ⌄" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutClicked3"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="20dp"
+                            android:paddingVertical="10dp"
+                            android:text="심리상담과 코칭은 얼마나 자주 받아야 하나요?                          ⌃" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="20dp"
+                            android:paddingVertical="10dp"
+                            android:text="심리상담/코칭은 보통 주 1회 50분 동안 진행됩니다. 심리상담/코칭 이후, 1주일 동안 스스로의 삶에 적용하며 적응하는 과정이 변화의 측면에서 필요하기 때문에 심리상담/코칭 주기는 일반적으로 1주일의 간격을 두고 진행이 됩니다. 자신의 현재 상황과 심리상담/ 코칭의 목적에 접합하지 않은 짧은 간격의 잦은 심리상담/코칭은 오히려 스스로의 자립에 방해가 될 수 있고, 상담사/코치에게 의존하게 될 수도 있습니다.\n\n\n 단, 경험하는 어려움이 매우 크고 하루하루 일상을 보내는 것이 매우 힘들어서 심리상담을 필요로 하는 경우나 또는 장기적인 전문 역량의 발전과 목표 달성을 위한 코칭이 필요한 경우처럼 자신의 문제, 목표, 상황 등의 수준에 따라 상담사/코치와의 협의를 통해 주 2회 이상의 심리상담/코칭을 진행할 수 있습니다." />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:background="@color/gray" />
+
+
+                    <TextView
+                        android:id="@+id/txtNormal4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:paddingVertical="10dp"
+                        android:text="심리상담과 코칭, 어떤 차이가 있나요?                                         ⌄" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutClicked4"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="20dp"
+                            android:paddingVertical="10dp"
+                            android:text="심리상담과 코칭, 어떤 차이가 있나요?                                         ⌃" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="20dp"
+                            android:paddingVertical="10dp"
+                            android:text="심리상담의 핵심은 상처받은 마음의 치유입니다. 심리상담을 통해 자신의 과거와 현재를 탐색하며 아픔의 원인을 찾아 해결할 수 있습니다. 불안, 우울, 스트레스, 트라우마 등 정신적 고통, 기능장애, 대인관계 갈등을 치유하며 현재와 미래의 삶을 개선할 수 있습니다. 심리상담은 '원인탐색', '고통/증상 완화', '상황 개선', '마음 치유','문제 해결'에 이르는 치유의 과정입니다.\n\n\n 코칭의 핵심은 꿈, 목표, 성과의 달성입니다. 코칭을 통해 개인적, 전문적 성장을 하며 현재 자신이 가지고 있는 강전과 역량을 최대한 이끌어낼 수 있습니다. 비즈니스, 성과, 관계, 가족, 진로 등의 영역에서 특정 목표를 달성하기 위한 구체적 행동전략을 세우고 실천하며, 꿈을 이루기 위한 도움을 받을 수 있습니다. 코칭은 '목표 수립','행동 전략','실행,'성취'에 초점을 맞춘 미래지향적 목표달성의 과정입니다." />
 
 
                     </LinearLayout>
 
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:background="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/txtNormal5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:paddingVertical="10dp"
+                        android:text="그룹 프로그램은 심리상담이나 코칭과 어떤 차이가 있나요?      ⌄" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutClicked5"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="20dp"
+                            android:paddingVertical="10dp"
+                            android:text="그룹 프로그램은 심리상담이나 코칭과 어떤 차이가 있나요?      ⌃" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="20dp"
+                            android:paddingVertical="10dp"
+                            android:text="심리상담/코칭은 전문가(상담사/코치)와의 1:1 방식으로 진행됩니다. 이와 달리 그룹 프로그램은 비슷한 고민을 가진 참가자들이 함께하며(4~10명), 그룹 프로그램 리더(상담사/코치)의 가이드에 따라 치유를 경험하고 목표를 달성하는 과정으로 진행됩니다. 그룹 프로그램 참가자들은 그룹 프로그램에 참여하며 서로의 관심사, 고민, 감정을 편안하게 이야기하고 수용받는 경험을 할 수 있습니다. 서로를 격려하고 도움을 주고 받는 과정 속에서 자신과 타인에 대한 이해를 증진시키고 자아존중감을 높일 수 있습니다. 그룹 프로그램 참가자들의 상호작용 속에서 타인에 대한 바람직한 태도와 행동을 확인하고 문제해결에 필요한 적응적 기술과 대인관계 능력을 함양하여, 상처받은 마음을 치유하고 목표에 도달하기 위한 능력을 키울 수 있습니다." />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:background="@color/gray" />
 
                 </LinearLayout>
 
             </LinearLayout>
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="50dp"
-                android:paddingHorizontal="20dp"
-                android:paddingVertical="10dp"
-                android:elevation="3dp"
-                android:backgroundTint="#F4F2DC"
-                android:background="@drawable/spinner_background_box"
-                android:layout_gravity="center"
-                android:text="텍스트(채팅)에 대해 더 알고 싶어요                                     >"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="FAQ"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:layout_marginStart="20dp"/>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="20dp"
-                android:background="@color/light_gray">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingHorizontal="20dp"
-                    android:paddingVertical="10dp"
-                    android:text="텍스트(채팅)와 보이스(전화), 어떤 차이가 있나요?                     ⌄"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginHorizontal="20dp"
-                    android:background = "@color/gray"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingHorizontal="20dp"
-                    android:paddingVertical="10dp"
-                    android:text="심리상담과 코칭을 몇 번이나 받아야 하나요?                              ⌄"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/gray"
-                    android:layout_marginHorizontal="20dp"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="심리상담과 코칭은 얼마나 자주 받아야 하나요?                          ⌄"
-                    android:paddingHorizontal="20dp"
-                    android:paddingVertical="10dp"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/gray"
-                    android:layout_marginHorizontal="20dp"/>
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="심리상담과 코칭, 어떤 차이가 있나요?                                         ⌄"
-                    android:layout_marginHorizontal="20dp"
-                    android:paddingVertical="10dp"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/gray"
-                    android:layout_marginHorizontal="10dp"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="20dp"
-                    android:paddingVertical="10dp"
-                    android:text="그룹 프로그램은 심리상담이나 코칭과 어떤 차이가 있나요?      ⌄"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginHorizontal="20dp"
-                    android:background="@color/gray"/>
-
-            </LinearLayout>
-
-        </LinearLayout>
         </ScrollView>
 
     </LinearLayout>

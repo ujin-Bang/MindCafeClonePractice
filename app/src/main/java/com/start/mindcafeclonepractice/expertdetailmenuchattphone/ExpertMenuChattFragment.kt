@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.database.*
+import com.start.mindcafeclonepractice.ChattDetailActivity
 import com.start.mindcafeclonepractice.Payment2Activity
 import com.start.mindcafeclonepractice.R
 import com.start.mindcafeclonepractice.adapters.ExpertMenuChatRecylerAdapter
@@ -42,6 +43,12 @@ class ExpertMenuChattFragment:BaseFragment() {
     override fun setupEvents() {
 
         recyclerViewItemClickListener()
+
+        binding.btnTextTherapyMore.setOnClickListener {
+
+            startActivity(Intent(mContext, ChattDetailActivity::class.java))
+        }
+
     }
 
     override fun setValues() {
