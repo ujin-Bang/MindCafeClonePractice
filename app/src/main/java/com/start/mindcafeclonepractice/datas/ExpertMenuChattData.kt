@@ -8,6 +8,7 @@ class ExpertMenuChattData(
     val severalMinutesTime: String? =null,
     val price: Int? = null,
     val therapyContent: String? = null,
+    val normalPrice: Int? = null,
 
 ):Serializable {
 }
