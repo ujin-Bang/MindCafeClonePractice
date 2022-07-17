@@ -6,15 +6,24 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.SnapHelper
+import com.google.firebase.database.*
 import com.start.mindcafeclonepractice.R
 import com.start.mindcafeclonepractice.VoiceDetailActivity
+import com.start.mindcafeclonepractice.adapters.ExpertMenuPhoneRecylerAdapter
 import com.start.mindcafeclonepractice.bottomnavfragments.BaseFragment
 import com.start.mindcafeclonepractice.databinding.FragmentExpertMenuChattBinding
 import com.start.mindcafeclonepractice.databinding.FragmentExpertMenuPhoneBinding
+import com.start.mindcafeclonepractice.datas.ExpertMenuPhoneData
 
 class ExpertMenuPhoneFragment:BaseFragment() {
 
     lateinit var binding: FragmentExpertMenuPhoneBinding
+    val mList = ArrayList<ExpertMenuPhoneData>()
+    lateinit var mAdapter: ExpertMenuPhoneRecylerAdapter
+
+    lateinit var ref: DatabaseReference
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -44,6 +53,7 @@ class ExpertMenuPhoneFragment:BaseFragment() {
 
     override fun setValues() {
 
+        getPhoneDataFromFireBaseDB()
     }
 
     //전화택 하단 FAQ클릭 이벤트처리
@@ -112,6 +122,40 @@ class ExpertMenuPhoneFragment:BaseFragment() {
             binding.layoutClicked5.visibility = View.GONE
             binding.txtNormal5.visibility = View.VISIBLE
         }
+
+
+    }
+
+    //파이어베이스 연결 데이터 리스트에 담기
+    fun getPhoneDataFromFireBaseDB(){
+
+        ref = FirebaseDatabase.getInstance().getReference("phone")
+        ref.addValueEventListener(object : ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+
+                if (snapshot.exists()){
+                    for (h in snapshot.children){
+                        val phoneData = h.getValue(ExpertMenuPhoneData::class.java)
+
+                        if (phoneData != null){
+
+                            mList.add(phoneData)
+
+                        }
+                    }
+                    mAdapter.notifyDataSetChanged()
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+            }
+
+        })
+
+        mAdapter = ExpertMenuPhoneRecylerAdapter(mContext, mList)
+        binding.phoneRecyclerView.adapter = mAdapter
+        binding.phoneRecyclerView.layoutManager = LinearLayoutManager(mContext)
+        binding.phoneRecyclerView.setHasFixedSize(true)
 
 
     }
