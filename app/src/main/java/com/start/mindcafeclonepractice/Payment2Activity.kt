@@ -1,6 +1,7 @@
 package com.start.mindcafeclonepractice
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -27,6 +28,12 @@ class Payment2Activity : BaseActivity() {
     override fun setupEvents() {
 
         couponRegistration()
+
+        paymentMethodSelect()
+
+        binding.btnOk.setOnClickListener {
+            startActivity(Intent(mContext, FinalPaymentActivity::class.java))
+        }
 
     }
 
@@ -68,165 +75,197 @@ class Payment2Activity : BaseActivity() {
         spinner3()
     }
 
-        @SuppressLint("ResourceType")
-        fun spinner3() {
-            //스피너 어댑터 세팅
-            val spList = arrayListOf(
-                "쿠폰을 선택해주세요", "1월 10%할인", "2월 10%할인", "3월 10%할인", "가정의 달10%할인",
-                "날씨가 좋아서 10%할인", "추워서 10%할인", "그냥 10%할인"
-            )
+    @SuppressLint("ResourceType")
+    fun spinner3() {
+        //스피너 어댑터 세팅
+        val spList = arrayListOf(
+            "쿠폰을 선택해주세요", "1월 10%할인", "2월 10%할인", "3월 10%할인", "가정의 달10%할인",
+            "날씨가 좋아서 10%할인", "추워서 10%할인", "그냥 10%할인"
+        )
 
-            val spAdapter = ArrayAdapter(
-                mContext,
-                androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,
-                spList
-            )
+        val spAdapter = ArrayAdapter(
+            mContext,
+            androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,
+            spList
+        )
 
-            binding.couponSpinner3.adapter = spAdapter
+        binding.couponSpinner3.adapter = spAdapter
 
-            binding.couponSpinner3.onItemSelectedListener =
-                object : AdapterView.OnItemSelectedListener {
-                    override fun onItemSelected(
-                        parent: AdapterView<*>?,
-                        view: View?,
-                        position: Int,
-                        id: Long
-                    ) {
-                        Log.d("선택된 스피너 항목", parent?.selectedItem.toString())
+        binding.couponSpinner3.onItemSelectedListener =
+            object : AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(
+                    parent: AdapterView<*>?,
+                    view: View?,
+                    position: Int,
+                    id: Long
+                ) {
+                    Log.d("선택된 스피너 항목", parent?.selectedItem.toString())
 
-                        val dec = DecimalFormat("#,###") // 3자리마다 콤마찍기 숫자를 String으로
-                        val normalPri = mData.normalPrice //받아온 데이터안에 가격 변수에 담기
-                        val couponDiscountPri = normalPri?.times(0.1) //쿠폰 선택 10%할인
-                        val discountPri005 = normalPri?.times(0.05)
-                        val discountPri01 = normalPri?.times(0.1)
+                    val dec = DecimalFormat("#,###") // 3자리마다 콤마찍기 숫자를 String으로
+                    val normalPri = mData.normalPrice //받아온 데이터안에 가격 변수에 담기
+                    val couponDiscountPri = normalPri?.times(0.1) //쿠폰 선택 10%할인
+                    val discountPri005 = normalPri?.times(0.05)
+                    val discountPri01 = normalPri?.times(0.1)
 
 
-                        if (parent!!.selectedItemPosition != 0){
+                    if (parent!!.selectedItemPosition != 0) {
 
-                            if (normalPri != null) {
-                                if (normalPri < 100000){
-                                    binding.couponDiscountPrice.text = "${parent!!.selectedItem}:  -${dec.format(couponDiscountPri)}원"
-                                    binding.resultPrice.text = "${dec.format(normalPri - couponDiscountPri!!)}원"
-                                }
-
-                                else if (normalPri < 200000){
-                                    binding.couponDiscountPrice.text = "${parent!!.selectedItem}:  -${dec.format(couponDiscountPri)}원"
-                                    binding.discountPrice.text = "-${dec.format(discountPri005)}원"
-                                    binding.resultPrice.text = "${dec.format(normalPri - discountPri005!! - couponDiscountPri!!)}원"
-                                }
-
-                                else{
-                                    binding.couponDiscountPrice.text = "${parent!!.selectedItem}:  -${dec.format(couponDiscountPri)}원"
-                                    binding.discountPrice.text = "-${dec.format(discountPri01)}원"
-                                    binding.resultPrice.text = "${dec.format(normalPri - discountPri01!! - couponDiscountPri!!)}원"
-                                }
-
+                        if (normalPri != null) {
+                            if (normalPri < 100000) {
+                                binding.couponDiscountPrice.text =
+                                    "${parent!!.selectedItem}:  -${dec.format(couponDiscountPri)}원"
+                                binding.resultPrice.text =
+                                    "${dec.format(normalPri - couponDiscountPri!!)}원"
+                            } else if (normalPri < 200000) {
+                                binding.couponDiscountPrice.text =
+                                    "${parent!!.selectedItem}:  -${dec.format(couponDiscountPri)}원"
+                                binding.discountPrice.text = "-${dec.format(discountPri005)}원"
+                                binding.resultPrice.text =
+                                    "${dec.format(normalPri - discountPri005!! - couponDiscountPri!!)}원"
+                            } else {
+                                binding.couponDiscountPrice.text =
+                                    "${parent!!.selectedItem}:  -${dec.format(couponDiscountPri)}원"
+                                binding.discountPrice.text = "-${dec.format(discountPri01)}원"
+                                binding.resultPrice.text =
+                                    "${dec.format(normalPri - discountPri01!! - couponDiscountPri!!)}원"
                             }
 
                         }
-                        else{
-
-                            if(normalPri != null){
-                                if (normalPri < 100000){
-
-                                    binding.couponDiscountPrice.text = "${parent!!.selectedItem}"
-                                    binding.resultPrice.text = "${dec.format(normalPri)}원"
-                                }
-
-                                else if(normalPri < 200000) {
-
-                                    binding.couponDiscountPrice.text = "${parent!!.selectedItem}"
-                                    binding.resultPrice.text = "${dec.format(normalPri - discountPri005!!)}원"
-                                }
-                                else {
-                                    binding.couponDiscountPrice.text = "${parent!!.selectedItem}"
-                                    binding.resultPrice.text = "${dec.format(normalPri - discountPri01!!)}원"
-                                }
-                            }
-                        }
-
-                    }
-
-                    override fun onNothingSelected(parent: AdapterView<*>?) {
-
-                    }
-
-                }
-
-        }
-
-        fun couponRegistration() {
-            binding.couponRegistration2.setOnClickListener {
-
-                val customAlert =
-                    LayoutInflater.from(mContext).inflate(R.layout.alert_custom2, null)
-
-                val alert = AlertDialog.Builder(mContext)
-                    .setView(customAlert)
-                    .create()
-
-                val btnx = customAlert.findViewById<ImageView>(R.id.btnX)
-                val btnCouponCodeCheck = customAlert.findViewById<TextView>(R.id.btnCouponCodeCheck)
-                val btnCouponCodeNormal =
-                    customAlert.findViewById<TextView>(R.id.btnCouponCodeNormal)
-                val btnCouponNameNormal =
-                    customAlert.findViewById<TextView>(R.id.btnCouponNameNormal)
-                val btnCouponNameCheck = customAlert.findViewById<TextView>(R.id.btnCouponNameCheck)
-                val txtText = customAlert.findViewById<TextView>(R.id.txtText)
-                val layoutCode = customAlert.findViewById<LinearLayout>(R.id.layoutCode)
-                val edtCode = customAlert.findViewById<EditText>(R.id.edtCode)
-                val layoutName = customAlert.findViewById<LinearLayout>(R.id.layoutName)
-                val edtName = customAlert.findViewById<EditText>(R.id.edtName)
-                val btnCouponIssued = customAlert.findViewById<Button>(R.id.btnCouponIssued)
-
-
-                btnx.setOnClickListener {
-                    alert.dismiss()
-                }
-
-                btnCouponCodeNormal.setOnClickListener {
-                    btnCouponCodeNormal.visibility = View.GONE
-                    btnCouponCodeCheck.visibility = View.VISIBLE
-                    btnCouponNameCheck.visibility = View.GONE
-                    btnCouponNameNormal.visibility = View.VISIBLE
-                    txtText.text = "쿠폰 코드를 입력해주세요."
-                    layoutCode.visibility = View.VISIBLE
-                    layoutName.visibility = View.GONE
-
-                }
-
-                btnCouponNameNormal.setOnClickListener {
-                    btnCouponNameNormal.visibility = View.GONE
-                    btnCouponNameCheck.visibility = View.VISIBLE
-                    btnCouponCodeCheck.visibility = View.GONE
-                    btnCouponCodeNormal.visibility = View.VISIBLE
-                    txtText.text = "쿠폰 이름을 입력해주세요"
-                    layoutName.visibility = View.VISIBLE
-                    layoutCode.visibility = View.GONE
-                }
-
-                btnCouponIssued.setOnClickListener {
-                    if (btnCouponCodeCheck.visibility == View.VISIBLE) {
-
-                        if (edtCode.length() < 19) {
-                            Toast.makeText(mContext, "16자리 숫자 코드를 입력해주세요.", Toast.LENGTH_SHORT)
-                                .show()
-                            return@setOnClickListener
-                        }
-
 
                     } else {
-                        if (edtName.length() == 0) {
-                            Toast.makeText(mContext, "쿠폰 이름을 입력해주세요.", Toast.LENGTH_SHORT).show()
-                            return@setOnClickListener
-                        }
 
+                        if (normalPri != null) {
+                            if (normalPri < 100000) {
+
+                                binding.couponDiscountPrice.text = "${parent!!.selectedItem}"
+                                binding.resultPrice.text = "${dec.format(normalPri)}원"
+                            } else if (normalPri < 200000) {
+
+                                binding.couponDiscountPrice.text = "${parent!!.selectedItem}"
+                                binding.resultPrice.text =
+                                    "${dec.format(normalPri - discountPri005!!)}원"
+                            } else {
+                                binding.couponDiscountPrice.text = "${parent!!.selectedItem}"
+                                binding.resultPrice.text =
+                                    "${dec.format(normalPri - discountPri01!!)}원"
+                            }
+                        }
                     }
 
                 }
 
-                alert.show()
+                override fun onNothingSelected(parent: AdapterView<*>?) {
+
+                }
 
             }
+
+    }
+
+        //새로운 쿠폰 등록하기 클릭시 => 얼럿다이얼로그 커스텀 등
+    fun couponRegistration() {
+        binding.couponRegistration2.setOnClickListener {
+
+            val customAlert =
+                LayoutInflater.from(mContext).inflate(R.layout.alert_custom2, null)
+
+            val alert = AlertDialog.Builder(mContext)
+                .setView(customAlert)
+                .create()
+
+            val btnx = customAlert.findViewById<ImageView>(R.id.btnX)
+            val btnCouponCodeCheck = customAlert.findViewById<TextView>(R.id.btnCouponCodeCheck)
+            val btnCouponCodeNormal =
+                customAlert.findViewById<TextView>(R.id.btnCouponCodeNormal)
+            val btnCouponNameNormal =
+                customAlert.findViewById<TextView>(R.id.btnCouponNameNormal)
+            val btnCouponNameCheck = customAlert.findViewById<TextView>(R.id.btnCouponNameCheck)
+            val txtText = customAlert.findViewById<TextView>(R.id.txtText)
+            val layoutCode = customAlert.findViewById<LinearLayout>(R.id.layoutCode)
+            val edtCode = customAlert.findViewById<EditText>(R.id.edtCode)
+            val layoutName = customAlert.findViewById<LinearLayout>(R.id.layoutName)
+            val edtName = customAlert.findViewById<EditText>(R.id.edtName)
+            val btnCouponIssued = customAlert.findViewById<Button>(R.id.btnCouponIssued)
+
+
+            btnx.setOnClickListener {
+                alert.dismiss()
+            }
+
+            btnCouponCodeNormal.setOnClickListener {
+                btnCouponCodeNormal.visibility = View.GONE
+                btnCouponCodeCheck.visibility = View.VISIBLE
+                btnCouponNameCheck.visibility = View.GONE
+                btnCouponNameNormal.visibility = View.VISIBLE
+                txtText.text = "쿠폰 코드를 입력해주세요."
+                layoutCode.visibility = View.VISIBLE
+                layoutName.visibility = View.GONE
+
+            }
+
+            btnCouponNameNormal.setOnClickListener {
+                btnCouponNameNormal.visibility = View.GONE
+                btnCouponNameCheck.visibility = View.VISIBLE
+                btnCouponCodeCheck.visibility = View.GONE
+                btnCouponCodeNormal.visibility = View.VISIBLE
+                txtText.text = "쿠폰 이름을 입력해주세요"
+                layoutName.visibility = View.VISIBLE
+                layoutCode.visibility = View.GONE
+            }
+
+            btnCouponIssued.setOnClickListener {
+                if (btnCouponCodeCheck.visibility == View.VISIBLE) {
+
+                    if (edtCode.length() < 19) {
+                        Toast.makeText(mContext, "16자리 숫자 코드를 입력해주세요.", Toast.LENGTH_SHORT)
+                            .show()
+                        return@setOnClickListener
+                    }
+
+
+                } else {
+                    if (edtName.length() == 0) {
+                        Toast.makeText(mContext, "쿠폰 이름을 입력해주세요.", Toast.LENGTH_SHORT).show()
+                        return@setOnClickListener
+                    }
+
+                }
+
+            }
+
+            alert.show()
+
         }
     }
+
+    fun paymentMethodSelect(){
+
+        binding.btnCreditCard.setOnClickListener {
+            binding.btnCreditCard.visibility = View.GONE
+            binding.btnCreditCardChecked.visibility = View.VISIBLE
+            binding.btnPhonePayment.visibility = View.VISIBLE
+            binding.btnPhonePaymentChecked.visibility = View.GONE
+            binding.btnRealtimeAccountTransfer.visibility = View.VISIBLE
+            binding.btnRealtimeAccountTransferChecked.visibility = View.GONE
+        }
+
+        binding.btnPhonePayment.setOnClickListener {
+            binding.btnPhonePayment.visibility = View.GONE
+            binding.btnPhonePaymentChecked.visibility = View.VISIBLE
+            binding.btnCreditCard.visibility = View.VISIBLE
+            binding.btnCreditCardChecked.visibility = View.GONE
+            binding.btnRealtimeAccountTransfer.visibility = View.VISIBLE
+            binding.btnRealtimeAccountTransferChecked.visibility = View.GONE
+        }
+
+        binding.btnRealtimeAccountTransfer.setOnClickListener {
+            binding.btnRealtimeAccountTransfer.visibility = View.GONE
+            binding.btnRealtimeAccountTransferChecked.visibility = View.VISIBLE
+            binding.btnPhonePayment.visibility = View.VISIBLE
+            binding.btnPhonePaymentChecked.visibility = View.GONE
+            binding.btnCreditCard.visibility = View.VISIBLE
+            binding.btnCreditCardChecked.visibility = View.GONE
+        }
+    }
+
+}
