@@ -1,6 +1,8 @@
 package com.start.mindcafeclonepractice
 
 import android.annotation.SuppressLint
+import android.content.Intent
+import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -36,6 +38,12 @@ class Payment22Activity : BaseActivity() {
 
             couponRegistration()
 
+        }
+
+        paymentMethod()
+
+        binding.btnOk.setOnClickListener {
+            startActivity(Intent(mContext, FinalPaymentActivity::class.java))
         }
     }
 
@@ -121,7 +129,7 @@ class Payment22Activity : BaseActivity() {
                         else if (normalPri < 300000){
 
                             binding.couponDiscountPrice.text = "${parent.selectedItem}"
-                            binding.resultPrice.text = "${dec.format(normalPri - discount005!!)}"
+                            binding.resultPrice.text = "${dec.format(normalPri - discount005!!)}원"
                         }
 
                         else {
@@ -242,4 +250,37 @@ class Payment22Activity : BaseActivity() {
         }
         binding.discountPrice
     }
+
+    //결제 수단 선택
+    fun paymentMethod(){
+
+        binding.btnCouponCode.setOnClickListener {
+            binding.btnCouponCode.visibility = View.GONE
+            binding.btnCouponCodeChecked.visibility = View.VISIBLE
+            binding.btnPhonePayment.visibility = View.VISIBLE
+            binding.btnPhonePaymentChecked.visibility = View.GONE
+            binding.btnRealtimeAccountTransfer.visibility = View.VISIBLE
+            binding.btnRealtimeAccountTransferChecked.visibility = View.GONE
+        }
+
+        binding.btnPhonePayment.setOnClickListener {
+            binding.btnPhonePayment.visibility = View.GONE
+            binding.btnPhonePaymentChecked.visibility = View.VISIBLE
+            binding.btnCouponCode.visibility = View.VISIBLE
+            binding.btnCouponCodeChecked.visibility = View.GONE
+            binding.btnRealtimeAccountTransfer.visibility = View.VISIBLE
+            binding.btnRealtimeAccountTransferChecked.visibility = View.GONE
+        }
+
+        binding.btnRealtimeAccountTransfer.setOnClickListener {
+            binding.btnRealtimeAccountTransfer.visibility = View.GONE
+            binding.btnRealtimeAccountTransferChecked.visibility = View.VISIBLE
+            binding.btnCouponCode.visibility = View.VISIBLE
+            binding.btnCouponCodeChecked.visibility = View.GONE
+            binding.btnPhonePayment.visibility = View.VISIBLE
+            binding.btnPhonePaymentChecked.visibility = View.GONE
+        }
+    }
+
+
 }
