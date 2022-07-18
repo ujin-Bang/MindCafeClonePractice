@@ -1,5 +1,6 @@
 package com.start.mindcafeclonepractice
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,11 +12,14 @@ import androidx.databinding.DataBindingUtil
 import com.start.mindcafeclonepractice.adapters.ExpertMenuPhoneRecylerAdapter
 import com.start.mindcafeclonepractice.databinding.ActivityPayment22Binding
 import com.start.mindcafeclonepractice.datas.ExpertMenuPhoneData
+import java.text.DecimalFormat
 
 class Payment22Activity : BaseActivity() {
 
     lateinit var binding: ActivityPayment22Binding
     lateinit var mData: ExpertMenuPhoneData
+
+    val dec = DecimalFormat("#,###")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,6 +48,8 @@ class Payment22Activity : BaseActivity() {
 
         mTxtPaymentTitle.text = mData.title
         binding.txtMenuDetailContent.text = mData.detailContent
+
+        paymentCalculator()
     }
 
     //스피너 만들기
@@ -67,12 +73,66 @@ class Payment22Activity : BaseActivity() {
         binding.spCoupon.adapter = arrAdapter
 
         binding.spCoupon.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            @SuppressLint("SetTextI18n")
             override fun onItemSelected(
                 parent: AdapterView<*>?,
                 view: View?,
                 position: Int,
                 id: Long
             ) {
+
+                val normalPri = mData.normalPrice
+                val discount005 = normalPri?.times(0.05)
+                val discount01 = normalPri!! * 0.1
+                val couponDiscount = normalPri * 0.1
+
+                binding.normalPrice.text = "${dec.format(normalPri)}원"
+
+                if (parent != null) {
+                    if (parent.selectedItemPosition != 0){
+
+                        if (normalPri < 100000){
+
+                            binding.couponDiscountPrice.text = "-${dec.format(couponDiscount)}원"
+                            binding.resultPrice.text = "${dec.format(normalPri - couponDiscount)}원"
+                        }
+
+                        else if (normalPri < 300000) {
+
+                            binding.couponDiscountPrice.text = "-${dec.format(couponDiscount)}원"
+                            binding.resultPrice.text = "${dec.format(normalPri - discount005!! - couponDiscount)}원"
+                        }
+
+                        else{
+
+                            binding.couponDiscountPrice.text = "-${dec.format(couponDiscount)}원"
+                            binding.resultPrice.text = "${dec.format(normalPri - discount01 - couponDiscount)}원"
+
+                        }
+                    }
+
+                    else{
+
+                        if (normalPri < 100000){
+                            binding.couponDiscountPrice.text = "${parent.selectedItem}"
+                            binding.resultPrice.text = "${dec.format(normalPri)}원"
+                        }
+
+                        else if (normalPri < 300000){
+
+                            binding.couponDiscountPrice.text = "${parent.selectedItem}"
+                            binding.resultPrice.text = "${dec.format(normalPri - discount005!!)}"
+                        }
+
+                        else {
+
+                            binding.couponDiscountPrice.text = "${parent.selectedItem}"
+                            binding.resultPrice.text = "${dec.format(normalPri - discount01)}"
+                        }
+                    }
+
+                }
+
 
             }
 
@@ -137,6 +197,7 @@ class Payment22Activity : BaseActivity() {
 
                     Toast.makeText(mContext, "16자리 쿠폰코드를 입력해주세요.", Toast.LENGTH_SHORT).show()
                     edtCode.requestFocus()//editText에 포커스 위치시키기
+                    return@setOnClickListener
                 }
 
             }
@@ -144,11 +205,41 @@ class Payment22Activity : BaseActivity() {
                 if (edtName.length() == 0){
                     Toast.makeText(mContext, "쿠폰 이름을 입력해주세요.", Toast.LENGTH_SHORT).show()
                     edtName.requestFocus()//edtiText에 포커스 위치시키기
+                    return@setOnClickListener
                 }
             }
         }
 
 
         alert.show()
+    }
+
+    //최종 결제금액 계산
+    fun paymentCalculator(){
+
+        val normalPri = mData.normalPrice
+        val normalPriceStr = dec.format(normalPri)
+        val discountPri005 = normalPri?.times(0.05)
+        val discountPri01 = normalPri?.times(0.1)
+
+        binding.normalPrice.text = "${normalPriceStr}원"
+
+        if (normalPri != null) {
+
+            if (normalPri < 100000) {
+                binding.layoutDiscount.visibility = View.GONE
+                binding.resultPrice.text = "${dec.format(normalPri)}원"
+            }
+            else if (normalPri < 300000) {
+                binding.discountPrice.text = "-${dec.format(discountPri005)}원"
+                binding.resultPrice.text = "${dec.format(normalPri - discountPri005!!)}원 "
+            }
+            else {
+                binding.discountPrice.text = "-${dec.format(discountPri01)}원"
+                binding.resultPrice.text = "${dec.format(normalPri - discountPri01!!)}원"
+
+            }
+        }
+        binding.discountPrice
     }
 }
