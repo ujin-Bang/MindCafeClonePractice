@@ -216,7 +216,7 @@ class Payment2Activity : BaseActivity() {
             btnCouponIssued.setOnClickListener {
                 if (btnCouponCodeCheck.visibility == View.VISIBLE) {
 
-                    if (edtCode.length() < 19) {
+                    if (edtCode.length() < 16) {
                         Toast.makeText(mContext, "16자리 숫자 코드를 입력해주세요.", Toast.LENGTH_SHORT)
                             .show()
                         return@setOnClickListener

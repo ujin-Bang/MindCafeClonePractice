@@ -29,6 +29,7 @@
 
             <ImageView
                 android:id="@+id/btnX"
+                android:background="@drawable/ripple_effect_background"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:src="@drawable/x_icon" />
@@ -98,6 +99,7 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/txtPhrase"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="쿠폰 코드를 입력해주세요."
