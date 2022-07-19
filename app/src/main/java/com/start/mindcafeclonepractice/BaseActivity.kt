@@ -31,6 +31,7 @@ abstract class BaseActivity : AppCompatActivity() {
     lateinit var mLinearLayoutPaymentActionBar: LinearLayout
     lateinit var mLinearlayoutPaymentPhoneActionBar: LinearLayout
     lateinit var mLinearLayoutGroupDetailActionBar: LinearLayout
+    lateinit var mLinearLayoutWritingActionBar: LinearLayout
 
     lateinit var mBtnBack: TextView
     lateinit var mBtnNext: TextView
@@ -55,6 +56,11 @@ abstract class BaseActivity : AppCompatActivity() {
     lateinit var mBtnPaymentPhoneBack: ImageView
     lateinit var mBtnGroupDetailActionBarBack: ImageView
     lateinit var mTxtGroupDetailActionBarTitle: TextView
+    lateinit var mTxtPhrase: TextView
+    lateinit var mBtnWriteX: ImageView
+    lateinit var mTxtWriteUpdate: TextView
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -106,6 +112,7 @@ abstract class BaseActivity : AppCompatActivity() {
         mLinearLayoutPaymentActionBar = defActionBar.customView.findViewById(R.id.paymentActionBar)
         mLinearlayoutPaymentPhoneActionBar = defActionBar.customView.findViewById(R.id.paymentPhoneActionBar)
         mLinearLayoutGroupDetailActionBar = defActionBar.customView.findViewById(R.id.groupDetailActionBar)
+        mLinearLayoutWritingActionBar = defActionBar.customView.findViewById(R.id.layoutWriteActionBar)
 
 
         mBtnBack = defActionBar.customView.findViewById(R.id.btnBack)
@@ -131,7 +138,14 @@ abstract class BaseActivity : AppCompatActivity() {
         mBtnPaymentPhoneBack = defActionBar.customView.findViewById(R.id.btnPaymentPhoneBack)
         mBtnGroupDetailActionBarBack = defActionBar.customView.findViewById(R.id.btnGroupDetailActionBarBack)
         mTxtGroupDetailActionBarTitle = defActionBar.customView.findViewById(R.id.txtGroupDetailActionBarTitle)
+        mBtnWriteX = defActionBar.customView.findViewById(R.id.btnWriteX)
+        mTxtWriteUpdate = defActionBar.customView.findViewById(R.id.txtWriteUpdateActionBar)
+        mTxtPhrase = defActionBar.customView.findViewById(R.id.txtPhraseActionBar)
 
+
+        mBtnWriteX.setOnClickListener {
+            finish()
+        }
 
         mBtnGroupDetailActionBarBack.setOnClickListener {
             finish()
@@ -222,44 +236,44 @@ abstract class BaseActivity : AppCompatActivity() {
 
 
 
-        mBtnNext.setOnTouchListener { v, event ->
-
-            when (event.action) {
-
-                MotionEvent.ACTION_DOWN -> {
-
-                    mBtnNext.setTextColor(
-                        ContextCompat.getColor(
-                            applicationContext!!,
-                            R.color.teal
-                        )
-                    )
-                }
-
-                MotionEvent.ACTION_MOVE -> {
-
-                    mBtnNext.setTextColor(
-                        ContextCompat.getColor(
-                            applicationContext!!,
-                            R.color.teal
-                        )
-                    )
-
-                }
-
-                MotionEvent.ACTION_UP -> {
-                    val myIntent = Intent(mContext, WriteNextButtonClickActivity::class.java)
-                    startActivity(myIntent)
-
-                    finish()
-
-                }
-
-                else -> {
-                }
-            }
-            true
-        }
+//        mBtnNext.setOnTouchListener { v, event ->
+//
+//            when (event.action) {
+//
+//                MotionEvent.ACTION_DOWN -> {
+//
+//                    mBtnNext.setTextColor(
+//                        ContextCompat.getColor(
+//                            applicationContext!!,
+//                            R.color.teal
+//                        )
+//                    )
+//                }
+//
+//                MotionEvent.ACTION_MOVE -> {
+//
+//                    mBtnNext.setTextColor(
+//                        ContextCompat.getColor(
+//                            applicationContext!!,
+//                            R.color.teal
+//                        )
+//                    )
+//
+//                }
+//
+//                MotionEvent.ACTION_UP -> {
+//                    val myIntent = Intent(mContext, WriteNextButtonClickActivity::class.java)
+//                    startActivity(myIntent)
+//
+//                    finish()
+//
+//                }
+//
+//                else -> {
+//                }
+//            }
+//            true
+//        }
     }
 
 

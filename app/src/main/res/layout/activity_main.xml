@@ -33,6 +33,7 @@
 
             <ImageView
                 android:id="@+id/btnWrite"
+                android:background="@drawable/custom_ripple_effect2"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:src="@drawable/bottom_nav_write_icon"/>

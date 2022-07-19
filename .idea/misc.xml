@@ -41,7 +41,7 @@
         <entry key="app/src/main/res/layout/activity_final_payment_page.xml" value="0.278125" />
         <entry key="app/src/main/res/layout/activity_group_detail.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_group_payment.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.26145833333333335" />
         <entry key="app/src/main/res/layout/activity_mind_postit.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_new_expert_detail.xml" value="0.165" />
@@ -59,11 +59,13 @@
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.2640625" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.278125" />
         <entry key="app/src/main/res/layout/activity_voice_detail.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_write.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/activity_write.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_write_next_button_click.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_writing.xml" value="0.25" />
         <entry key="app/src/main/res/layout/alert_custom2.xml" value="0.25" />
         <entry key="app/src/main/res/layout/alert_dialog_custom.xml" value="0.25" />
         <entry key="app/src/main/res/layout/chat_menu_list_item.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/community_title_list_item.xml" value="0.27708333333333335" />
         <entry key="app/src/main/res/layout/consulting_menu_chatting_list_item.xml" value="0.27708333333333335" />
         <entry key="app/src/main/res/layout/consulting_menu_phone_list_item.xml" value="0.27708333333333335" />
         <entry key="app/src/main/res/layout/coupon_code_button_box.xml" value="0.12864583333333332" />

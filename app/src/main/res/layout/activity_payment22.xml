@@ -248,6 +248,7 @@
             android:id="@+id/btnCouponRegistration"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:foreground="@drawable/ripple_effect_background"
             android:text="♲ 새로운 쿠폰 등록하기"
             android:gravity="center"
             android:layout_marginTop="15dp"

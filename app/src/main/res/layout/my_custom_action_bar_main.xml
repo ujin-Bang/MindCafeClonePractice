@@ -98,6 +98,7 @@
 
             <TextView
                 android:id="@+id/btnNext"
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="다음"
@@ -490,6 +491,53 @@
                 android:textColor="@color/black"
                 android:layout_marginStart="120dp"/>
 
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutWriteActionBar"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="10dp">
+
+
+            <ImageView
+                android:id="@+id/btnWriteX"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ripple_effect_background"
+                android:src="@drawable/x_like_black_icon"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight = "1"/>
+
+
+            <TextView
+                android:id="@+id/txtPhraseActionBar"
+                android:layout_width="wrap_content"
+                android:layout_height= "wrap_content"
+                android:text="응원문구"
+                android:textSize="19sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/txtWriteUpdateActionBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:textColor="@color/bottomnav"
+                android:textStyle="bold"
+                android:text="사연 올리기"/>
 
         </LinearLayout>
 

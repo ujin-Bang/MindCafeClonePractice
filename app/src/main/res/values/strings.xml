@@ -49,4 +49,9 @@
         <item>묻지마 할인10%</item>
 
     </string-array>
+
+
+    <string name="underline">
+        <u>전문가</u>
+    </string>
 </resources>
