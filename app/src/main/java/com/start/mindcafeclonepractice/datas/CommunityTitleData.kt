@@ -7,6 +7,6 @@ class CommunityTitleData(
     val smallTitle: String = "",
     val actionBarTitle: String ="",
     val edtHint: String ="",
-    val worryData: WorryData,
+//    val worryData: WorryData,
 ):Serializable {
 }

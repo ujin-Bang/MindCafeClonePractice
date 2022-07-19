@@ -8,18 +8,19 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.start.mindcafeclonepractice.R
 import com.start.mindcafeclonepractice.datas.CommunityTitleData
+import com.start.mindcafeclonepractice.datas.WorryData
 
 class WorryRecyclerAdapter(
     val mContext: Context,
-    val mList: List<CommunityTitleData>
+    val mList: List<WorryData>
 ): RecyclerView.Adapter<WorryRecyclerAdapter.WorryViewHolder>() {
 
     inner class WorryViewHolder(row: View): RecyclerView.ViewHolder(row){
 
         val txtWorry = row.findViewById<TextView>(R.id.txtWorry)
 
-        fun bind(data: CommunityTitleData){
-            txtWorry.text = data.worryData.worry
+        fun bind(data: WorryData){
+            txtWorry.text = data.worry
         }
 
     }

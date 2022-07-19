@@ -3,14 +3,23 @@ package com.start.mindcafeclonepractice
 import android.os.Bundle
 import android.view.View
 import androidx.databinding.DataBindingUtil
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.firebase.database.*
+import com.start.mindcafeclonepractice.adapters.WorryRecyclerAdapter
 import com.start.mindcafeclonepractice.databinding.ActivityWritingBinding
 import com.start.mindcafeclonepractice.datas.CommunityTitleData
+import com.start.mindcafeclonepractice.datas.WorryData
+import com.start.mindcafeclonepractice.datas.WorryData2
 
 class WritingActivity : BaseActivity() {
 
     lateinit var binding: ActivityWritingBinding
     lateinit var mData: CommunityTitleData
     private var authUid: String? = null
+
+    val mList = ArrayList<WorryData>()
+    lateinit var mAdapter: WorryRecyclerAdapter
+    var ref: DatabaseReference? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,13 +31,31 @@ class WritingActivity : BaseActivity() {
 
     override fun setupEvents() {
 
+        //사연 보내기 버튼 클릭시 => 입력한 텍스트, 받아온 제목, 로그인 uid
         mTxtWriteUpdate.setOnClickListener {
 
+            val inputEdtText = binding.edtContent.text.toString()
+            val mTitle = mData.title
+            //보낸 로그인 UID받기
+            if(intent.hasExtra("auth")){
+
+                authUid = intent.getStringExtra("auth")
+
+            }
+
+            ref = FirebaseDatabase.getInstance().getReference()
+
+            val dataInput = WorryData2( mTitle, inputEdtText, authUid!!)
+            ref?.child("board")?.push()?.setValue(dataInput)
+
+
         }
+
+
     }
 
     override fun setValues() {
-        // 보낸 데이터 받기
+        // 보내온 데이터 받기
         mData = intent.getSerializableExtra("data") as CommunityTitleData
 
         //보낸 로그인 UID받기
@@ -62,4 +89,29 @@ class WritingActivity : BaseActivity() {
 
 
     }
+
+//    fun getWorryDataFromFirebase(){
+//
+//        ref = FirebaseDatabase.getInstance().getReference("community")
+//        ref?.addValueEventListener(object : ValueEventListener{
+//            override fun onDataChange(snapshot: DataSnapshot) {
+//                if (snapshot.exists()){
+//                    for (h in snapshot.children){
+//                        val myWorryData = h.getValue(WorryData::class.java)
+//                        mList.add(myWorryData!!)
+//                    }
+//                }
+//                mAdapter.notifyDataSetChanged()
+//            }
+//
+//            override fun onCancelled(error: DatabaseError) {
+//
+//            }
+//
+//        })
+//        mAdapter = WorryRecyclerAdapter(mContext, mList)
+//        binding.worryListRecyclerView.adapter = mAdapter
+//        binding.worryListRecyclerView.layoutManager = LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false)
+//        binding.worryListRecyclerView.setHasFixedSize(true)
+//    }
 }
