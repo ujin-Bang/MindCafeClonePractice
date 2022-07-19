@@ -59,6 +59,7 @@ abstract class BaseActivity : AppCompatActivity() {
     lateinit var mTxtPhrase: TextView
     lateinit var mBtnWriteX: ImageView
     lateinit var mTxtWriteUpdate: TextView
+    lateinit var mTxtWriteNextActionBar: TextView
 
 
 
@@ -141,6 +142,7 @@ abstract class BaseActivity : AppCompatActivity() {
         mBtnWriteX = defActionBar.customView.findViewById(R.id.btnWriteX)
         mTxtWriteUpdate = defActionBar.customView.findViewById(R.id.txtWriteUpdateActionBar)
         mTxtPhrase = defActionBar.customView.findViewById(R.id.txtPhraseActionBar)
+        mTxtWriteNextActionBar = defActionBar.customView.findViewById(R.id.txtWriteNextActionBar)
 
 
         mBtnWriteX.setOnClickListener {

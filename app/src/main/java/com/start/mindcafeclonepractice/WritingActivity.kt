@@ -3,7 +3,6 @@ package com.start.mindcafeclonepractice
 import android.os.Bundle
 import android.view.View
 import androidx.databinding.DataBindingUtil
-import com.google.firebase.auth.FirebaseAuth
 import com.start.mindcafeclonepractice.databinding.ActivityWritingBinding
 import com.start.mindcafeclonepractice.datas.CommunityTitleData
 
@@ -53,9 +52,12 @@ class WritingActivity : BaseActivity() {
         //받아온 데이터 안에 문구를 EditText의 힌트로 적용
         binding.edtContent.hint = mData.edtHint
 
+        //받아온 데이터의 액션바 타이틀 길이가 4이면 실행
         if(mData.actionBarTitle.length == 4) {
             binding.edtContent.visibility = View.GONE
             binding.layoutFirstPosition.visibility = View.VISIBLE
+            mTxtWriteUpdate.visibility = View.GONE
+            mTxtWriteNextActionBar.visibility = View.VISIBLE
         }
 
 
