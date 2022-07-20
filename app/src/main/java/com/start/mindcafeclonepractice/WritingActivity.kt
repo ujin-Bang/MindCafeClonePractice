@@ -1,7 +1,9 @@
 package com.start.mindcafeclonepractice
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.database.*
@@ -31,11 +33,14 @@ class WritingActivity : BaseActivity() {
 
     override fun setupEvents() {
 
+        binding.edtContent.requestFocus()
+
         //사연 보내기 버튼 클릭시 => 입력한 텍스트, 받아온 제목, 로그인 uid
         mTxtWriteUpdate.setOnClickListener {
 
             val inputEdtText = binding.edtContent.text.toString()
             val mTitle = mData.title
+
             //보낸 로그인 UID받기
             if(intent.hasExtra("auth")){
 
@@ -43,10 +48,18 @@ class WritingActivity : BaseActivity() {
 
             }
 
-            ref = FirebaseDatabase.getInstance().getReference()
+            if ("".equals(inputEdtText)){
+                Toast.makeText(mContext, "사연을 입력해주세요.", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+            else{
+                ref = FirebaseDatabase.getInstance().getReference()
 
-            val dataInput = WorryData2( mTitle, inputEdtText, authUid!!)
-            ref?.child("board")?.push()?.setValue(dataInput)
+                val dataInput = WorryData2( mTitle, inputEdtText, authUid!!)
+                ref?.child("board")?.push()?.setValue(dataInput)
+
+                startActivity(Intent(mContext, MainActivity::class.java))
+            }
 
 
         }
