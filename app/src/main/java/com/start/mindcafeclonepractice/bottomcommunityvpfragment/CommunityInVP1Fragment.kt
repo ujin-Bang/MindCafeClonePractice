@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.database.*
+import com.google.firebase.database.ktx.getValue
 import com.start.mindcafeclonepractice.R
 import com.start.mindcafeclonepractice.adapters.CommunityContentCheerRecyclerViewAdapter
 import com.start.mindcafeclonepractice.bottomnavfragments.BaseFragment
@@ -54,11 +55,12 @@ class CommunityInVP1Fragment : BaseFragment() {
 
                 if (snapshot.exists()){
                     for (h in snapshot.children){
-                        val myData = h.getValue(CommunityContentData::class.java)
 
-                        if (myData != null){
-                            mList.add(myData)
-                        }
+                            val myData = h.getValue(CommunityContentData::class.java)
+                            if (myData != null){
+                                mList.add(myData)
+                            }
+
                     }
                     mAdapter.notifyDataSetChanged()
                 }

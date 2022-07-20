@@ -67,6 +67,7 @@
         <entry key="app/src/main/res/layout/alert_dialog_custom.xml" value="0.25" />
         <entry key="app/src/main/res/layout/chat_menu_list_item.xml" value="0.25" />
         <entry key="app/src/main/res/layout/community_cheer_list_item.xml" value="0.278125" />
+        <entry key="app/src/main/res/layout/community_free_list_item.xml" value="0.16197916666666667" />
         <entry key="app/src/main/res/layout/community_title_list_item.xml" value="0.27708333333333335" />
         <entry key="app/src/main/res/layout/consulting_menu_chatting_list_item.xml" value="0.27708333333333335" />
         <entry key="app/src/main/res/layout/consulting_menu_phone_list_item.xml" value="0.27708333333333335" />
