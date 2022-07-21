@@ -163,6 +163,22 @@ class LoginActivity : BaseActivity() {
             val inputId = binding.edtId.text.toString()
             val inputPw = binding.edtPw.text.toString()
 
+            if(inputId.isEmpty()){
+                Toast.makeText(mContext, "아이디를 입력해주세요.", Toast.LENGTH_SHORT).show()
+                binding.edtId.requestFocus()
+                return@setOnClickListener
+            }
+            if (inputPw.isEmpty()){
+                Toast.makeText(mContext, "비밀번호를 입력해주세요", Toast.LENGTH_SHORT).show()
+                binding.edtPw.requestFocus()
+                return@setOnClickListener
+            }
+            if (inputId.isEmpty() && inputPw.isEmpty()){
+                Toast.makeText(mContext, "아이디와 비밀번호를 입력해주세요.", Toast.LENGTH_SHORT).show()
+                binding.edtId.requestFocus()
+                return@setOnClickListener
+            }
+
             signIn(inputId, inputPw)
 
         }
@@ -232,6 +248,7 @@ class LoginActivity : BaseActivity() {
     override fun setValues() {
 
         keyHash()
+
     }
 
     fun keyHash(){
@@ -280,7 +297,7 @@ class LoginActivity : BaseActivity() {
                         Toast.makeText(mContext, "로그인 성공", Toast.LENGTH_SHORT).show()
                         moveMainPage(auth?.currentUser)
                     }else{
-                        Toast.makeText(mContext, "로그인 실패", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(mContext, "이메일, 비밀번호를 다시 확인해주세요.", Toast.LENGTH_SHORT).show()
                     }
                 }
         }

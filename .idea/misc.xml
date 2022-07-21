@@ -30,6 +30,7 @@
         <entry key="app/src/main/res/drawable/spinner_background_box_2_checked.xml" value="0.175" />
         <entry key="app/src/main/res/drawable/style.xml" value="0.15" />
         <entry key="app/src/main/res/drawable/time_background.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/worry_item_background_box.xml" value="0.375" />
         <entry key="app/src/main/res/layout/activity_chatt_detail.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_community.xml" value="0.1296875" />
         <entry key="app/src/main/res/layout/activity_expert_consulting_menu_chatt_phone.xml" value="0.165" />
@@ -69,6 +70,7 @@
         <entry key="app/src/main/res/layout/community_cheer_list_item.xml" value="0.278125" />
         <entry key="app/src/main/res/layout/community_free_list_item.xml" value="0.16197916666666667" />
         <entry key="app/src/main/res/layout/community_title_list_item.xml" value="0.27708333333333335" />
+        <entry key="app/src/main/res/layout/community_total_list_item.xml" value="0.15729166666666666" />
         <entry key="app/src/main/res/layout/consulting_menu_chatting_list_item.xml" value="0.27708333333333335" />
         <entry key="app/src/main/res/layout/consulting_menu_phone_list_item.xml" value="0.27708333333333335" />
         <entry key="app/src/main/res/layout/coupon_code_button_box.xml" value="0.12864583333333332" />

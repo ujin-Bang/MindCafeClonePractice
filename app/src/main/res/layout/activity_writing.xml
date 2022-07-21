@@ -27,12 +27,196 @@
         <com.nex3z.flowlayout.FlowLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:flChildSpacing="auto"
+            app:flChildSpacingForLastRow="auto"
+            app:flRowSpacing="16dp"
             android:layout_marginTop="20dp">
 
-           <androidx.recyclerview.widget.RecyclerView
-               android:id="@+id/worryListRecyclerView"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/child1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="취업/진로"
+                android:textSize="17sp"
+                android:textColor="#019A10"
+                android:background="@drawable/worry_item_background_box"
+                android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/child2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="직장"
+                android:textSize="17sp"
+                android:textColor="#019A10"
+                android:background="@drawable/spinner_background_box_2"
+                android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/child3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="연애"
+                android:textSize="17sp"
+                android:textColor="#019A10"
+                android:background="@drawable/spinner_background_box_2"
+                android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/child4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="성추행"
+                android:textSize="17sp"
+                android:textColor="#019A10"
+                android:background="@drawable/spinner_background_box_2"
+                android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/child5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="결혼/육아"
+                android:textSize="17sp"
+                android:textColor="#019A10"
+                android:background="@drawable/spinner_background_box_2"
+                android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/child6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="대인관계"
+                android:textSize="17sp"
+                android:textColor="#019A10"
+                android:background="@drawable/spinner_background_box_2"
+                android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/child7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="외모"
+                android:textSize="17sp"
+                android:textColor="#019A10"
+                android:background="@drawable/spinner_background_box_2"
+                android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/child8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="가족"
+                android:textSize="17sp"
+                android:textColor="#019A10"
+                android:background="@drawable/spinner_background_box_2"
+                android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/child9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="학업/고시"
+                android:textSize="17sp"
+                android:textColor="#019A10"
+                android:background="@drawable/spinner_background_box_2"
+                android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/child10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="금전/사업"
+                android:textSize="17sp"
+                android:textColor="#019A10"
+                android:background="@drawable/spinner_background_box_2"
+                android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/child11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="성생활"
+                android:textSize="17sp"
+                android:textColor="#019A10"
+                android:background="@drawable/spinner_background_box_2"
+                android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/child12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이별/이혼"
+                android:textSize="17sp"
+                android:textColor="#019A10"
+                android:background="@drawable/spinner_background_box_2"
+                android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/child13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="중독/집착"
+                android:textSize="17sp"
+                android:textColor="#019A10"
+                android:background="@drawable/spinner_background_box_2"
+                android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/child14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="투병/신체"
+                android:textSize="17sp"
+                android:textColor="#019A10"
+                android:background="@drawable/spinner_background_box_2"
+                android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/child15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="정신건강"
+                android:textSize="17sp"
+                android:textColor="#019A10"
+                android:background="@drawable/spinner_background_box_2"
+                android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/child16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LGBT"
+                android:textSize="17sp"
+                android:textColor="#019A10"
+                android:background="@drawable/spinner_background_box_2"
+                android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/child17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="자아/성격"
+                android:textSize="17sp"
+                android:textColor="#019A10"
+                android:background="@drawable/spinner_background_box_2"
+                android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/child18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="따돌림"
+                android:textSize="17sp"
+                android:textColor="#019A10"
+                android:background="@drawable/spinner_background_box_2"
+                android:padding="10dp"/>
+
+
+
+
+
+
 
         </com.nex3z.flowlayout.FlowLayout>
 
@@ -46,6 +230,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/light_gray"
+            android:visibility="visible"
             android:hint="힌트 내용 자리."
             android:gravity="top"
             android:padding="20dp"

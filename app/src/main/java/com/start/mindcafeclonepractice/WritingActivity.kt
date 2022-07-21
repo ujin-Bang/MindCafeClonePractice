@@ -5,12 +5,10 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.firebase.database.*
-import com.start.mindcafeclonepractice.adapters.WorryRecyclerAdapter
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import com.start.mindcafeclonepractice.databinding.ActivityWritingBinding
 import com.start.mindcafeclonepractice.datas.CommunityTitleData
-import com.start.mindcafeclonepractice.datas.WorryData
 import com.start.mindcafeclonepractice.datas.WorryData2
 
 class WritingActivity : BaseActivity() {
@@ -18,18 +16,16 @@ class WritingActivity : BaseActivity() {
     lateinit var binding: ActivityWritingBinding
     lateinit var mData: CommunityTitleData
     private var authUid: String? = null
-
-    val mList = ArrayList<WorryData>()
-    lateinit var mAdapter: WorryRecyclerAdapter
     var ref: DatabaseReference? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_writing)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_writing)
         setupEvents()
         setValues()
     }
+
 
     override fun setupEvents() {
 
@@ -42,20 +38,19 @@ class WritingActivity : BaseActivity() {
             val mTitle = mData.title
 
             //보낸 로그인 UID받기
-            if(intent.hasExtra("auth")){
+            if (intent.hasExtra("auth")) {
 
                 authUid = intent.getStringExtra("auth")
 
             }
 
-            if ("".equals(inputEdtText)){
+            if ("".equals(inputEdtText)) {
                 Toast.makeText(mContext, "사연을 입력해주세요.", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
-            }
-            else{
+            } else {
                 ref = FirebaseDatabase.getInstance().getReference()
 
-                val dataInput = WorryData2( mTitle, inputEdtText, authUid!!)
+                val dataInput = WorryData2(mTitle, inputEdtText, authUid!!)
                 ref?.child("board")?.push()?.setValue(dataInput)
 
                 startActivity(Intent(mContext, MainActivity::class.java))
@@ -64,7 +59,6 @@ class WritingActivity : BaseActivity() {
 
         }
 
-
     }
 
     override fun setValues() {
@@ -72,7 +66,7 @@ class WritingActivity : BaseActivity() {
         mData = intent.getSerializableExtra("data") as CommunityTitleData
 
         //보낸 로그인 UID받기
-        if(intent.hasExtra("auth")){
+        if (intent.hasExtra("auth")) {
 
             authUid = intent.getStringExtra("auth")
 
@@ -84,8 +78,8 @@ class WritingActivity : BaseActivity() {
         mTxtPhrase.text = mData.actionBarTitle
 
         //EditText의 문구에 아무것도 적혀 있지 않은 상태라면 포커스를 EditText에 위치시켜주세요.
-       val inputText =  binding.edtContent
-        if ("".equals(inputText.text.toString())){
+        val inputText = binding.edtContent
+        if ("".equals(inputText.text.toString())) {
             inputText.requestFocus()
         }
 
@@ -93,7 +87,7 @@ class WritingActivity : BaseActivity() {
         binding.edtContent.hint = mData.edtHint
 
         //받아온 데이터의 액션바 타이틀 길이가 4이면 실행
-        if(mData.actionBarTitle.length == 4) {
+        if (mData.actionBarTitle.length == 4) {
             binding.edtContent.visibility = View.GONE
             binding.layoutFirstPosition.visibility = View.VISIBLE
             mTxtWriteUpdate.visibility = View.GONE
@@ -102,6 +96,7 @@ class WritingActivity : BaseActivity() {
 
 
     }
+
 
 //    fun getWorryDataFromFirebase(){
 //
