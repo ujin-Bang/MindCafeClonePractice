@@ -43,6 +43,9 @@ class CommunityInVP1Fragment : BaseFragment() {
 
     override fun setupEvents() {
 
+
+
+
            }
 
     override fun setValues() {
