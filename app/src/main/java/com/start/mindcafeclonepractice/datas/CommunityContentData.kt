@@ -4,5 +4,6 @@ class CommunityContentData(
     val title:String? = null,
     val content: String? = null,
     val uid: String? = null,
+    val createAt: String? = null,
 ) {
 }

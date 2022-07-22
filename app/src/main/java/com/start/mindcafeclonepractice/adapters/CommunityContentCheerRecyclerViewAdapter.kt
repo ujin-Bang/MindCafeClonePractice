@@ -18,6 +18,8 @@ class CommunityContentCheerRecyclerViewAdapter(
         val txtTitle = row.findViewById<TextView>(R.id.txtTitle)
         val txtContent = row.findViewById<TextView>(R.id.txtContent)
         val txtUid = row.findViewById<TextView>(R.id.txtUid)
+        val txtCreatedAt = row.findViewById<TextView>(R.id.txtCreatedAt)
+
 
         fun bind(data: CommunityContentData){
             txtTitle.text = data.title

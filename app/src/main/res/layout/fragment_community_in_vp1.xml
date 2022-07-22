@@ -6,6 +6,7 @@
         android:background="@color/light_gray"
         android:orientation="vertical">
 
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/cheerRecyclerView"
             android:layout_width="match_parent"

@@ -1,5 +1,6 @@
 package com.start.mindcafeclonepractice.bottomcommunityvpfragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.database.*
 import com.google.firebase.database.ktx.getValue
+import com.start.mindcafeclonepractice.MainActivity
 import com.start.mindcafeclonepractice.R
 import com.start.mindcafeclonepractice.adapters.CommunityContentCheerRecyclerViewAdapter
 import com.start.mindcafeclonepractice.bottomnavfragments.BaseFragment
@@ -41,7 +43,7 @@ class CommunityInVP1Fragment : BaseFragment() {
 
     override fun setupEvents() {
 
-    }
+           }
 
     override fun setValues() {
 

@@ -1,15 +1,20 @@
 package com.start.mindcafeclonepractice
 
+import android.annotation.SuppressLint
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.databinding.DataBindingUtil
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.start.mindcafeclonepractice.databinding.ActivityWritingBinding
 import com.start.mindcafeclonepractice.datas.CommunityTitleData
 import com.start.mindcafeclonepractice.datas.WorryData2
+import java.text.SimpleDateFormat
+import java.util.*
 
 class WritingActivity : BaseActivity() {
 
@@ -17,6 +22,7 @@ class WritingActivity : BaseActivity() {
     lateinit var mData: CommunityTitleData
     private var authUid: String? = null
     var ref: DatabaseReference? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +33,8 @@ class WritingActivity : BaseActivity() {
     }
 
 
+
+    @SuppressLint("SimpleDateFormat")
     override fun setupEvents() {
 
         binding.edtContent.requestFocus()
@@ -34,6 +42,7 @@ class WritingActivity : BaseActivity() {
         //사연 보내기 버튼 클릭시 => 입력한 텍스트, 받아온 제목, 로그인 uid
         mTxtWriteUpdate.setOnClickListener {
 
+            //입력한 텍스트값 넣기, 보내온 타이틀값 넣기
             val inputEdtText = binding.edtContent.text.toString()
             val mTitle = mData.title
 
@@ -47,10 +56,11 @@ class WritingActivity : BaseActivity() {
             if ("".equals(inputEdtText)) {
                 Toast.makeText(mContext, "사연을 입력해주세요.", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
+
             } else {
                 ref = FirebaseDatabase.getInstance().getReference()
 
-                val dataInput = WorryData2(mTitle, inputEdtText, authUid!!)
+                val dataInput = WorryData2(mTitle, inputEdtText, authUid!!  )
                 ref?.child("board")?.push()?.setValue(dataInput)
 
                 startActivity(Intent(mContext, MainActivity::class.java))
